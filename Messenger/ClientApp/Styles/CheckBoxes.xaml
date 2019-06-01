@@ -1,0 +1,185 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--<Style TargetType="CheckBox" x:Key="CircleCheckbox">
+        <Setter Property="Cursor" Value="Hand"></Setter>
+        <Setter Property="Content" Value=""></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Grid>
+                        <Ellipse x:Name="outerEllipse">
+                            <Ellipse.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Offset="0" Color="Red"/>
+                                    <GradientStop Offset="0.88" Color="LightCoral"/>
+                                    <GradientStop Offset="1" Color="DarkRed"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse Margin="10" x:Name="highlightCircle" >
+                            <Ellipse.Fill >
+                                <LinearGradientBrush >
+                                    <GradientStop Offset="0" Color="Green"/>
+                                    <GradientStop Offset="0.5" Color="LightGreen"/>
+                                    <GradientStop Offset="1" Color="DarkGreen"/>
+                                </LinearGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <ContentPresenter x:Name="content" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="highlightCircle" Property="Fill">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0.3,0" EndPoint="0.7,1">
+                                        <GradientStop Offset="0" Color="Green"/>
+                                        <GradientStop Offset="0.5" Color="LightGreen"/>
+                                        <GradientStop Offset="1" Color="DarkGreen"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="outerEllipse" Property="Fill">
+                                <Setter.Value>
+                                    <RadialGradientBrush>
+                                        <GradientStop Offset="0" Color="Green"/>
+                                        <GradientStop Offset="0.88" Color="LightGreen"/>
+                                        <GradientStop Offset="1" Color="DarkGreen"/>
+                                    </RadialGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="highlightCircle" Property="Fill">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0.3,0" EndPoint="0.7,1">
+                                        <GradientStop Offset="0" Color="Red"/>
+                                        <GradientStop Offset="0.5" Color="LightCoral"/>
+                                        <GradientStop Offset="1" Color="DarkRed"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{x:Type CheckBox}" TargetType="CheckBox">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="FontFamily" Value="{StaticResource ExoRegular}"/>
+        <Setter Property="Foreground" Value="{StaticResource BlueBrush}"/>
+        <Setter Property="Background" Value="{StaticResource GreenBrush}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <BulletDecorator Background="{StaticResource DarkBlueBrush}">
+                        <BulletDecorator.Bullet>
+                            <Border x:Name="Border"  
+                              Width="13" 
+                              Height="13" 
+                              CornerRadius="10" 
+                              Background="{StaticResource OrangeBrush}"
+                              BorderBrush="{StaticResource DarkBlueBrush}"
+                              BorderThickness="1">
+                                <Path 
+                                                    Width="7" Height="7" 
+                                                    x:Name="CheckMark"
+                                                    SnapsToDevicePixels="False" 
+                                                    Stroke="{StaticResource ForegroundLightBrush}"
+                                                    StrokeThickness="2"
+                                                    Data="M 0 0 L 7 7 M 0 7 L 7 0" />
+                            </Border>
+                        </BulletDecorator.Bullet>
+                        <ContentPresenter Margin="8,0,0,0"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            RecognizesAccessKey="True"/>
+                    </BulletDecorator>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="false">
+                            <Setter TargetName="CheckMark" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        --><!--<Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter TargetName="CheckMark" Property="Data" Value="M 0 7 L 7 0" />
+                        </Trigger>--><!--
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="#454545" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="Red" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#c1c1c1"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+    <Style TargetType="{x:Type CheckBox}" x:Key="ContactSelectedCheckBox" >
+        <Setter Property="FontFamily" Value="{StaticResource FontAwesome}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"/>
+        <Setter Property="Background" Value="{StaticResource OrangeBrush}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Padding" Value="50 10" />
+        <Setter Property="Margin" Value="0 10" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Grid>
+                        <Border x:Name="border"
+                                CornerRadius="10"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}" 
+                                SnapsToDevicePixels="True"
+                                >
+                            <Grid>
+                                <TextBlock x:Name="checkBox" 
+                                       FontFamily="{StaticResource FontAwesome}" 
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Text="{StaticResource FontAwesomePlusCircleIcon}"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                       Visibility="Visible"
+                                       />
+                                <!--<TextBlock x:Name="checkBoxChecked" 
+                                       FontFamily="{StaticResource FontAwesome}" 
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Text="{StaticResource FontAwesomeCloseIcon}"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                       Visibility="Collapsed"
+                                       />-->
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <!--<ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            --><!--<Setter TargetName="checkBox" Property="Text" Value="{StaticResource FontAwesomeCloseIcon}"/>--><!--
+                            <Setter TargetName="checkBoxChecked" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="checkBox" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            --><!--<Setter TargetName="checkBox" Property="Text" Value="{StaticResource FontAwesomePlusCircleIcon}"/>--><!--
+                            <Setter TargetName="checkBoxChecked" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="checkBox" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>-->
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

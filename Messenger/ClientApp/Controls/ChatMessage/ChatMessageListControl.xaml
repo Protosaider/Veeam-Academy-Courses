@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ClientApp.Controls.ChatMessage.ChatMessageListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ClientApp.Controls.ChatMessage"
+             xmlns:attachedProperties="clr-namespace:ClientApp.AttachedProperties"
+             xmlns:design="clr-namespace:ClientApp.ViewModels.ChatPage.Design"
+             xmlns:converters="clr-namespace:ClientApp.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="300"
+             >
+
+    <Grid
+          VerticalAlignment="Bottom">
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      attachedProperties:ScrollToBottomOnLoadProperty.Value="True"
+                      attachedProperties:AutoScrollToBottomProperty.Value="True"
+                      >
+            <ItemsControl ItemsSource="{Binding FilteredItems}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:ChatMessageListItemControl attachedProperties:AnimateSlideInFromBottomOnLoadProperty.Value="{Binding IsRead, Converter={converters:BooleanInvertConverter}}"
+                                                          d:DataContext="{d:DesignData CMessageData}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

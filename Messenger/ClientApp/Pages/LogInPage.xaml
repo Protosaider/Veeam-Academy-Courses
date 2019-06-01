@@ -1,0 +1,110 @@
+﻿<local:BasePage x:TypeArguments="logInPage:CLogInViewModel"
+                x:Class="ClientApp.Pages.LogInPage"
+                x:Name="Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientApp.Pages"
+      xmlns:logInPage="clr-namespace:ClientApp.ViewModels.LogInPage"
+      xmlns:attachedProperties="clr-namespace:ClientApp.AttachedProperties"
+      xmlns:converters="clr-namespace:ClientApp.Converters"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      >
+
+    <Grid>
+        <!--<Border BorderBrush="Black" 
+                BorderThickness="1" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Padding="15 15 15 15">-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+            <StackPanel 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            TextBlock.TextAlignment="Center">
+
+                <Border Background="{StaticResource ForegroundLightBrush}" 
+                            CornerRadius="10"
+                            Padding="15 50 15 15"
+                            Width="440"
+                            Margin="50 50 50 0">
+                    <StackPanel>
+
+                        <TextBlock 
+                    Text="Authentication" 
+                    FontSize="{StaticResource FontSizeExtraExtraLarge}" 
+                    FontFamily="{StaticResource ExoRegular}"
+                    Foreground="{StaticResource BlueBrush}"/>
+
+                        <TextBlock x:Name="ErrorText" 
+                        Foreground="Red" 
+                        TextWrapping="Wrap"
+                        MaxHeight="40"
+                        MinHeight="40"
+                        Margin="10 10 20 0"
+                        FontFamily="{StaticResource ExoThin}"
+                        FontSize="{StaticResource FontSizeRegular}"
+                        Text="{
+                Binding (Validation.Errors)[0].ErrorContent, 
+                ElementName=LoginTextBox
+                }">
+                        </TextBlock>
+
+                        <TextBox Name="LoginTextBox"
+                            attachedProperties:IsFocusedProperty.Value="True"
+                            Tag="Login"
+                            VerticalContentAlignment="Center" 
+                            HorizontalContentAlignment="Center" 
+                            Margin="20 0 20 10"
+                            Text="{Binding Login, UpdateSourceTrigger=PropertyChanged,
+                    ValidatesOnNotifyDataErrors=True}"
+                            Validation.ErrorTemplate="{x:Null}">
+                        </TextBox>
+
+                        <TextBox Style="{StaticResource PasswordTextBox}" 
+                                 Tag="Password"
+                                 MaxLength="24"
+                                 VerticalContentAlignment="Center" 
+                                 HorizontalContentAlignment="Center"
+                                 Margin="20 0 20 20"
+                                 Text="{Binding Password, UpdateSourceTrigger=PropertyChanged,
+                    ValidatesOnNotifyDataErrors=True}"
+                                 Validation.ErrorTemplate="{x:Null}"
+                                />
+
+                        <Button Content="Log In"
+                                IsDefault="True"
+                                HorizontalAlignment="Center"
+                                attachedProperties:IsBusyProperty.Value="{Binding LogInCommandAsyncClass.IsExecuting}"
+                                Command="{Binding LogInCommand}"
+                                Validation.ErrorTemplate="{x:Null}"
+                                >
+                            <Button.CommandParameter>
+                                <MultiBinding Converter="{converters:LogInCommandParameterConverter}">
+                                    <MultiBinding.Bindings>
+                                        <Binding Path="Login" />
+                                        <Binding Path="Password" />
+                                    </MultiBinding.Bindings>
+                                </MultiBinding>
+                            </Button.CommandParameter>
+                        </Button>
+
+                    </StackPanel>
+                </Border>
+
+                <Button 
+                Style="{StaticResource TextButton}" 
+                Content="{Binding SignUpText}" 
+                Command="{Binding GoToSignUpPageCommand}"
+                HorizontalAlignment="Center"
+                attachedProperties:IsBusyProperty.Value="{Binding GoToSignUpPageCommand.IsExecuting}"
+                >
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+        <!--</Border>-->
+    </Grid>
+</local:BasePage>

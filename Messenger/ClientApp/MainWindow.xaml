@@ -1,0 +1,164 @@
+﻿<Window x:Class="ClientApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp"
+        xmlns:controls="clr-namespace:ClientApp.Controls"
+        xmlns:other="clr-namespace:ClientApp.Other"
+        xmlns:attachedProperties="clr-namespace:ClientApp.AttachedProperties"
+        xmlns:converters="clr-namespace:ClientApp.Converters"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+        
+        x:Name="AppWindow"
+        Title="YAM - Yet Another Messenger"
+        Icon="Images/Icons/yam.ico"
+        MinWidth="{Binding WindowMinimumWidth}"
+        MinHeight="{Binding WindowMinimumHeight}"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True" 
+        Deactivated="AppWindow_Deactivated"
+        Activated="AppWindow_Activated"
+        >
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <!-- Outer border with the dropshadow margin-->
+                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=0}" BorderBrush="{StaticResource ForegroundDarkBrush}" BorderThickness="{Binding FlatBorderThickness}">
+                        <!-- Main window outline -->
+                        <Grid>
+                                <!-- Outer dragging border -->
+                                <Border BorderThickness="{Binding BeingMoved, Converter={converters:BooleanToBorderThicknessConverter}}"
+                                        Panel.ZIndex="2"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
+                                        BorderBrush="{StaticResource OrangeBrush}" />
+
+                                <!-- Opacity mask for corners on grid-->
+                                <Border x:Name="Container" 
+                                        Background="{StaticResource BackgroundLightBrush}" 
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
+                                </Border>
+                            
+                                <!-- Window border and drop shadow -->
+                            <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
+                                    Background="{StaticResource ForegroundLightBrush}">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="0.5" Opacity="0.2" />
+                                </Border.Effect>
+                            </Border>
+                            <!-- The main window content -->
+                            <Grid>
+                                    <!-- Corner clipping -->
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                    </Grid.OpacityMask>
+                                
+                                    <Grid.RowDefinitions>
+                                    <!-- Title Bar -->
+                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=42}" />
+                                    <!-- Window Content -->
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <!-- Title Bar -->
+                                <Grid Grid.Column="0" Panel.ZIndex="1">
+                                    <Grid.ColumnDefinitions>
+                                        <!-- Menu Icon -->
+                                        <ColumnDefinition Width="Auto" />
+                                        <!-- Title -->
+                                        <ColumnDefinition Width="*" />
+                                            <!-- Window Commands -->
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Icon -->
+                                    <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
+                                        <Image Source="/Images/Icons/yam.png" />
+                                    </Button>
+                                    
+                                    <!-- Title -->
+                                    <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
+                                        <StackPanel>
+                                            <TextBlock Margin="0,0,0,-5" FontFamily="{StaticResource ExoBold}" FontSize="{StaticResource FontSizeLarge}">
+                                                <Run Text="Y" Foreground="{StaticResource OrangeBrush}" />
+                                                <Run Text="A" Foreground="{StaticResource BlueBrush}" />
+                                                <Run Text="M" Foreground="{StaticResource GreenBrush}" />
+                                            </TextBlock>
+                                        </StackPanel>
+                                    </Viewbox>
+
+                                    <!-- Window Buttons -->
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                        <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}" Content="_" />
+                                        <Button Command="{Binding MaximizeCommand}" Style="{StaticResource WindowControlButton}" Content="[ ]" />
+                                        <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}" Content="X" />
+                                    </StackPanel>
+                                </Grid>
+
+                                <!-- Page Content -->
+                                <Border Grid.Row="1" ClipToBounds="True">
+                                    <ContentPresenter Content="{TemplateBinding Content}" />
+                                </Border>
+
+                            </Grid>
+                        </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="{Binding ResizeBorderThickness}"
+                      CaptionHeight="{Binding TitleHeight}"
+            CornerRadius="0"
+            GlassFrameThickness="0"
+            />
+        <!--Remove default CornerRadius to make rounded cornenrs-->
+    </WindowChrome.WindowChrome>
+
+    <Border Background="{StaticResource BlueBrush}">
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Background image -->
+            <Grid.Background>
+                <!--<ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 200 200" ImageSource="/Images/Icons/logo-head.png" />-->
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 200 200" ImageSource="/Images/Backgrounds/hexellence.png" />
+            </Grid.Background>
+
+            <!-- Dimmed overlay -->
+            <Border Grid.ColumnSpan="2"
+                    Panel.ZIndex="10"
+                    Opacity="0.3">
+                <Border Background="{StaticResource ForegroundVeryDarkBrush}"
+                        attachedProperties:AnimateFadeInProperty.Value="{Binding DimmableOverlayVisible}"
+                        />
+            </Border>
+            
+            <controls:PageHost Grid.Column="1" 
+                   CurrentPage="{Binding ApplicationViewModel.CurrentPage,
+                                        Source={x:Static other:CViewModelLocator.Instance}}"
+                   CurrentPageViewModel="{Binding ApplicationViewModel.CurrentPageViewModel,
+                                        Source={x:Static other:CViewModelLocator.Instance}}"                            
+                            />
+
+            <controls:SideMenuControl Grid.Column="0" 
+                DataContext="{Binding ApplicationViewModel, Source={x:Static other:CViewModelLocator.Instance}}"
+                Width="300" 
+                attachedProperties:AnimateSlideInFromLeftProperty.Value="{Binding IsSideMenuVisible}"
+                />
+
+        </Grid>
+    </Border>
+
+</Window>

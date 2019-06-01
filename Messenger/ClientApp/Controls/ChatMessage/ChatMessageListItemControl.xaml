@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="ClientApp.Controls.ChatMessage.ChatMessageListItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:converters="clr-namespace:ClientApp.Converters" 
+             xmlns:design="clr-namespace:ClientApp.ViewModels.ChatPage.Design" 
+             mc:Ignorable="d" d:DesignWidth="300"
+             d:DataContext="{x:Static design:ChatMessageDesignViewModel.Instance}">
+    <Border Padding="5">
+        <Grid>
+            <!-- Profile picture -->
+            <Border 
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="0 5.5 0 0"
+                Visibility="{Binding IsSentByMe, Converter={converters:BooleanToVisibilityValueConverter}}"
+                CornerRadius="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                Width="35"
+                Background="{Binding ProfilePictureRgb, Converter={converters:StringRGBToBrushConverter}}"
+                BorderBrush="{StaticResource ForegroundLightBrush}"
+                BorderThickness="1"
+                >
+                <TextBlock Text="{Binding Initials}"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Foreground="{StaticResource ForegroundLightBrush}"
+                           FontFamily="{StaticResource ExoRegular}"
+                           >
+                </TextBlock>
+            </Border>
+            <!-- Chat message container -->
+            <Grid Margin="{Binding IsSentByMe, Converter={converters:IsSentByMeToMarginConverter}}"                 
+                  HorizontalAlignment="{Binding IsSentByMe, Converter={converters:IsSentByMeToAlignmentConverter}}">
+
+                <Grid.Triggers>
+                    <!-- Mouse over shows time -->
+                    <EventTrigger>
+                        <EventTrigger.RoutedEvent>MouseEnter</EventTrigger.RoutedEvent>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="ExtraDetails" Storyboard.TargetProperty="Opacity">
+                                <DoubleAnimation To="1" Duration="00:00:00.5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <!-- Mouse leave hides time -->
+                    <EventTrigger>
+                        <EventTrigger.RoutedEvent>MouseLeave</EventTrigger.RoutedEvent>
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="ExtraDetails" Storyboard.TargetProperty="Opacity">
+                                <DoubleAnimation To="0" Duration="00:00:00.5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Speech bubble rectangle -->
+                <Border 
+                    CornerRadius="10"
+                    Padding="{Binding IsSentByMe, Converter={converters:IsSentByMeToPaddingConverter}}"
+                    Background="{Binding IsSentByMe, Converter={converters:IsSentByMeToBackgroundConverter}}"              
+                    >
+                    <!-- Message text -->
+                    <TextBlock VerticalAlignment="Center"
+                           TextWrapping="Wrap"
+                           FontFamily="{StaticResource ExoRegular}"
+                           Foreground="{StaticResource DarkBlueBrush}"
+                           TextAlignment="Left"
+                           Text="{Binding Message}"
+                           />
+                </Border>
+
+                <!-- Chat bubble anchor -->
+                <Path Grid.Row="1"
+                      Stroke="Black" 
+                      StrokeThickness="0"
+                      Panel.ZIndex="1"
+                      Margin="{Binding IsSentByMe, Converter={converters:IsSentByMeToBubbleAnchorMarginConverter}}"
+                      Data="{Binding IsSentByMe, Converter={converters:IsSentByMeToBubbleAnchorDataConverter}}"
+                      HorizontalAlignment="{Binding IsSentByMe, Converter={converters:IsSentByMeToAlignmentConverter}}"
+                      Fill="{Binding IsSentByMe, Converter={converters:IsSentByMeToBackgroundConverter}}"
+                      ></Path>
+                <!--Data="M 0,0 L 10,10 L 20,0 L 0,0"-->
+                <!--Data="{Binding IsSentByMe, Converter={converters:IsSentByMeToBubbleAnchorDataConverter}}"-->
+
+                <!-- Time containers -->
+                <StackPanel Name="ExtraDetails" 
+                            Opacity="0"
+                            Grid.Row="2"
+                            HorizontalAlignment="{Binding IsSentByMe, Converter={converters:IsSentByMeToAlignmentConverter}}"
+                            Orientation="Horizontal">
+
+                    <!-- Sent time -->
+                    <TextBlock Text="{Binding DispatchDate, Converter={converters:TimeToDisplayTimeConverter}}"
+                               Foreground="{StaticResource ForegroundLightBrush}"
+                               FontSize="{StaticResource FontSizeSmall}"
+                               FontFamily="{StaticResource ExoRegular}"
+                               Margin="{Binding IsSentByMe, Converter={converters:IsSentByMeToSentTimeMarginConverter}}"
+                               HorizontalAlignment="{Binding IsSentByMe, Converter={converters:IsSentByMeToAlignmentConverter}}"
+                           />
+                    <!--HorizontalAlignment="{Binding IsSentByMe, Converter={converters:IsSentByMeToAlignmentConverter}}"-->
+
+                    <!-- Read time -->
+                    <!--<TextBlock Text="{Binding ReadDate, Converter={converters:TimeToReadTimeConverter}}"
+                               Foreground="{StaticResource DarkBlueBrush}"
+                               FontSize="{StaticResource FontSizeSmall}"
+                               FontFamily="{StaticResource ExoRegular}"
+                           />-->
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

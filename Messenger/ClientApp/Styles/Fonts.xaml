@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!-- #Exo Regular - это имя шрифта, когда его открываешь - не файла -->
+    <FontFamily x:Key="ExoRegular">pack://application;,,,/Fonts/#Exo Regular</FontFamily>
+    <FontFamily x:Key="ExoThin">pack://application;,,,/Fonts/#Exo Thin</FontFamily>
+    <FontFamily x:Key="ExoBold">pack://application;,,,/Fonts/#Exo Black</FontFamily>
+    <FontFamily x:Key="FontAwesome">pack://appliction;,,,/Fonts/FontAwesomeSolid.otf#Font Awesome 5 Free Solid</FontFamily>
+
+    <system:Double x:Key="FontSizeSmaller">10</system:Double>
+    <system:Double x:Key="FontSizeSmall">12</system:Double>
+    <system:Double x:Key="FontSizeRegular">14</system:Double>
+    <system:Double x:Key="FontSizeLarge">20</system:Double>
+    <system:Double x:Key="FontSizeExtraLarge">24</system:Double>
+    <system:Double x:Key="FontSizeExtraExtraLarge">30</system:Double>
+
+    <!-- Create style for lowest level we can (every Control). Specify the key. -->
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
+        <Setter Property="FontFamily" Value="{StaticResource ExoThin}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="BaseTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource ExoThin}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
+    </Style>
+    
+    <!--Apply them to all elements of type N (specify target type and based on previously keyed style)-->
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}"></Style>
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseStyle}"></Style>
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}"></Style>
+    <Style TargetType="{x:Type TreeView}" BasedOn="{StaticResource BaseStyle}"></Style>
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}"></Style>
+
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}"></Style>
+
+    <system:String x:Key="FontAwesomeChatIcon">&#xf086;</system:String>
+    <system:String x:Key="FontAwesomeUserIcon">&#xf007;</system:String>
+    <system:String x:Key="FontAwesomePictureIcon">&#xf1c5;</system:String>
+    <system:String x:Key="FontAwesomeCogIcon">&#xf013;</system:String>
+    <system:String x:Key="FontAwesomeSearchIcon">&#xf002;</system:String>
+    <system:String x:Key="FontAwesomeEllipsisIcon">&#xf141;</system:String>
+    <system:String x:Key="FontAwesomeEllipsisVerticalIcon">&#xf142;</system:String>
+    <system:String x:Key="FontAwesomePaperclipIcon">&#xf0c6;</system:String>
+    <system:String x:Key="FontAwesomeEmojiIcon">&#xf118;</system:String>
+    <system:String x:Key="FontAwesomeArrowLeftIcon">&#xf060;</system:String>
+    <system:String x:Key="FontAwesomeTickIcon">&#xf00c;</system:String>
+    <system:String x:Key="FontAwesomeCloseIcon">&#xf00d;</system:String>
+
+    <system:String x:Key="FontAwesomeAddUserIcon">&#xf234;</system:String>
+    <system:String x:Key="FontAwesomeCreateChatIcon">&#xf7f5;</system:String>
+    <system:String x:Key="FontAwesomePlusCircleIcon">&#xf055;</system:String>
+    <system:String x:Key="FontAwesomeEyeIcon">&#xf06e;</system:String>
+    <system:String x:Key="FontAwesomeEyeSlashIcon">&#xf070;</system:String>
+    <system:String x:Key="FontAwesomeShieldIcon">&#xf3ed;</system:String>
+
+    <system:String x:Key="FontAwesomeFilterIcon">&#xf0b0;</system:String>
+    <system:String x:Key="FontAwesomeSortIcon">&#xf0dc;</system:String>
+    <system:String x:Key="FontAwesomeSortAlphaUpIcon">&#xf15e;</system:String>
+    <system:String x:Key="FontAwesomeSortAlphaDownIcon">&#xf15d;</system:String>
+    <system:String x:Key="FontAwesomeSortNumericUpIcon">&#xf163;</system:String>
+    <system:String x:Key="FontAwesomeSortNumericDownIcon">&#xf162;</system:String>
+        
+</ResourceDictionary>
+    

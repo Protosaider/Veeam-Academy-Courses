@@ -1,0 +1,230 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Server Scripts", "SQL Server Scripts", "{8B6EA21F-AB71-4DBA-B8B5-8C27BB2D662C}"
+	ProjectSection(SolutionItems) = preProject
+		Alter Tables 1.sql = Alter Tables 1.sql
+		Alter Tables 2.sql = Alter Tables 2.sql
+		Chats Queries.sql = Chats Queries.sql
+		Contacts Queries.sql = Contacts Queries.sql
+		Create Database.sql = Create Database.sql
+		Create Full Text Search Catalog and Index.sql = Create Full Text Search Catalog and Index.sql
+		Create Tables 2.sql = Create Tables 2.sql
+		Create Tables.sql = Create Tables.sql
+		Create Test Data 2.sql = Create Test Data 2.sql
+		Create Test Data.sql = Create Test Data.sql
+		DatabaseDiagram.png = DatabaseDiagram.png
+		Drop Database.sql = Drop Database.sql
+		Drop Tables.sql = Drop Tables.sql
+		Users Queries.sql = Users Queries.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{4A43D5A7-C241-4992-959A-4AAE8230D358}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{106F67AD-243A-4CE7-A66B-8059F8FC966F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{6B31C8CC-FEAB-440D-9FEF-42E1E5191D8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{24C6CE3F-7404-440F-9CD1-2A03F9B4F57C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStorage", "DataStorage\DataStorage.csproj", "{AD842668-78C0-4529-9FBB-DF923C61BC26}"
+	ProjectSection(ProjectDependencies) = postProject
+		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStorage.Test", "DataStorage.Test\DataStorage.Test.csproj", "{3082D9AB-6B8E-4640-85C1-0F0AA2E9DE33}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD842668-78C0-4529-9FBB-DF923C61BC26} = {AD842668-78C0-4529-9FBB-DF923C61BC26}
+		{4CD81DD5-AC39-4B7E-8B86-949AD0818F66} = {4CD81DD5-AC39-4B7E-8B86-949AD0818F66}
+		{F4561AEB-84F0-477E-A237-CEA9C2616E06} = {F4561AEB-84F0-477E-A237-CEA9C2616E06}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApp", "ClientApp\ClientApp.csproj", "{1D6055DC-3C36-49CC-9502-3074775C06C8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHosting", "ConsoleHosting\ConsoleHosting.csproj", "{523D95FD-06CC-4F25-8043-65054551CDA5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerService", "MessengerService\MessengerService.csproj", "{BA112001-8F88-411D-9BE4-DDB946BBCE8D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36FEEC9D-2610-463D-96AE-1D413F614A7D}"
+	ProjectSection(SolutionItems) = preProject
+		TFSIgnore.tfignore = TFSIgnore.tfignore
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{F4561AEB-84F0-477E-A237-CEA9C2616E06}"
+	ProjectSection(ProjectDependencies) = postProject
+		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Info", "Info\Info.csproj", "{4CD81DD5-AC39-4B7E-8B86-949AD0818F66}"
+	ProjectSection(ProjectDependencies) = postProject
+		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{4A79FE29-DACC-4F3B-9C74-0EFEF25D91CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.ServiceLocator", "Common.ServiceLocator\Common.ServiceLocator.csproj", "{41ED059E-C792-4631-95DE-D5245C5B014E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaintenanceService", "MaintenanceService\MaintenanceService.csproj", "{501AA7A5-4882-476A-B19B-54AB27333405}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD842668-78C0-4529-9FBB-DF923C61BC26} = {AD842668-78C0-4529-9FBB-DF923C61BC26}
+		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
+		{4CD81DD5-AC39-4B7E-8B86-949AD0818F66} = {4CD81DD5-AC39-4B7E-8B86-949AD0818F66}
+		{F4561AEB-84F0-477E-A237-CEA9C2616E06} = {F4561AEB-84F0-477E-A237-CEA9C2616E06}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Maintenance", "Maintenance", "{0B8FB70E-1322-4B8C-9C02-EEE81A94C08C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHostingMaintenance", "ConsoleHostingMaintenance\ConsoleHostingMaintenance.csproj", "{4B290526-8BCD-449D-B2E8-06787C586170}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messenger", "Messenger", "{FE45A8D3-ABA0-4DAF-952A-CE0CF5113B5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{A09E7C10-3C48-4C6D-9D7E-543DB08B3C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHostingAuthentication", "ConsoleHostingAuthentication\ConsoleHostingAuthentication.csproj", "{E23AE5B7-0714-48DD-B1FE-09145AC31A46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{2D09E016-F031-4834-87FA-C2705A4A0563}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD842668-78C0-4529-9FBB-DF923C61BC26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD842668-78C0-4529-9FBB-DF923C61BC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD842668-78C0-4529-9FBB-DF923C61BC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD842668-78C0-4529-9FBB-DF923C61BC26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3082D9AB-6B8E-4640-85C1-0F0AA2E9DE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3082D9AB-6B8E-4640-85C1-0F0AA2E9DE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3082D9AB-6B8E-4640-85C1-0F0AA2E9DE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3082D9AB-6B8E-4640-85C1-0F0AA2E9DE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6055DC-3C36-49CC-9502-3074775C06C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6055DC-3C36-49CC-9502-3074775C06C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6055DC-3C36-49CC-9502-3074775C06C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6055DC-3C36-49CC-9502-3074775C06C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{523D95FD-06CC-4F25-8043-65054551CDA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{523D95FD-06CC-4F25-8043-65054551CDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{523D95FD-06CC-4F25-8043-65054551CDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{523D95FD-06CC-4F25-8043-65054551CDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA112001-8F88-411D-9BE4-DDB946BBCE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA112001-8F88-411D-9BE4-DDB946BBCE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA112001-8F88-411D-9BE4-DDB946BBCE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA112001-8F88-411D-9BE4-DDB946BBCE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4561AEB-84F0-477E-A237-CEA9C2616E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4561AEB-84F0-477E-A237-CEA9C2616E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4561AEB-84F0-477E-A237-CEA9C2616E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4561AEB-84F0-477E-A237-CEA9C2616E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD81DD5-AC39-4B7E-8B86-949AD0818F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD81DD5-AC39-4B7E-8B86-949AD0818F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD81DD5-AC39-4B7E-8B86-949AD0818F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD81DD5-AC39-4B7E-8B86-949AD0818F66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41ED059E-C792-4631-95DE-D5245C5B014E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41ED059E-C792-4631-95DE-D5245C5B014E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41ED059E-C792-4631-95DE-D5245C5B014E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41ED059E-C792-4631-95DE-D5245C5B014E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501AA7A5-4882-476A-B19B-54AB27333405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501AA7A5-4882-476A-B19B-54AB27333405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501AA7A5-4882-476A-B19B-54AB27333405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501AA7A5-4882-476A-B19B-54AB27333405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B290526-8BCD-449D-B2E8-06787C586170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B290526-8BCD-449D-B2E8-06787C586170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B290526-8BCD-449D-B2E8-06787C586170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B290526-8BCD-449D-B2E8-06787C586170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23AE5B7-0714-48DD-B1FE-09145AC31A46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23AE5B7-0714-48DD-B1FE-09145AC31A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23AE5B7-0714-48DD-B1FE-09145AC31A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23AE5B7-0714-48DD-B1FE-09145AC31A46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D09E016-F031-4834-87FA-C2705A4A0563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D09E016-F031-4834-87FA-C2705A4A0563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D09E016-F031-4834-87FA-C2705A4A0563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D09E016-F031-4834-87FA-C2705A4A0563}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD842668-78C0-4529-9FBB-DF923C61BC26} = {4A43D5A7-C241-4992-959A-4AAE8230D358}
+		{3082D9AB-6B8E-4640-85C1-0F0AA2E9DE33} = {106F67AD-243A-4CE7-A66B-8059F8FC966F}
+		{1D6055DC-3C36-49CC-9502-3074775C06C8} = {6B31C8CC-FEAB-440D-9FEF-42E1E5191D8A}
+		{523D95FD-06CC-4F25-8043-65054551CDA5} = {FE45A8D3-ABA0-4DAF-952A-CE0CF5113B5D}
+		{BA112001-8F88-411D-9BE4-DDB946BBCE8D} = {FE45A8D3-ABA0-4DAF-952A-CE0CF5113B5D}
+		{F4561AEB-84F0-477E-A237-CEA9C2616E06} = {24C6CE3F-7404-440F-9CD1-2A03F9B4F57C}
+		{4CD81DD5-AC39-4B7E-8B86-949AD0818F66} = {4A43D5A7-C241-4992-959A-4AAE8230D358}
+		{41ED059E-C792-4631-95DE-D5245C5B014E} = {4A79FE29-DACC-4F3B-9C74-0EFEF25D91CC}
+		{501AA7A5-4882-476A-B19B-54AB27333405} = {0B8FB70E-1322-4B8C-9C02-EEE81A94C08C}
+		{0B8FB70E-1322-4B8C-9C02-EEE81A94C08C} = {24C6CE3F-7404-440F-9CD1-2A03F9B4F57C}
+		{4B290526-8BCD-449D-B2E8-06787C586170} = {0B8FB70E-1322-4B8C-9C02-EEE81A94C08C}
+		{FE45A8D3-ABA0-4DAF-952A-CE0CF5113B5D} = {24C6CE3F-7404-440F-9CD1-2A03F9B4F57C}
+		{A09E7C10-3C48-4C6D-9D7E-543DB08B3C19} = {24C6CE3F-7404-440F-9CD1-2A03F9B4F57C}
+		{E23AE5B7-0714-48DD-B1FE-09145AC31A46} = {A09E7C10-3C48-4C6D-9D7E-543DB08B3C19}
+		{2D09E016-F031-4834-87FA-C2705A4A0563} = {A09E7C10-3C48-4C6D-9D7E-543DB08B3C19}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AD15A71-BC50-442C-ADC2-A39A786ED8A7}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 13
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/vacourse4
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DataStorage\\DataStorage.csproj
+		SccProjectTopLevelParentUniqueName1 = Messenger.sln
+		SccProjectName1 = DataStorage
+		SccLocalPath1 = DataStorage
+		SccProjectUniqueName2 = DataStorage.Test\\DataStorage.Test.csproj
+		SccProjectTopLevelParentUniqueName2 = Messenger.sln
+		SccProjectName2 = DataStorage.Test
+		SccLocalPath2 = DataStorage.Test
+		SccProjectUniqueName3 = ClientApp\\ClientApp.csproj
+		SccProjectTopLevelParentUniqueName3 = Messenger.sln
+		SccProjectName3 = ClientApp
+		SccLocalPath3 = ClientApp
+		SccProjectUniqueName4 = ConsoleHosting\\ConsoleHosting.csproj
+		SccProjectTopLevelParentUniqueName4 = Messenger.sln
+		SccProjectName4 = ConsoleHosting
+		SccLocalPath4 = ConsoleHosting
+		SccProjectUniqueName5 = MessengerService\\MessengerService.csproj
+		SccProjectTopLevelParentUniqueName5 = Messenger.sln
+		SccProjectName5 = MessengerService
+		SccLocalPath5 = MessengerService
+		SccProjectUniqueName6 = Info\\Info.csproj
+		SccProjectTopLevelParentUniqueName6 = Messenger.sln
+		SccProjectName6 = Info
+		SccLocalPath6 = Info
+		SccProjectUniqueName7 = DTO\\DTO.csproj
+		SccProjectTopLevelParentUniqueName7 = Messenger.sln
+		SccProjectName7 = DTO
+		SccLocalPath7 = DTO
+		SccProjectUniqueName8 = Common.ServiceLocator\\Common.ServiceLocator.csproj
+		SccProjectTopLevelParentUniqueName8 = Messenger.sln
+		SccProjectName8 = Common.ServiceLocator
+		SccLocalPath8 = Common.ServiceLocator
+		SccProjectUniqueName9 = MaintenanceService\\MaintenanceService.csproj
+		SccProjectTopLevelParentUniqueName9 = Messenger.sln
+		SccProjectName9 = MaintenanceService
+		SccLocalPath9 = MaintenanceService
+		SccProjectUniqueName10 = ConsoleHostingMaintenance\\ConsoleHostingMaintenance.csproj
+		SccProjectTopLevelParentUniqueName10 = Messenger.sln
+		SccProjectName10 = ConsoleHostingMaintenance
+		SccLocalPath10 = ConsoleHostingMaintenance
+		SccProjectUniqueName11 = ConsoleHostingAuthentication\\ConsoleHostingAuthentication.csproj
+		SccProjectTopLevelParentUniqueName11 = Messenger.sln
+		SccProjectName11 = ConsoleHostingAuthentication
+		SccLocalPath11 = ConsoleHostingAuthentication
+		SccProjectUniqueName12 = AuthenticationService\\AuthenticationService.csproj
+		SccProjectTopLevelParentUniqueName12 = Messenger.sln
+		SccProjectName12 = AuthenticationService
+		SccLocalPath12 = AuthenticationService
+	EndGlobalSection
+EndGlobal

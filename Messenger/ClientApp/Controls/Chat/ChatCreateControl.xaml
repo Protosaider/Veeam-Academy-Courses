@@ -1,0 +1,79 @@
+﻿<controls:BaseControl
+    x:TypeArguments="viewModel:ChatCreateViewModel"
+    x:Class="ClientApp.Controls.Chat.ChatCreateControl"
+             xmlns:controls="clr-namespace:ClientApp.Controls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientApp.Controls.Chat"
+             xmlns:attachedProperties="clr-namespace:ClientApp.AttachedProperties"
+             xmlns:contact="clr-namespace:ClientApp.Controls.Contact"
+             xmlns:viewModel="clr-namespace:ClientApp.ViewModels.ChatPage"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="200">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Title bar -->
+        <Grid Height="50" Background="{StaticResource BlueBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!-- Main buttons -->
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <Button Style="{StaticResource IconButton}" 
+                        Content="{StaticResource FontAwesomeArrowLeftIcon}" 
+                        Command="{Binding CloseCreateChatCommand}"
+                        />
+            </StackPanel>
+        </Grid>
+
+        <StackPanel VerticalAlignment="Top"
+                    Background="{StaticResource ForegroundLightBrush}"
+                    Grid.Row="1"
+                    HorizontalAlignment="Stretch">
+            <TextBox Tag="Title..." 
+                        Margin="10 10 10 10" 
+                        FontSize="{StaticResource FontSizeLarge}" 
+                        FontFamily="{StaticResource ExoRegular}"
+                        Text="{Binding DisplayTitle}"
+                        TextAlignment="Center"/>
+            <CheckBox Content="Is Personal?"
+                    HorizontalAlignment="Center"
+                    FontSize="{StaticResource FontSizeLarge}" 
+                    FontFamily="{StaticResource ExoRegular}"
+                    Margin="0 10 0 10"
+                    IsChecked="{Binding IsPersonal}"/>
+            <TextBlock Text="Participants" 
+                    FontSize="{StaticResource FontSizeRegular}" 
+                    FontFamily="{StaticResource ExoRegular}"
+                    Foreground="{StaticResource BlueBrush}"
+                    Margin="0 10 0 10" TextAlignment="Center"/>
+        </StackPanel>
+
+        <local:ChatCreateListControl Grid.Row="2" />
+
+        <Border Grid.Row="3" Background="{StaticResource ForegroundLightBrush}">
+            <Button 
+                Height="34"
+                Width="80"
+                Padding="0"
+                Margin="0 8 0 8"
+                FontSize="{StaticResource FontSizeLarge}"
+                FontFamily="{StaticResource ExoRegular}" 
+                Content="Create" 
+                Command="{Binding CreateChatCommand}">
+            </Button>
+        </Border>
+
+
+    </Grid>
+</controls:BaseControl>
