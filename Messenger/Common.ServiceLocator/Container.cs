@@ -10,16 +10,16 @@ namespace Common.ServiceLocator
         private CContainer() { }
 
 
-        private readonly IList<RegisteredObject> _registeredObjects = new List<RegisteredObject>();
+        private readonly IList<CRegisteredObject> _registeredObjects = new List<CRegisteredObject>();
 
-        public void Register<TConcreteRealization>(ELifeCycle lifeCycle = ELifeCycle.Transient)
+        public void Register<TConcreteRealization>(ELifeCycle lifeCycle)
         {
             Register<TConcreteRealization, TConcreteRealization>(lifeCycle);
         }
 
-        public void Register<TTypeToResolve, TConcreteRealization>(ELifeCycle lifeCycle = ELifeCycle.Transient)
+        public void Register<TTypeToResolve, TConcreteRealization>(ELifeCycle lifeCycle)
         {
-            _registeredObjects.Add(new RegisteredObject(typeof(TTypeToResolve), typeof(TConcreteRealization), lifeCycle));
+            _registeredObjects.Add(new CRegisteredObject(typeof(TTypeToResolve), typeof(TConcreteRealization), lifeCycle));
         }
 
         public TTypeToResolve Resolve<TTypeToResolve>()
@@ -35,15 +35,10 @@ namespace Common.ServiceLocator
         private Object ResolveObject(Type typeToResolve)
         {
             var registeredObject = _registeredObjects.FirstOrDefault(o => o.TypeToResolve == typeToResolve);
-            if (registeredObject == null)
-            {
-                return null;
-                //throw new TypeNotRegisteredException($"The type {typeToResolve.Name} has not been registered");
-            }
-            return GetInstance(registeredObject);
-        }
+            return registeredObject == null ? null : GetInstance(registeredObject);
+		}
 
-        private Object GetInstance(RegisteredObject registeredObject)
+        private Object GetInstance(CRegisteredObject registeredObject)
         {
             if (registeredObject.Instance == null ||
                 registeredObject.LifeCycle == ELifeCycle.Transient)
@@ -57,7 +52,7 @@ namespace Common.ServiceLocator
 
         //This is a recursive operation that ensures the entire object graph is instantiated
         //Only registered types can be instantiated!
-        private IEnumerable<Object> ResolveConstructorParameters(RegisteredObject registeredObject)
+        private IEnumerable<Object> ResolveConstructorParameters(CRegisteredObject registeredObject)
         {
             //var constructorInfo = registeredObject.ConcreteType.GetConstructors().First();
             var constructorInfo = registeredObject.ConcreteType.GetConstructors();

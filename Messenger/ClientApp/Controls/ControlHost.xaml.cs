@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ClientApp.Other;
 using ClientApp.ViewModels;
 using ClientApp.ViewModels.Base;
@@ -62,9 +52,15 @@ namespace ClientApp.Controls
             var currentControl = (SideMenuContent)value;
             var currentControlViewModel = d.GetValue(CurrentControlViewModelProperty);
 
+			if (!(d is ControlHost))
+			{
+				//Debugger.Break();
+				return value;
+            }
+
             //get frames from xaml
-            var newPageFrame = (d as ControlHost).NewControl;
-            var oldPageFrame = (d as ControlHost).OldControl;
+            var newPageFrame = ((ControlHost)d).NewControl;
+            var oldPageFrame = ((ControlHost)d).OldControl;
 
             // If the current page hasn't changed just update the view model
             if (newPageFrame.Content is BaseControl page &&
@@ -72,7 +68,6 @@ namespace ClientApp.Controls
             {
                 // Just update the view model
                 page.ViewModelObject = currentControlViewModel;
-
                 return value;
             }
 

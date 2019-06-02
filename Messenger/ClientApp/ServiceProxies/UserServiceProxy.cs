@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Net.Http;
 using System.Text;
+using ClientApp.Other;
 using DTO;
 using log4net;
 using Newtonsoft.Json;
-using Other;
 
 namespace ClientApp.ServiceProxies
 {

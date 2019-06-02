@@ -3,9 +3,9 @@ using System.Windows.Input;
 
 namespace ClientApp.ViewModels
 {
-    public class CRefreshMessageListCommand : ICommand
+	internal sealed class CRefreshMessageListCommand : ICommand
     {
-        public Boolean IsWaitingForExecution { get; private set; } = true;
+		private Boolean IsWaitingForExecution { get; set; } = true;
 
         private readonly Predicate<Object> _canExecute;
         private readonly Action _refreshAction;

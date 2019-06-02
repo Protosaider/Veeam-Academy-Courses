@@ -2,13 +2,13 @@
 
 namespace DTO
 {
-    public class CChatDto
+    public sealed class CChatDto
     {
-        public Guid Id { get; set; }
-        public String Title { get; set; }
-        public Guid OwnerId { get; set; }
-        public Boolean IsPersonal { get; set; }
-        public Int32 Type { get; set; }
+        public Guid Id { get; }
+        public String Title { get; }
+        public Guid OwnerId { get; }
+        public Boolean IsPersonal { get; }
+        public Int32 Type { get; }
 
         public CChatDto(Guid id, String title, Guid ownerId, Boolean isPersonal, Int32 type)
         {

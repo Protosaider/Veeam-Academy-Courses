@@ -1,19 +1,16 @@
 ﻿using ClientApp.ServiceProxies;
-using ClientApp.ViewModels.ChatPage;
 using DTO;
 using log4net;
-using Other;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using ClientApp.DataSuppliers.Data;
 using ClientApp.Other;
 
 namespace ClientApp.DataSuppliers
 {
-    public sealed class CChatsSupplier : IChatsSupplier
+	internal sealed class CChatsSupplier : IChatsSupplier
     {
         private readonly CChatsServiceProxy _service;
         private readonly ILog _logger = SLogger.GetLogger();
@@ -40,18 +37,7 @@ namespace ClientApp.DataSuppliers
         {
             _logger.LogInfo($"Supplier method '{nameof(GetChats)}({participantId})' is called");
 
-            List<CChatData> chats = new List<CChatData>();
-
-            foreach (var chatDto in _service.GetChats(participantId))
-            {
-                //if (!Enum.TryParse(chatDto.Type, out EChatType type))
-                //    throw new ArgumentException(nameof(type));
-
-                var chat = new CChatData(chatDto.Id, chatDto.Title, (EChatType)chatDto.Type, chatDto.IsPersonal);
-                chats.Add(chat);
-            }
-
-            return chats;
+			return _service.GetChats(participantId).Select(chatDto => new CChatData(chatDto.Id, chatDto.Title, (EChatType)chatDto.Type, chatDto.IsPersonal)).ToList();
         }
 
         public Task<Int32> GetUnreadMessagesCount(Guid userId, Guid chatId)
@@ -69,10 +55,8 @@ namespace ClientApp.DataSuppliers
             {
                 //TODO May return null - Use NullObjectPattern?
                 var result = _service.GetLastMessage(userId, chatId);
-                if (result == null)
-                    return CMessageData.Null;
-                return new CMessageData(result.Id, result.DispatchDate, result.MessageText, result.IsSentByRequestingUser, result.IsRead, result.Login, result.USN);
-            });
+                return result == null ? CMessageData.Null : new CMessageData(result.Id, result.DispatchDate, result.MessageText, result.IsSentByRequestingUser, result.IsRead, result.Login, result.Usn);
+			});
         }
         //TODO Create method to get item depended on chat type
         public Task<CChatData> GetDialog(Guid userId, Guid participantId)

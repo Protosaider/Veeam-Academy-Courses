@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Common.ServiceLocator;
@@ -11,11 +8,11 @@ using DataStorage.DataProviders;
 using DTO;
 using Info;
 using log4net;
-using Other;
+using MessengerService.Other;
 
 namespace MessengerService.Controllers
 {
-    public class AuthController : ApiController
+    public sealed class AuthController : ApiController
     {
         private static readonly ILog s_log = SLogger.GetLogger();
         private readonly ICUserInfoDataProvider _userDataProvider;
@@ -41,12 +38,12 @@ namespace MessengerService.Controllers
         [ValidateModel]
         public IHttpActionResult GetUser([FromUri]CCredentialsDto credentials)
         {
-            s_log.LogInfo($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({credentials}) is called");
+            s_log.LogInfo($"{System.Reflection.MethodBase.GetCurrentMethod()}({credentials}) is called");
 
             if (credentials == null)
             {
                 ModelState.AddModelError($"{nameof(credentials)}", new ArgumentNullException(nameof(credentials), "Incoming data is null"));
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({credentials})", new ArgumentNullException(nameof(credentials), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({(CCredentialsDto)null})", new ArgumentNullException(nameof(credentials), "Incoming data is null"));
                 return BadRequest(ModelState);
             }
 
@@ -54,17 +51,15 @@ namespace MessengerService.Controllers
 
             if (userInfo == null)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({credentials})", new HttpResponseException(HttpStatusCode.NotFound));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({credentials})", new HttpResponseException(HttpStatusCode.NotFound));
                 return NotFound();
             }
-            else
-            {
-                var userDto = new CTokenDto(
-                    userInfo.Id
-                    );
-                return Ok(userDto);
-            }         
-        }
+
+			var userDto = new CTokenDto(
+				userInfo.Id
+			);
+			return Ok(userDto);
+		}
 
         [Route("api/auth/signup")]
         [ResponseType(typeof(String))]
@@ -74,7 +69,7 @@ namespace MessengerService.Controllers
             if (signUpData == null)
             {
                 ModelState.AddModelError($"{nameof(signUpData)}", "Incoming data is null");
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({signUpData})", new ArgumentNullException(nameof(signUpData), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({(CSignUpDto)null})", new ArgumentNullException(nameof(signUpData), "Incoming data is null"));
                 return BadRequest(ModelState);
             }
 
@@ -91,7 +86,7 @@ namespace MessengerService.Controllers
 
             if (newUserId == Guid.Empty)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({signUpData})", new Exception("Failed to create new user"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({signUpData})", new Exception("Failed to create new user"));
                 return InternalServerError();
             }
 

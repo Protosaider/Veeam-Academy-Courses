@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using DataStorage.Other;
 using Info;
 using log4net;
-using Other;
 
 namespace DataStorage.DataProviders
 {

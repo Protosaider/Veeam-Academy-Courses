@@ -1,19 +1,15 @@
-﻿using ClientApp.Other;
-using ClientApp.ViewModels.Base;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using ClientApp.Other;
 
-namespace ClientApp.ViewModels
+namespace ClientApp.ViewModels.Base
 {
-    public abstract class CBaseAsyncCommand : ICommand, INotifyPropertyChanged
+	internal abstract class CBaseAsyncCommand : ICommand, INotifyPropertyChanged
     {
         #region IsExecuting
 

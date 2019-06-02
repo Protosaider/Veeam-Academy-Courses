@@ -18,7 +18,7 @@ namespace ClientApp.ViewModels.Base
 
         private readonly Dictionary<String, ICollection<String>> _validationErrors = new Dictionary<String, ICollection<String>>();
 
-        public delegate TResult ValidateFunc<in T1, T2, out TResult>(T1 propertyValue, out T2 validationErrors);
+		protected delegate TResult ValidateFunc<in T1, T2, out TResult>(T1 propertyValue, out T2 validationErrors);
 
 		protected Boolean ValidateProperty<T>(ValidateFunc<T, ICollection<String>, Boolean> validate, T propertyValue, [CallerMemberName]String propertyName = "")
         {

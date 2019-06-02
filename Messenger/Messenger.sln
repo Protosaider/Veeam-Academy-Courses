@@ -56,11 +56,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerService", "Messeng
 		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36FEEC9D-2610-463D-96AE-1D413F614A7D}"
-	ProjectSection(SolutionItems) = preProject
-		TFSIgnore.tfignore = TFSIgnore.tfignore
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{F4561AEB-84F0-477E-A237-CEA9C2616E06}"
 	ProjectSection(ProjectDependencies) = postProject
 		{41ED059E-C792-4631-95DE-D5245C5B014E} = {41ED059E-C792-4631-95DE-D5245C5B014E}
@@ -172,59 +167,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AD15A71-BC50-442C-ADC2-A39A786ED8A7}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 13
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dev.azure.com/vacourse4
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = DataStorage\\DataStorage.csproj
-		SccProjectTopLevelParentUniqueName1 = Messenger.sln
-		SccProjectName1 = DataStorage
-		SccLocalPath1 = DataStorage
-		SccProjectUniqueName2 = DataStorage.Test\\DataStorage.Test.csproj
-		SccProjectTopLevelParentUniqueName2 = Messenger.sln
-		SccProjectName2 = DataStorage.Test
-		SccLocalPath2 = DataStorage.Test
-		SccProjectUniqueName3 = ClientApp\\ClientApp.csproj
-		SccProjectTopLevelParentUniqueName3 = Messenger.sln
-		SccProjectName3 = ClientApp
-		SccLocalPath3 = ClientApp
-		SccProjectUniqueName4 = ConsoleHosting\\ConsoleHosting.csproj
-		SccProjectTopLevelParentUniqueName4 = Messenger.sln
-		SccProjectName4 = ConsoleHosting
-		SccLocalPath4 = ConsoleHosting
-		SccProjectUniqueName5 = MessengerService\\MessengerService.csproj
-		SccProjectTopLevelParentUniqueName5 = Messenger.sln
-		SccProjectName5 = MessengerService
-		SccLocalPath5 = MessengerService
-		SccProjectUniqueName6 = Info\\Info.csproj
-		SccProjectTopLevelParentUniqueName6 = Messenger.sln
-		SccProjectName6 = Info
-		SccLocalPath6 = Info
-		SccProjectUniqueName7 = DTO\\DTO.csproj
-		SccProjectTopLevelParentUniqueName7 = Messenger.sln
-		SccProjectName7 = DTO
-		SccLocalPath7 = DTO
-		SccProjectUniqueName8 = Common.ServiceLocator\\Common.ServiceLocator.csproj
-		SccProjectTopLevelParentUniqueName8 = Messenger.sln
-		SccProjectName8 = Common.ServiceLocator
-		SccLocalPath8 = Common.ServiceLocator
-		SccProjectUniqueName9 = MaintenanceService\\MaintenanceService.csproj
-		SccProjectTopLevelParentUniqueName9 = Messenger.sln
-		SccProjectName9 = MaintenanceService
-		SccLocalPath9 = MaintenanceService
-		SccProjectUniqueName10 = ConsoleHostingMaintenance\\ConsoleHostingMaintenance.csproj
-		SccProjectTopLevelParentUniqueName10 = Messenger.sln
-		SccProjectName10 = ConsoleHostingMaintenance
-		SccLocalPath10 = ConsoleHostingMaintenance
-		SccProjectUniqueName11 = ConsoleHostingAuthentication\\ConsoleHostingAuthentication.csproj
-		SccProjectTopLevelParentUniqueName11 = Messenger.sln
-		SccProjectName11 = ConsoleHostingAuthentication
-		SccLocalPath11 = ConsoleHostingAuthentication
-		SccProjectUniqueName12 = AuthenticationService\\AuthenticationService.csproj
-		SccProjectTopLevelParentUniqueName12 = Messenger.sln
-		SccProjectName12 = AuthenticationService
-		SccLocalPath12 = AuthenticationService
 	EndGlobalSection
 EndGlobal

@@ -1,12 +1,7 @@
 ﻿using ClientApp.DataSuppliers;
-using ClientApp.Models.DataSuppliers;
 using ClientApp.ServiceProxies;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ClientApp.Activities
 {

@@ -3,16 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DataStorage.Other;
 using Info;
 using log4net;
-using Other;
 
 namespace DataStorage.DataProviders
 {
-    public class CChatInfoDataProvider : ICChatInfoDataProvider
+	public class CChatInfoDataProvider : ICChatInfoDataProvider
     {
         private readonly CDataStorageSettings _dbSettings;
         private static readonly ILog s_log = SLogger.GetLogger();

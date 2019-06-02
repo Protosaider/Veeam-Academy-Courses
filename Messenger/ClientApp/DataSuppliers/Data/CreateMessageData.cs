@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClientApp.DataSuppliers.Data
 {
-	internal class CCreateMessageData
+	internal sealed class CCreateMessageData
     {
         public Guid ChatId { get; }
         public String Text { get; }

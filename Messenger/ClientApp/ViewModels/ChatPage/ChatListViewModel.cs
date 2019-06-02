@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using ClientApp.DataSuppliers;
 using ClientApp.Other;
@@ -11,7 +9,7 @@ using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-    public sealed class ChatListViewModel : BaseViewModel
+	internal sealed class ChatListViewModel : BaseViewModel
     {
         private ObservableCollection<ChatListItemViewModel> _items;
         private ObservableCollection<ChatListItemViewModel> _filteredItems;
@@ -111,24 +109,24 @@ namespace ClientApp.ViewModels.ChatPage
 
         private readonly Dictionary<EListSortOrder, Comparer<ChatListItemViewModel>> _comparerDict = new Dictionary<EListSortOrder, Comparer<ChatListItemViewModel>>
         {
-            [EListSortOrder.ByStringAsc] = Comparer<ChatListItemViewModel>.Create(new Comparison<ChatListItemViewModel>((l, r) => l.Name.CompareTo(r.Name))),
-            [EListSortOrder.ByStringDesc] = Comparer<ChatListItemViewModel>.Create(new Comparison<ChatListItemViewModel>((l, r) => -1 * l.Name.CompareTo(r.Name))),
+            [EListSortOrder.ByStringAsc] = Comparer<ChatListItemViewModel>.Create(new Comparison<ChatListItemViewModel>((l, r) => String.Compare(l.Name, r.Name, StringComparison.InvariantCultureIgnoreCase))),
+            [EListSortOrder.ByStringDesc] = Comparer<ChatListItemViewModel>.Create(new Comparison<ChatListItemViewModel>((l, r) => -1 * String.Compare(l.Name, r.Name, StringComparison.InvariantCultureIgnoreCase))),
             [EListSortOrder.ByNumberAsc] = Comparer<ChatListItemViewModel>.Create(new Comparison<ChatListItemViewModel>((l, r) => l.NewMessagesCount.CompareTo(r.NewMessagesCount))),
             [EListSortOrder.ByNumberDesc] = Comparer<ChatListItemViewModel>.Create(new Comparison<ChatListItemViewModel>((l, r) => -1 * l.NewMessagesCount.CompareTo(r.NewMessagesCount))),
         };
 
         public EListSortOrder SortOrder { get; set; } = EListSortOrder.None;
 
-        public ICommand ChangeSortOrderCommand { get; set; }
-        public ICommand OpenFilterCommand { get; set; }
-        public ICommand CloseFilterCommand { get; set; }
+        public ICommand ChangeSortOrderCommand { get; }
+        public ICommand OpenFilterCommand { get; }
+        public ICommand CloseFilterCommand { get; }
 
 
 
-        public ICommand SearchCommand { get; set; }
-        public ICommand OpenSearchCommand { get; set; }
-        public ICommand CloseSearchCommand { get; set; }
-        public ICommand ClearSearchCommand { get; set; }
+        public ICommand SearchCommand { get; }
+        public ICommand OpenSearchCommand { get; }
+        public ICommand CloseSearchCommand { get; }
+        public ICommand ClearSearchCommand { get; }
 
 
         private COpenCreateChatCommand _openCreateChatCommandClass;
@@ -264,7 +262,7 @@ namespace ClientApp.ViewModels.ChatPage
                   */ 
             #endregion
 
-            _chatsSupplier = new CChatsSupplier();
+            _chatsSupplier = CChatsSupplier.Create();
 
             Items = new ObservableCollection<ChatListItemViewModel>(_chatsSupplier
                 .GetChats(ServiceProxies.STokenProvider.Id).Select(x => new ChatListItemViewModel(x)));
@@ -279,7 +277,7 @@ namespace ClientApp.ViewModels.ChatPage
             ChangeSortOrderCommand = new CRelayCommand((obj) =>
             {
                 SortOrder = (EListSortOrder)obj;
-                Filter(null);
+                Filter();
             });
         }
 
@@ -288,7 +286,7 @@ namespace ClientApp.ViewModels.ChatPage
         private void OpenFilter(Object obj) => FilterIsOpen = true;
         private void CloseFilter(Object obj) => FilterIsOpen = false;
 
-        private void Filter(Object obj)
+        private void Filter()
         {
             // If we have no search text, or no items
             if (String.IsNullOrEmpty(SearchText) || Items == null || Items.Count <= 0)
@@ -346,7 +344,7 @@ namespace ClientApp.ViewModels.ChatPage
                 String.Equals(_lastSearchText, SearchText))
                 return;
 
-            Filter(obj);
+            Filter();
 
             //// Find all items that contain the given text
             //FilteredItems = new ObservableCollection<ChatListItemViewModel>(

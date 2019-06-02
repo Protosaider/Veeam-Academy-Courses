@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Animation;
 
@@ -15,7 +11,7 @@ namespace ClientApp.Animations
         /// Adds a slide from left animation to the storyboard
         /// </summary>
         /// <param name="storyboard">The storyboard to add the animation to</param>
-        /// <param name="seconds">The time the animation will take</param>
+        /// <param name="durationInSeconds">The time the animation will take</param>
         /// <param name="offset">The distance to the left to start from</param>
         /// <param name="decelerationRatio">The rate of deceleration</param>
         /// <param name="keepMargin">Whether to keep the element at the same width during animation</param>

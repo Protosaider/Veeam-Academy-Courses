@@ -2,20 +2,18 @@
 using DTO;
 using Info;
 using log4net;
-using Other;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Common.ServiceLocator;
 using DataStorage;
+using MessengerService.Other;
 
 namespace MessengerService.Controllers
 {
-    public class ChatController : ApiController
+    public sealed class ChatController : ApiController
     {
         private static readonly ILog s_log = SLogger.GetLogger();
         private readonly ICMessageInChatInfoDataProvider _messageInChatDataProvider;
@@ -45,12 +43,12 @@ namespace MessengerService.Controllers
         [ResponseType(typeof(IEnumerable<CMessageDto>))]
         public IHttpActionResult GetAllMessages([FromUri]Guid userId, [FromUri]Guid chatId, [FromUri]Int32 limit = 50, [FromUri]Int32 offset = 0)
         {
-            s_log.LogInfo($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({chatId}) is called");
+            s_log.LogInfo($"{System.Reflection.MethodBase.GetCurrentMethod()}({chatId}) is called");
 
             if (chatId == Guid.Empty)
             {
                 ModelState.AddModelError($"{nameof(chatId)}", "Incoming data is null");
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({chatId})", new ArgumentNullException(nameof(chatId), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({chatId})", new ArgumentNullException(nameof(chatId), "Incoming data is null"));
                 return BadRequest(ModelState);
             }
 
@@ -58,11 +56,11 @@ namespace MessengerService.Controllers
 
             if (messageInfos == null)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({chatId})", new Exception("Failed to get all messages from chat"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({chatId})", new Exception("Failed to get all messages from chat"));
                 return NotFound();
             }
 
-            return Ok(messageInfos.Select(x => new CMessageDto(x.Id, x.DispatchDate, x.MessageText, x.Type, x.ContentUri, x.FromUserId == userId, x.IsRead, x.Login, x.USN)));
+            return Ok(messageInfos.Select(x => new CMessageDto(x.Id, x.DispatchDate, x.MessageText, x.Type, x.ContentUri, x.FromUserId == userId, x.IsRead, x.Login, x.Usn)));
         }
 
         //[Route("api/chats/{chatId}/messages{lastRequestDate}{limit}{offset}")]
@@ -71,12 +69,12 @@ namespace MessengerService.Controllers
         [ResponseType(typeof(List<CMessageDto>))]
         public IHttpActionResult GetNewMessages([FromUri]Guid userId, [FromUri]Guid chatId, [FromUri]DateTimeOffset lastRequestDate, [FromUri]Int64 lastUsn, [FromUri]Int32 limit = 50, [FromUri]Int32 offset = 0)
         {
-            s_log.LogInfo($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({chatId}) is called");
+            s_log.LogInfo($"{System.Reflection.MethodBase.GetCurrentMethod()}({chatId}) is called");
 
             if (chatId == Guid.Empty)
             {
                 ModelState.AddModelError($"{nameof(chatId)}", "Incoming data is null");
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({chatId})", new ArgumentNullException(nameof(chatId), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({chatId})", new ArgumentNullException(nameof(chatId), "Incoming data is null"));
                 return BadRequest(ModelState);
             }
 
@@ -89,11 +87,11 @@ namespace MessengerService.Controllers
 
             if (messageInfos == null)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({chatId})", new Exception("Failed to get all messages from chat"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({chatId})", new Exception("Failed to get all messages from chat"));
                 return NotFound();
             }
 
-            return Ok(messageInfos.Select(x => new CMessageDto(x.Id, x.DispatchDate, x.MessageText, x.Type, x.ContentUri, x.FromUserId == userId, x.IsRead, x.Login, x.USN)).ToList());
+            return Ok(messageInfos.Select(x => new CMessageDto(x.Id, x.DispatchDate, x.MessageText, x.Type, x.ContentUri, x.FromUserId == userId, x.IsRead, x.Login, x.Usn)).ToList());
         }
 
 
@@ -146,19 +144,18 @@ namespace MessengerService.Controllers
 
             if (messageInfoRetrieved == null || messageInfoRetrieved.Id == Guid.Empty)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({message})", new Exception("Failed to post message: can't get message info"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({message})", new Exception("Failed to post message: can't get message info"));
                 return InternalServerError();
             }
 
             var chatParticipants = _userDataProvider.GetAllChatParticipantsByChatId(message.ChatId);
             if (chatParticipants == null || chatParticipants.Count == 0)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({message})", new Exception("Failed to post message: can't get chat participants"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({message})", new Exception("Failed to post message: can't get chat participants"));
                 return InternalServerError();
             }
 
-            var rowsAffected = 0;
-            CUserInfo senderInfo = null;
+			CUserInfo senderInfo = null;
             //get all participants
             foreach (var user in chatParticipants)
             {
@@ -177,16 +174,16 @@ namespace MessengerService.Controllers
                     user.Id == message.SenderId
                     );
 
-                rowsAffected = _messageInChatDataProvider.CreateMessageInChat(messageInChatInfo);
+                var rowsAffected = _messageInChatDataProvider.CreateMessageInChat(messageInChatInfo);
 
                 if (rowsAffected == 0)
                 {
-                    s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({message})", new Exception("Failed to post message: can't create message in chat"));
+                    s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({message})", new Exception("Failed to post message: can't create message in chat"));
                     return InternalServerError();
                 }
             }
 
-            return Ok(new CMessagePostedDto(messageInfoRetrieved.Id, messageInfoRetrieved.DispatchDate, senderInfo.Login, messageInfoRetrieved.USN));
+            return Ok(new CMessagePostedDto(messageInfoRetrieved.Id, messageInfoRetrieved.DispatchDate, senderInfo != null ? senderInfo.Login : String.Empty, messageInfoRetrieved.Usn));
         }
 
         [Route("api/chats/messages/read")]
@@ -215,7 +212,7 @@ namespace MessengerService.Controllers
 
                 if (rowsAffected == 0)
                 {
-                    s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({readMessages})", new Exception("Failed to update message in chat"));
+                    s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({readMessages})", new Exception("Failed to update message in chat"));
                     return InternalServerError();
                 }
             }

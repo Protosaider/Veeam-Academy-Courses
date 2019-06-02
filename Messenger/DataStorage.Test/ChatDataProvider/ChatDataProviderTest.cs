@@ -7,11 +7,11 @@ using Xunit;
 
 namespace DataStorage.Test.ChatDataProvider
 {
-    public sealed class ChatDataProviderTest
+    public sealed class CChatDataProviderTest
     {
         private readonly ICChatInfoDataProvider _chatDataProvider;
 
-        public ChatDataProviderTest()
+        public CChatDataProviderTest()
         {
             var container = SServiceLocator.CreateContainer();
             container.Register<ICChatInfoDataProvider, CChatInfoDataProvider>(ELifeCycle.Transient);

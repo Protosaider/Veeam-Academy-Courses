@@ -3,11 +3,10 @@ using System.Windows.Input;
 using ClientApp.DataSuppliers.Data;
 using ClientApp.Other;
 using ClientApp.ViewModels.Base;
-using DTO;
 
 namespace ClientApp.ViewModels.Contact
 {
-    public sealed class ContactListItemViewModel : BaseViewModel
+	internal sealed class ContactListItemViewModel : BaseViewModel
     {
         private String _name;
         private DateTimeOffset _lastActiveTime;
@@ -105,8 +104,8 @@ namespace ClientApp.ViewModels.Contact
 
         public ContactListItemViewModel() { }
 
-        private COpenChatCommand _openChatCommandClass;       
-        public COpenChatCommand OpenChatCommandClass => _openChatCommandClass ?? (_openChatCommandClass = new COpenChatCommand(() => IsChatOpened = true, () => !IsChatOpened));
+        private COpenChatCommand _openChatCommandClass;
+		private COpenChatCommand OpenChatCommandClass => _openChatCommandClass ?? (_openChatCommandClass = new COpenChatCommand(() => IsChatOpened = true, () => !IsChatOpened));
         private ICommand _openChatCommand;
         public ICommand OpenChatCommand => _openChatCommand ?? (_openChatCommand = OpenChatCommandClass);
 

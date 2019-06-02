@@ -1,18 +1,14 @@
 ﻿using ClientApp.DataSuppliers.Data;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-    public class OpenChatCommandArgs
+	internal class COpenChatCommandArgs
     {
-        public readonly CChatData ChatData;
-        public readonly Boolean IsSelected;
+		public CChatData ChatData { get; }
+		public Boolean IsSelected { get; }
 
-        public OpenChatCommandArgs(CChatData chatData, Boolean isSelected)
+		public COpenChatCommandArgs(CChatData chatData, Boolean isSelected)
         {
             ChatData = chatData;
             IsSelected = isSelected;

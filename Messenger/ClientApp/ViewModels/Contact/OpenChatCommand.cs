@@ -2,14 +2,13 @@
 using ClientApp.Other;
 using ClientApp.ViewModels.ChatPage;
 using System;
-using System.Collections.Generic;
-using System.Windows.Input;
 using ClientApp.DataSuppliers.Data;
 using ClientApp.ServiceProxies;
+using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.Contact
 {
-    public sealed class COpenChatCommand : CBaseCommand
+	internal sealed class COpenChatCommand : CBaseCommand
     {
         private readonly Action _onExecute;
         private readonly Func<Boolean> _onCanExecute;

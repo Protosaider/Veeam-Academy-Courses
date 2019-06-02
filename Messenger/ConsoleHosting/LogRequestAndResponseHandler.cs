@@ -1,13 +1,13 @@
 ﻿using log4net;
-using Other;
 using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using ConsoleHosting.Other;
 
 namespace ConsoleHosting
 {
-    internal class LogRequestAndResponseHandler : DelegatingHandler
+    internal sealed class CLogRequestAndResponseHandler : DelegatingHandler
     {
         private static readonly ILog s_log = SLogger.GetLogger();
         private static readonly String s_requestBody = "Incoming request body: ";

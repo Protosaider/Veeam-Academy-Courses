@@ -1,19 +1,20 @@
-﻿using DTO;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
+using ClientApp.Other;
+using DTO;
+using log4net;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace ClientApp.Models.DataSuppliers
+namespace ClientApp.ServiceProxies
 {
 	internal sealed class CContactsServiceProxy : IDisposable
     {
         private readonly HttpClient _client;
+		private readonly ILog _logger = SLogger.GetLogger();
 
         public CContactsServiceProxy()
         {
@@ -28,6 +29,7 @@ namespace ClientApp.Models.DataSuppliers
 
         public IEnumerable<CContactDto> GetContacts(Guid ownerId)
         {
+            _logger.LogInfo($"Service method '{nameof(GetContacts)}({ownerId})' is called");
             try
             {
                 HttpResponseMessage response = _client.GetAsync(
@@ -41,12 +43,14 @@ namespace ClientApp.Models.DataSuppliers
             catch (Exception e)
             {
                 Console.WriteLine(e);
+				_logger.LogError(@"MessengerService Error", e);
                 throw;
             }
         }
 
         public IEnumerable<CContactDto> GetHasDialogContacts(Guid ownerId)
         {
+            _logger.LogInfo($"Service method '{nameof(GetHasDialogContacts)}({ownerId})' is called");
             try
             {
                 HttpResponseMessage response = _client.GetAsync(
@@ -60,12 +64,14 @@ namespace ClientApp.Models.DataSuppliers
             catch (Exception e)
             {
                 Console.WriteLine(e);
+				_logger.LogError(@"MessengerService Error", e);
                 throw;
             }
         }
 
         public IEnumerable<CContactDto> SearchNewContacts(Guid ownerId, String q)
         {
+            _logger.LogInfo($"Service method '{nameof(SearchNewContacts)}({ownerId}, {q})' is called");
             try
             {
                 HttpResponseMessage response = _client.GetAsync(
@@ -79,6 +85,7 @@ namespace ClientApp.Models.DataSuppliers
             catch (Exception e)
             {
                 Console.WriteLine(e);
+				_logger.LogError(@"MessengerService Error", e);
                 throw;
             }          
         }
@@ -87,6 +94,7 @@ namespace ClientApp.Models.DataSuppliers
         public String PostContact(JObject dataToPost)
         {
             Console.WriteLine($@"Service method '{nameof(PostContact)}({dataToPost})' is called");
+			_logger.LogInfo($"Service method '{nameof(PostContact)}({dataToPost})' is called");
 
             try
             {
@@ -110,7 +118,8 @@ namespace ClientApp.Models.DataSuppliers
             }
             catch (Exception ex)
             {
-                Console.WriteLine("MessengerService Error", ex);
+                Console.WriteLine(@"MessengerService Error");
+				_logger.LogError(@"MessengerService Error", ex);
                 throw;
             }
 
@@ -119,6 +128,7 @@ namespace ClientApp.Models.DataSuppliers
         public String DeleteContact(JObject dataToDelete)
         {
             Console.WriteLine($@"Service method '{nameof(DeleteContact)}({dataToDelete})' is called");
+			_logger.LogInfo($"Service method '{nameof(DeleteContact)}({dataToDelete})' is called");
 
             try
             {
@@ -132,13 +142,15 @@ namespace ClientApp.Models.DataSuppliers
             }
             catch (Exception ex)
             {
-                Console.WriteLine("MessengerService Error", ex);
+                Console.WriteLine(@"MessengerService Error");
+				_logger.LogError(@"MessengerService Error", ex);
                 throw;
             }
         }
 
         public IEnumerable<CLastActiveDateDto> GetContactsLastActivityDate(Guid ownerId)
         {
+            _logger.LogInfo($"Service method '{nameof(GetContactsLastActivityDate)}({ownerId})' is called");
             try
             {
                 HttpResponseMessage response = _client.GetAsync(
@@ -152,6 +164,7 @@ namespace ClientApp.Models.DataSuppliers
             catch (Exception e)
             {
                 Console.WriteLine(e);
+				_logger.LogError(@"MessengerService Error", e);
                 throw;
             }
         }

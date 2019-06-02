@@ -11,7 +11,7 @@
              xmlns:contact="clr-namespace:ClientApp.Controls.Contact"
              xmlns:viewModel="clr-namespace:ClientApp.ViewModels.ChatPage"
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="200">
+             d:DesignHeight="350" d:DesignWidth="200" x:ClassModifier="internal">
     
     <Grid>
         <Grid.RowDefinitions>

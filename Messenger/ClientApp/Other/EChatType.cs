@@ -1,6 +1,6 @@
 ﻿namespace ClientApp.Other
 {
-    public enum EChatType
+	internal enum EChatType
     {
         Common,
         Group,

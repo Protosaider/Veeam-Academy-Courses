@@ -7,12 +7,10 @@ using ClientApp.DataSuppliers;
 using ClientApp.Other;
 using ClientApp.ServiceProxies;
 using ClientApp.ViewModels.Base;
-using ClientApp.ViewModels.ChatPage;
-using DTO;
 
 namespace ClientApp.ViewModels.Contact
 {
-    public sealed class ContactListViewModel : BaseViewModel
+	internal sealed class ContactListViewModel : BaseViewModel
     {
         private ObservableCollection<ContactListItemViewModel> _items;
         private ObservableCollection<ContactListItemViewModel> _filteredItems;
@@ -112,31 +110,31 @@ namespace ClientApp.ViewModels.Contact
 
         private readonly Dictionary<EListSortOrder, Comparer<ContactListItemViewModel>> _comparerDict = new Dictionary<EListSortOrder, Comparer<ContactListItemViewModel>>
         {
-            [EListSortOrder.ByStringAsc] = Comparer<ContactListItemViewModel>.Create(new Comparison<ContactListItemViewModel>((l, r) => l.Name.CompareTo(r.Name))),
-            [EListSortOrder.ByStringDesc] = Comparer<ContactListItemViewModel>.Create(new Comparison<ContactListItemViewModel>((l, r) => -1 * l.Name.CompareTo(r.Name))),
+            [EListSortOrder.ByStringAsc] = Comparer<ContactListItemViewModel>.Create(new Comparison<ContactListItemViewModel>((l, r) => String.Compare(l.Name, r.Name, StringComparison.InvariantCultureIgnoreCase))),
+            [EListSortOrder.ByStringDesc] = Comparer<ContactListItemViewModel>.Create(new Comparison<ContactListItemViewModel>((l, r) => -1 * String.Compare(l.Name, r.Name, StringComparison.InvariantCultureIgnoreCase))),
             [EListSortOrder.ByDateAsc] = Comparer<ContactListItemViewModel>.Create(new Comparison<ContactListItemViewModel>((l, r) => l.LastActiveTime.CompareTo(r.LastActiveTime))),
             [EListSortOrder.ByDateDesc] = Comparer<ContactListItemViewModel>.Create(new Comparison<ContactListItemViewModel>((l, r) => -1 * l.LastActiveTime.CompareTo(r.LastActiveTime))),
         };
 
-        public EListSortOrder SortOrder { get; set; } = EListSortOrder.None;
+		//set is accessible (public) because sort order can be set via Command
+        public EListSortOrder SortOrder { get; set; }
 
-        public ICommand ChangeSortOrderCommand { get; set; }
-        public ICommand OpenFilterCommand { get; set; }
-        public ICommand CloseFilterCommand { get; set; }
+        public ICommand ChangeSortOrderCommand { get; }
+        public ICommand OpenFilterCommand { get; }
+        public ICommand CloseFilterCommand { get; }
 
 
-        public ICommand SearchCommand { get; set; }
-        public ICommand OpenSearchCommand { get; set; }
-        public ICommand CloseSearchCommand { get; set; }
-        public ICommand ClearSearchCommand { get; set; }
+        public ICommand SearchCommand { get; }
+        public ICommand OpenSearchCommand { get; }
+        public ICommand CloseSearchCommand { get; }
+        public ICommand ClearSearchCommand { get; }
 
         private ICommand _openAddContactCommand;
         public ICommand OpenAddContactCommand => _openAddContactCommand ?? (_openAddContactCommand = OpenAddContactCommandClass);
         private COpenAddContactCommand _openAddContactCommandClass;
-        public COpenAddContactCommand OpenAddContactCommandClass => _openAddContactCommandClass ?? (_openAddContactCommandClass = new COpenAddContactCommand());
+		private COpenAddContactCommand OpenAddContactCommandClass => _openAddContactCommandClass ?? (_openAddContactCommandClass = new COpenAddContactCommand());
 
         private readonly IContactsSupplier _contactsSupplier;
-
 
         public ContactListViewModel()
         {
@@ -204,7 +202,7 @@ namespace ClientApp.ViewModels.Contact
                 */ 
             #endregion
 
-            _contactsSupplier = new CContactsSupplier();
+            _contactsSupplier = CContactsSupplier.Create();
 
             var lastActiveDates = _contactsSupplier.GetContactsLastActiveDate(STokenProvider.Id);
 
@@ -225,7 +223,7 @@ namespace ClientApp.ViewModels.Contact
             ChangeSortOrderCommand = new CRelayCommand((obj) =>
             {
                 SortOrder = (EListSortOrder)obj;
-                Filter(null);
+                Filter();
             });
         }
 
@@ -234,7 +232,7 @@ namespace ClientApp.ViewModels.Contact
         private void OpenFilter(Object obj) => FilterIsOpen = true;
         private void CloseFilter(Object obj) => FilterIsOpen = false;
 
-        private void Filter(Object obj)
+        private void Filter()
         {
             // If we have no search text, or no items
             if (String.IsNullOrEmpty(SearchText) || Items == null || Items.Count <= 0)
@@ -268,7 +266,6 @@ namespace ClientApp.ViewModels.Contact
 
         #endregion
 
-
         private void ClearSearch(Object obj)
         {
             if (String.IsNullOrEmpty(SearchText))
@@ -287,7 +284,7 @@ namespace ClientApp.ViewModels.Contact
                 String.Equals(_lastSearchText, SearchText))
                 return;
 
-            Filter(obj);
+            Filter();
         }
 
     }

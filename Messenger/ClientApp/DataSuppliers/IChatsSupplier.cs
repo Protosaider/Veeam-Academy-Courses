@@ -1,6 +1,4 @@
-﻿using ClientApp.ViewModels.ChatPage;
-using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ClientApp.DataSuppliers.Data;

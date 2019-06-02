@@ -2,9 +2,7 @@
 using System.Diagnostics;
 using ClientApp.Controls;
 using ClientApp.Controls.Chat;
-using ClientApp.Controls.ChatMessage;
 using ClientApp.Controls.Contact;
-using ClientApp.Pages;
 using ClientApp.ViewModels;
 using ClientApp.ViewModels.ChatPage;
 using ClientApp.ViewModels.Contact;

@@ -1,11 +1,10 @@
-﻿using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 
 namespace ClientApp.Converters
 {
-    public class LogInCommandParameterConverter : BaseMultiValueConverter<LogInCommandParameterConverter>
+    public sealed class LogInCommandParameterConverter : BaseMultiValueConverter<LogInCommandParameterConverter>
     {
         public override Object Convert(Object[] values, Type targetType, Object parameter, CultureInfo culture)
         {

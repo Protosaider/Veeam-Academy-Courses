@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace ClientApp
+namespace ClientApp.ViewModels.Base
 {
     public class CRelayCommand<T> : ICommand, INotifyPropertyChanged
     {
@@ -79,7 +75,7 @@ namespace ClientApp
 
     }
 
-    public sealed class CRelayCommand : ICommand, INotifyPropertyChanged
+	internal sealed class CRelayCommand : ICommand, INotifyPropertyChanged
     {
         private Boolean _isExecuting;
 

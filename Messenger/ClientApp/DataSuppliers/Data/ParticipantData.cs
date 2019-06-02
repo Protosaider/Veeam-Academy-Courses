@@ -2,7 +2,7 @@
 
 namespace ClientApp.DataSuppliers.Data
 {
-	internal class CParticipantData
+	internal sealed class CParticipantData
     {
         public String Login { get; }
         public Int32 ActivityStatus { get; }

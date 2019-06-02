@@ -1,16 +1,12 @@
 ﻿using Common.ServiceLocator;
 using DataStorage.DataProviders;
 using log4net;
-using Other;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
-using System.Web;
 
 namespace MaintenanceService.Other
 {
-    public static class UpdateUsersStatusActivity
+    public static class SUpdateUsersStatusActivity
     {
         private static readonly ILog s_logger = SLogger.GetLogger();
         //private static readonly TimeSpan s_cooldown = TimeSpan.FromSeconds(60);
@@ -20,7 +16,7 @@ namespace MaintenanceService.Other
 
         private static readonly ICUserInfoDataProvider s_userDataProvider;
 
-        static UpdateUsersStatusActivity()
+        static SUpdateUsersStatusActivity()
         {
             var container = SServiceLocator.CreateContainer();
             container.Register<ICUserInfoDataProvider, CUserInfoDataProvider>(ELifeCycle.Transient);
@@ -76,7 +72,7 @@ namespace MaintenanceService.Other
         {
             try
             {
-                s_logger.LogInfo($"Activity {nameof(UpdateUsersStatusActivity)} is started");
+                s_logger.LogInfo($"Activity {nameof(SUpdateUsersStatusActivity)} is started");
 
                 //using (CancellationTokenSource cancellationSource = new CancellationTokenSource())
                 //{
@@ -91,7 +87,7 @@ namespace MaintenanceService.Other
             }
             catch (Exception exc)
             {
-                s_logger.LogError($"Activity {nameof(UpdateUsersStatusActivity)} has catched exception", exc);
+                s_logger.LogError($"Activity {nameof(SUpdateUsersStatusActivity)} has catched exception", exc);
             }
         }
 

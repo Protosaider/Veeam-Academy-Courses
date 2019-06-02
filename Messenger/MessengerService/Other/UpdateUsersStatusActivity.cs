@@ -1,15 +1,10 @@
 ﻿using Common.ServiceLocator;
-using DataStorage.DataProviders;
 using log4net;
 using Newtonsoft.Json;
-using Other;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
-using System.Web;
 
 namespace MessengerService.Other
 {
@@ -106,20 +101,20 @@ namespace MessengerService.Other
         private static readonly TimeSpan s_isNowOfflineTimeLimit = TimeSpan.FromMinutes(1);
         private static readonly CancellationTokenSource s_tokenSource = new CancellationTokenSource();
 
-        private static readonly HttpClient _client;
+        private static readonly HttpClient s_client;
 
         static SUpdateUsersStatusActivity()
         {
             var container = SServiceLocator.CreateContainer();
             container.Register<HttpClient>(ELifeCycle.Transient);
 
-            _client = container.Resolve<HttpClient>();
+            s_client = container.Resolve<HttpClient>();
 
             String maintenanceServiceBaseAddress = "http://localhost:9000/";
 
-            _client.BaseAddress = new Uri(maintenanceServiceBaseAddress);
-            _client.DefaultRequestHeaders.Accept.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            s_client.BaseAddress = new Uri(maintenanceServiceBaseAddress);
+            s_client.DefaultRequestHeaders.Accept.Clear();
+            s_client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public static void Run()
@@ -134,7 +129,7 @@ namespace MessengerService.Other
             }
             catch (Exception exc)
             {
-                s_logger.LogError($"Activity {nameof(SUpdateUsersStatusActivity)} has catched exception", exc);
+                s_logger.LogError($"Activity {nameof(SUpdateUsersStatusActivity)} has caught exception", exc);
             }
         }
 
@@ -166,7 +161,7 @@ namespace MessengerService.Other
         {
             try
             {
-                HttpResponseMessage response = _client.PostAsync(
+                HttpResponseMessage response = s_client.PostAsync(
                     $"api/maintenance/updateUsersStatus",
                     new StringContent(JsonConvert.SerializeObject(s_isNowOfflineTimeLimit), Encoding.UTF8, "application/json")
                     ).Result;
@@ -175,11 +170,8 @@ namespace MessengerService.Other
                     ? response.Content.ReadAsAsync<Boolean>().Result
                     : false;
 
-                if (result)
-                    Console.WriteLine(@"User's statuses have been updated");
-                else
-                    Console.WriteLine(@"Users statuses weren't changed");
-            }
+				Console.WriteLine(result ? @"User's statuses have been updated" : @"Users statuses weren't changed");
+			}
             catch (Exception e)
             {
                 Console.WriteLine(e);

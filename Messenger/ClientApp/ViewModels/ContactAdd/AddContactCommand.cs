@@ -1,38 +1,35 @@
 ﻿using ClientApp.DataSuppliers;
 using ClientApp.ServiceProxies;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ContactAdd
 {
-    public sealed class AddContactCommand : CBaseAsyncCommand
+	internal sealed class CAddContactCommand : CBaseAsyncCommand
     {
         private readonly IContactsSupplier _contactsSupplier;
 
-        public AddContactCommand()
+        public CAddContactCommand()
         {
-            _contactsSupplier = new CContactsSupplier();
+            _contactsSupplier = CContactsSupplier.Create();
         }
 
-        protected override Boolean CanExecute<T>(T parameter)
-        {
-            return true;
-        }
+        protected override Boolean CanExecute<T>(T parameter) => true;
 
-        protected sealed override async Task ExecuteAsync(Object parameter)
+		protected override async Task ExecuteAsync(Object parameter)
         {
             if (parameter == null)
                 return;
 
             var contactId = (Guid)parameter;
 
-            var result = await _contactsSupplier.AddContact(contactId, STokenProvider.Id);
+            await _contactsSupplier.AddContact(contactId, STokenProvider.Id);
 
-            if (result == null)
-                return;
+            //var result = await _contactsSupplier.AddContact(contactId, STokenProvider.Id);
+
+            //if (result == null)
+            //    return;
         }
     }
 }

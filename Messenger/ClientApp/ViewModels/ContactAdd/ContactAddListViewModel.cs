@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -9,7 +8,7 @@ using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ContactAdd
 {
-    public sealed class ContactAddListViewModel : BaseViewModel
+	internal sealed class ContactAddListViewModel : BaseViewModel
     {
         private ObservableCollection<ContactAddListItemViewModel> _filteredItems;
         private String _lastSearchText;
@@ -40,18 +39,18 @@ namespace ClientApp.ViewModels.ContactAdd
             }
         }
 
-        public ICommand SearchCommand { get; set; }
-        public ICommand ClearSearchCommand { get; set; }
+        public ICommand SearchCommand { get; }
+        public ICommand ClearSearchCommand { get; }
 
         private ICommand _addContactCommand;
         public ICommand AddContactCommand => _addContactCommand ?? (_addContactCommand = AddContactCommandClass);
-        private AddContactCommand _addContactCommandClass;
-        public AddContactCommand AddContactCommandClass => _addContactCommandClass ?? (_addContactCommandClass = new AddContactCommand());
+        private CAddContactCommand _addContactCommandClass;
+		private CAddContactCommand AddContactCommandClass => _addContactCommandClass ?? (_addContactCommandClass = new CAddContactCommand());
 
         private ICommand _closeAddContactCommand;
         public ICommand CloseAddContactCommand => _closeAddContactCommand ?? (_closeAddContactCommand = CloseAddContactCommandClass);
         private CCloseAddContactCommand _closeAddContactCommandClass;
-        public CCloseAddContactCommand CloseAddContactCommandClass => _closeAddContactCommandClass ?? (_closeAddContactCommandClass = new CCloseAddContactCommand());
+		private CCloseAddContactCommand CloseAddContactCommandClass => _closeAddContactCommandClass ?? (_closeAddContactCommandClass = new CCloseAddContactCommand());
 
         private readonly IContactsSupplier _contactsSupplier;
 
@@ -84,7 +83,7 @@ namespace ClientApp.ViewModels.ContactAdd
             //}; 
             #endregion
 
-            _contactsSupplier = new CContactsSupplier();
+            _contactsSupplier = CContactsSupplier.Create();
 
             //FilteredItems = new ObservableCollection<ContactAddListItemViewModel>(_contactsSupplier.GetContacts(TokenProvider.Id).Select(x => new ContactAddListItemViewModel(x)));
             FilteredItems = new ObservableCollection<ContactAddListItemViewModel>();

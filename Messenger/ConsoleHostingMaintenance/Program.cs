@@ -1,13 +1,7 @@
-﻿using MaintenanceService.Other;
+﻿using System;
 using Microsoft.Owin.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-namespace ConsoleHosting
+namespace ConsoleHostingMaintenance
 {
     internal class Program
     {
@@ -21,7 +15,7 @@ namespace ConsoleHosting
             try
             {
                 // Start OWIN host
-                using (Microsoft.Owin.Hosting.WebApp.Start<Startup>(new StartOptions(url: baseAddress)))
+                using (Microsoft.Owin.Hosting.WebApp.Start<Startup>(new StartOptions(baseAddress)))
                 {
                     Console.WriteLine($@"WebAPI SelfHost started at {baseAddress}");
                     Console.WriteLine(@"Press enter to finish");

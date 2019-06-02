@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DTO
 {
-    public class CNewChatDto
+    public sealed class CNewChatDto
     {
-        public String Title { get; set; }
-        public Boolean IsPersonal { get; set; }
-        public Int32 Type { get; set; }
-        public Guid CreatorId { get; set; }
-        public List<Guid> ParticipantsId { get; set; }
+        public String Title { get; }
+        public Boolean IsPersonal { get; }
+        public Int32 Type { get; }
+        public Guid CreatorId { get; }
+        public List<Guid> ParticipantsId { get; }
 
         public CNewChatDto(String title, Boolean isPersonal, Int32 type, Guid creatorId, List<Guid> participantsId)
         {

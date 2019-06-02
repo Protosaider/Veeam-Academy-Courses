@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using ClientApp.DataSuppliers.Data;
-using DTO;
 
 namespace ClientApp.DataSuppliers
 {

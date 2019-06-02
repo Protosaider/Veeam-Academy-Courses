@@ -4,15 +4,15 @@ using System.Windows;
 
 namespace ClientApp.Converters
 {
-    public class BooleanToVisibilityValueConverter : BaseValueConverter<BooleanToVisibilityValueConverter>
+    public sealed class BooleanToVisibilityValueConverter : BaseValueConverter<BooleanToVisibilityValueConverter>
     {
         public override Object Convert(Object value, Type targetType, Object parameter, CultureInfo culture)
-        {
-            if (parameter == null)
-                return (Boolean)value ? Visibility.Hidden : Visibility.Visible;
-            else
-                return (Boolean)value ? Visibility.Visible : Visibility.Hidden;
-        }
+		{
+			if (parameter == null)
+                return value != null && (Boolean)value ? Visibility.Hidden : Visibility.Visible;
+
+			return value != null && (Boolean)value ? Visibility.Visible : Visibility.Hidden;
+		}
 
         public override Object ConvertBack(Object value, Type targetType, Object parameter, CultureInfo culture)
         {

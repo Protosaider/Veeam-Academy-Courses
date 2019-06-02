@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
 namespace ClientApp.Animations
 {
 	internal static class FrameworkElementAnimations
     {
-        public static async Task SlideAndFadeInAsync(this FrameworkElement element, AnimationSlideInDirection direction, Boolean isFirstLoad, Double durationInSeconds = 0.3f, Boolean keepMargin = true, Int32 size = 0)
+        public static async Task SlideAndFadeInAsync(this FrameworkElement element, EAnimationSlideInDirection direction, Boolean isFirstLoad, Double durationInSeconds = 0.3f, Boolean keepMargin = true, Int32 size = 0)
         {
             // Create the storyboard
             var sb = new Storyboard();
@@ -20,22 +16,24 @@ namespace ClientApp.Animations
             switch (direction)
             {
                 // Add slide from left animation
-                case AnimationSlideInDirection.Left:
+                case EAnimationSlideInDirection.Left:
                     sb.AddSlideFromLeft(durationInSeconds, size == 0 ? element.ActualWidth : size, keepMargin: keepMargin);
                     break;
                 // Add slide from right animation
-                case AnimationSlideInDirection.Right:
+                case EAnimationSlideInDirection.Right:
                     sb.AddSlideFromRight(durationInSeconds, size == 0 ? element.ActualWidth : size, keepMargin: keepMargin);
                     break;
                 // Add slide from top animation
-                case AnimationSlideInDirection.Top:
+                case EAnimationSlideInDirection.Top:
                     sb.AddSlideFromTop(durationInSeconds, size == 0 ? element.ActualHeight : size, keepMargin: keepMargin);
                     break;
                 // Add slide from bottom animation
-                case AnimationSlideInDirection.Bottom:
+                case EAnimationSlideInDirection.Bottom:
                     sb.AddSlideFromBottom(durationInSeconds, size == 0 ? element.ActualHeight : size, keepMargin: keepMargin);
                     break;
-            }
+				default:
+					throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+			}
             // Add fade in animation
             sb.AddFadeIn(durationInSeconds);
 
@@ -43,14 +41,16 @@ namespace ClientApp.Animations
             sb.Begin(element);
 
             // Make page visible only if we are animating or its the first load
-            if (durationInSeconds != 0 || isFirstLoad)
+			Double tolerance = Double.Epsilon * 1.0E5;
+
+			if (Math.Abs(durationInSeconds) > tolerance || isFirstLoad)
                 element.Visibility = Visibility.Visible;
 
             // Wait for it to finish
             await Task.Delay((Int32)(durationInSeconds * 1000));
         }
 
-        public static async Task SlideAndFadeOutAsync(this FrameworkElement element, AnimationSlideInDirection direction, Double durationInSeconds = 0.3f, Boolean keepMargin = true, Int32 size = 0)
+        public static async Task SlideAndFadeOutAsync(this FrameworkElement element, EAnimationSlideInDirection direction, Double durationInSeconds = 0.3f, Boolean keepMargin = true, Int32 size = 0)
         {
             // Create the storyboard
             var sb = new Storyboard();
@@ -59,22 +59,24 @@ namespace ClientApp.Animations
             switch (direction)
             {
                 // Add slide to left animation
-                case AnimationSlideInDirection.Left:
+                case EAnimationSlideInDirection.Left:
                     sb.AddSlideToLeft(durationInSeconds, size == 0 ? element.ActualWidth : size, keepMargin: keepMargin);
                     break;
                 // Add slide to right animation
-                case AnimationSlideInDirection.Right:
+                case EAnimationSlideInDirection.Right:
                     sb.AddSlideToRight(durationInSeconds, size == 0 ? element.ActualWidth : size, keepMargin: keepMargin);
                     break;
                 // Add slide to top animation
-                case AnimationSlideInDirection.Top:
+                case EAnimationSlideInDirection.Top:
                     sb.AddSlideToTop(durationInSeconds, size == 0 ? element.ActualHeight : size, keepMargin: keepMargin);
                     break;
                 // Add slide to bottom animation
-                case AnimationSlideInDirection.Bottom:
+                case EAnimationSlideInDirection.Bottom:
                     sb.AddSlideToBottom(durationInSeconds, size == 0 ? element.ActualHeight : size, keepMargin: keepMargin);
                     break;
-            }
+				default:
+					throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+			}
 
             // Add fade in animation
             sb.AddFadeOut(durationInSeconds);
@@ -83,7 +85,8 @@ namespace ClientApp.Animations
             sb.Begin(element);
 
             // Make page visible only if we are animating
-            if (durationInSeconds != 0)
+			Double tolerance = Double.Epsilon * 1.0E5;
+            if (Math.Abs(durationInSeconds) > tolerance)
                 element.Visibility = Visibility.Visible;
 
             // Wait for it to finish
@@ -105,7 +108,8 @@ namespace ClientApp.Animations
             sb.Begin(element);
 
             // Make page visible only if we are animating or its the first load
-            if (durationInSeconds != 0 || isFirstLoad)
+			Double tolerance = Double.Epsilon * 1.0E5;
+            if (Math.Abs(durationInSeconds) > tolerance || isFirstLoad)
                 element.Visibility = Visibility.Visible;
 
             // Wait for it to finish
@@ -125,7 +129,8 @@ namespace ClientApp.Animations
             sb.Begin(element);
 
             // Make page visible only if we are animating or its the first load
-            if (isFirstLoad != 0)
+			Double tolerance = Double.Epsilon * 1.0E5;
+            if (Math.Abs(isFirstLoad) > tolerance)
                 element.Visibility = Visibility.Visible;
 
             // Wait for it to finish

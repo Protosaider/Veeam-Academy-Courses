@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using ClientApp.DataSuppliers.Data;
+using ClientApp.Other;
 using ClientApp.ServiceProxies;
-using ClientApp.ViewModels.ChatPage;
 using DTO;
 using log4net;
-using Other;
 
 namespace ClientApp.DataSuppliers
 {
@@ -40,30 +40,17 @@ namespace ClientApp.DataSuppliers
         {
             _logger.LogInfo($"Supplier method '{nameof(GetAllMessages)}({userId}, {chatId}, {limit}, {offset})' is called");
 
-            var messages = new List<CMessageData>();
-            foreach (var messageDto in _service.GetAllMessages(userId, chatId, limit, offset))
-            {
-                messages.Add(new CMessageData(messageDto.Id, messageDto.DispatchDate, messageDto.MessageText,
-                    messageDto.IsSentByRequestingUser, messageDto.IsRead, messageDto.Login, messageDto.USN));
-            }
-
-            return messages;
+			return _service.GetAllMessages(userId, chatId, limit, offset).Select(messageDto => new CMessageData(messageDto.Id, messageDto.DispatchDate, messageDto.MessageText, messageDto.IsSentByRequestingUser, messageDto.IsRead, messageDto.Login, messageDto.Usn)).ToList();
         }
 
         public Task<IReadOnlyCollection<CMessageData>> GetNewMessages(Guid userId, Guid chatId, DateTimeOffset lastRequestDate, Int64 usn, Int32 limit, Int32 offset)
         {        
             _logger.LogInfo($"Supplier method '{nameof(GetNewMessages)}({userId}, {chatId}, {lastRequestDate}, {limit}, {offset})' is called");
             Console.WriteLine(@"GetNewMessages called");
-            return Task.Run<IReadOnlyCollection<CMessageData>>(() => {
-
-                var messages = new List<CMessageData>();
-                foreach (var messageDto in _service.GetNewMessages(userId, chatId, lastRequestDate, usn, limit, offset))
-                {
-                    messages.Add(new CMessageData(messageDto.Id, messageDto.DispatchDate, messageDto.MessageText,
-                        messageDto.IsSentByRequestingUser, messageDto.IsRead, messageDto.Login, messageDto.USN));
-                }
-                return messages;
-            });
+            return Task.Run<IReadOnlyCollection<CMessageData>>(() =>
+			{
+				return _service.GetNewMessages(userId, chatId, lastRequestDate, usn, limit, offset).Select(messageDto => new CMessageData(messageDto.Id, messageDto.DispatchDate, messageDto.MessageText, messageDto.IsSentByRequestingUser, messageDto.IsRead, messageDto.Login, messageDto.Usn)).ToList();
+			});
         }
 
         public CMessageData SendMessage(String messageText, DateTimeOffset dispatchDate, Int32 type, String attachedContent, Guid chatId, Guid senderId)
@@ -74,11 +61,8 @@ namespace ClientApp.DataSuppliers
 
             var result = _service.SendMessage(message);
 
-            if (result == null)
-                return null;
-
-            return new CMessageData(result.Id, dispatchDate, messageText, true, true, result.SenderLogin, result.USN);
-        }
+            return result == null ? null : new CMessageData(result.Id, dispatchDate, messageText, true, true, result.SenderLogin, result.Usn);
+		}
 
         //public Task<Boolean> ReadMessages(Guid userId, Guid chatId, List<Guid> readMessages)
         public Task<Boolean> ReadMessages(Guid userId, List<Guid> readMessages)
@@ -97,13 +81,7 @@ namespace ClientApp.DataSuppliers
         {
             _logger.LogInfo($"Supplier method '{nameof(GetChatParticipants)}({userId}, {chatId})' is called");
 
-            var messages = new List<CParticipantData>();
-            foreach (var userDto in _service.GetChatParticipants(userId, chatId))
-            {
-                messages.Add(new CParticipantData(userDto.Login, userDto.ActivityStatus));
-            }
-
-            return messages;
+			return _service.GetChatParticipants(userId, chatId).Select(userDto => new CParticipantData(userDto.Login, userDto.ActivityStatus)).ToList();
         }
 
         #endregion

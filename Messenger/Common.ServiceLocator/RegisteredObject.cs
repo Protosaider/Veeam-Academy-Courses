@@ -2,9 +2,9 @@
 
 namespace Common.ServiceLocator
 {
-	internal sealed class RegisteredObject
+	internal sealed class CRegisteredObject
     {
-        public RegisteredObject(Type typeToResolve, Type concreteType, ELifeCycle lifeCycle)
+        public CRegisteredObject(Type typeToResolve, Type concreteType, ELifeCycle lifeCycle)
         {
             TypeToResolve = typeToResolve;
             ConcreteType = concreteType;

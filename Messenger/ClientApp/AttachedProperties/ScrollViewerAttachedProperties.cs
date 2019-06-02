@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 
 namespace ClientApp.AttachedProperties
 {
@@ -25,7 +24,7 @@ namespace ClientApp.AttachedProperties
         }
 
         private void Control_DataContextChanged(Object sender, DependencyPropertyChangedEventArgs e) => 
-            (sender as ScrollViewer).ScrollToBottom();
+            (sender as ScrollViewer)?.ScrollToBottom();
     }
 
     /// <summary>
@@ -50,10 +49,8 @@ namespace ClientApp.AttachedProperties
 
         private void Control_ScrollChanged(Object sender, ScrollChangedEventArgs e)
         {
-            var scroll = sender as ScrollViewer;
-
-            // If we are close enough to the bottom...
-            if (scroll.ScrollableHeight - scroll.VerticalOffset < 20)
+			// If we are close enough to the bottom...
+            if (sender is ScrollViewer scroll && scroll.ScrollableHeight - scroll.VerticalOffset < 20)
                 // Scroll to the bottom
                 scroll.ScrollToEnd();
         }

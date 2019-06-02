@@ -11,10 +11,10 @@ namespace ClientApp.Pages
     /// Interaction logic for ChatPage.xaml
     /// </summary>
     //public partial class ChatPage : BasePage<ChatViewModel, Guid>
-    public partial class ChatPage : BasePage<ChatViewModel>
+	internal partial class ChatPage : BasePage<ChatViewModel>
     {
-        public ChatPage() : base()
-        {
+        public ChatPage()
+		{
             InitializeComponent();
         }
 
@@ -56,15 +56,17 @@ namespace ClientApp.Pages
                 if (Keyboard.Modifiers.HasFlag(ModifierKeys.Control))
                 {
                     // Add a new line at the point where the cursor is
-                    var index = textbox.CaretIndex;
+					if (textbox != null) {
+						var index = textbox.CaretIndex;
 
-                    // Insert the new line
-                    textbox.Text = textbox.Text.Insert(index, Environment.NewLine);
+						// Insert the new line
+						textbox.Text = textbox.Text.Insert(index, Environment.NewLine);
 
-                    // Shift the caret forward to the newline
-                    textbox.CaretIndex = index + Environment.NewLine.Length;
+						// Shift the caret forward to the newline
+						textbox.CaretIndex = index + Environment.NewLine.Length;
+					}
 
-                    // Mark this key as handled by us
+					// Mark this key as handled by us
                     e.Handled = true;
                 }
                 //else

@@ -1,18 +1,13 @@
-﻿using log4net;
-using MessengerService.Other;
-using Other;
+﻿using MessengerService.Other;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web.Configuration;
 using System.Web.Http;
 
 namespace MessengerService
 {
     public static class WebApiConfig
     {
-        public static ObservableDirectRouteProvider GlobalObservableDirectRouteProvider = new ObservableDirectRouteProvider();
+		private static readonly CObservableDirectRouteProvider GlobalObservableDirectRouteProvider = new CObservableDirectRouteProvider();
 
         public static void Register(HttpConfiguration config)
         {

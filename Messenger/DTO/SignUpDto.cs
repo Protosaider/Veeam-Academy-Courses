@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DTO
 {
-    public class CSignUpDto
+    public sealed class CSignUpDto
     {
         [Required]
-        public CCredentialsDto Credentials { get; set; }
-        public String Avatar { get; set; }
+        public CCredentialsDto Credentials { get; }
+        public String Avatar { get; }
 
         public CSignUpDto(CCredentialsDto credentials, String avatar)
         {

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Xml;
 using log4net;
-using log4net.Config;
 
-namespace Other
+namespace ConsoleHosting.Other
 {
     internal static class SLogger
     {

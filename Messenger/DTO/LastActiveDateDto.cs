@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DTO
 {
-    public class CLastActiveDateDto
+    public sealed class CLastActiveDateDto
     {
-        public Guid UserId { get; set; }
-        public DateTimeOffset LastActiveDate { get; set; }
+        public Guid UserId { get; }
+        public DateTimeOffset LastActiveDate { get; }
 
         public CLastActiveDateDto(Guid userId, DateTimeOffset lastActiveDate)
         {

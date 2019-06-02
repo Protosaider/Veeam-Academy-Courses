@@ -1,11 +1,11 @@
 ﻿using ClientApp.Other;
 using System;
-using System.Windows.Input;
 using ClientApp.DataSuppliers.Data;
+using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-    public sealed class COpenChatCommand : CBaseCommand
+	internal sealed class COpenChatCommand : CBaseCommand
     {
         private readonly Action _onExecute;
         private readonly Func<Boolean> _onCanExecute;

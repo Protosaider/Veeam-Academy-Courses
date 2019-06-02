@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DTO
 {
-    public class CActivityStatusDto
+    public sealed class CActivityStatusDto
     {
-        public Guid UserId { get; set; }
-        public Int32 ActivityStatus { get; set; }
+        public Guid UserId { get; }
+        public Int32 ActivityStatus { get; }
 
         public CActivityStatusDto(Guid userId, Int32 activityStatus)
         {

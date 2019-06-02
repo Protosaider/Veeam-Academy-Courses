@@ -1,13 +1,7 @@
-﻿using MessengerService;
-using MessengerService.Other;
+﻿using MessengerService.Other;
 using Microsoft.Owin.Hosting;
-using Other;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SLogger = Other.SLogger;
+using ConsoleHosting.Other;
 
 
 namespace ConsoleHosting
@@ -30,7 +24,7 @@ namespace ConsoleHosting
             try
             {
                 // Start OWIN host
-                using (Microsoft.Owin.Hosting.WebApp.Start<Startup>(new StartOptions(url: baseAddress)))
+                using (Microsoft.Owin.Hosting.WebApp.Start<Startup>(new StartOptions(baseAddress)))
                 {
                     SLogger.GetLogger().LogInfo($"WebAPI SelfHost started at {baseAddress}");
                     Console.WriteLine($@"WebAPI SelfHost started at {baseAddress}");

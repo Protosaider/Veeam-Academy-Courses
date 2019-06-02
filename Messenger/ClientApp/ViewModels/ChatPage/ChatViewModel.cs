@@ -1,9 +1,7 @@
 ﻿using ClientApp.Validators;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using ClientApp.DataSuppliers;
@@ -13,12 +11,11 @@ using System.Windows;
 using ClientApp.DataSuppliers.Data;
 using ClientApp.Other;
 using ClientApp.ServiceProxies;
-using ClientApp.ViewModels.Contact;
 
 namespace ClientApp.ViewModels.ChatPage
 {
     //public class ChatViewModel : BaseViewModel<Guid>
-    public class ChatViewModel : BaseViewModel, IDisposable
+	internal class ChatViewModel : BaseViewModel, IDisposable
     {
         //public Int32 MAX_MESSAGE_LENGTH = 2028;
         //public Int32 AVG_MESSAGE_LENGTH = 256;
@@ -72,7 +69,7 @@ namespace ClientApp.ViewModels.ChatPage
         public Boolean HasTitle => String.IsNullOrEmpty(_displayTitle);
 
         private DateTimeOffset _lastDateMessagesRequested = default(DateTimeOffset);
-        private Int64 _lastUSN;
+        private Int64 _lastUsn;
 
         private readonly CMessageValidator _messageValidator;
         private readonly IChatSupplier _chatSupplier;
@@ -165,7 +162,7 @@ namespace ClientApp.ViewModels.ChatPage
         #region Sending
 
         private CSendCommand _sendCommandClass;
-        public CSendCommand SendCommandClass => _sendCommandClass ?? (_sendCommandClass = new CSendCommand(_chatSupplier,
+		private CSendCommand SendCommandClass => _sendCommandClass ?? (_sendCommandClass = new CSendCommand(_chatSupplier,
             () => !HasErrors, Sent));
 
         private ICommand _sendCommand;
@@ -175,10 +172,10 @@ namespace ClientApp.ViewModels.ChatPage
 
         #region Searching
 
-        public ICommand SearchCommand { get; set; }
-        public ICommand OpenSearchCommand { get; set; }
-        public ICommand CloseSearchCommand { get; set; }
-        public ICommand ClearSearchCommand { get; set; }
+        public ICommand SearchCommand { get; }
+        public ICommand OpenSearchCommand { get; }
+        public ICommand CloseSearchCommand { get; }
+        public ICommand ClearSearchCommand { get; }
 
         #endregion
 
@@ -195,8 +192,8 @@ namespace ClientApp.ViewModels.ChatPage
             }
         }
 
-        public ICommand OpenParticipantsCommand { get; set; }
-        public ICommand CloseParticipantsCommand { get; set; }
+        public ICommand OpenParticipantsCommand { get; }
+        public ICommand CloseParticipantsCommand { get; }
 
         private ObservableCollection<ChatParticipantListItemViewModel> _participants;
         public ObservableCollection<ChatParticipantListItemViewModel> Participants
@@ -238,20 +235,21 @@ namespace ClientApp.ViewModels.ChatPage
 
                 if (Items.Count > 0)
                 {
-                    _lastUSN = Items[Items.Count - 1].USN;
+                    _lastUsn = Items[Items.Count - 1].Usn;
 
                     var messagesToRead = Items.Where(x => !x.IsRead).ToList();
 
                     if (messagesToRead.Count > 0)
-                    {
-                        for (var i = 0; i < messagesToRead.Count; i++)
-                        {
+					{
+						foreach (var msgViewModel in messagesToRead)
+						{
 #pragma warning disable 4014
-							messagesToRead[i].ReadMessage();
+							msgViewModel.ReadMessage();
 #pragma warning restore 4014
 						}
-                        _chatSupplier.ReadMessages(STokenProvider.Id, messagesToRead.Select(x => x.Id).ToList());
-                    }
+
+						_chatSupplier.ReadMessages(STokenProvider.Id, messagesToRead.Select(x => x.Id).ToList());
+					}
                 }
 
                 RunNewMessagesActivity();
@@ -460,7 +458,7 @@ namespace ClientApp.ViewModels.ChatPage
             Console.WriteLine(@"INSIDE UPDATE NEW MESSAGES");
             try
             {
-                var result = _chatSupplier.GetNewMessages(STokenProvider.Id, Id, _lastDateMessagesRequested, _lastUSN, 50, 0)
+                var result = _chatSupplier.GetNewMessages(STokenProvider.Id, Id, _lastDateMessagesRequested, _lastUsn, 50, 0)
                     .Result;
 
                 if (result.Count > 0)
@@ -473,7 +471,7 @@ namespace ClientApp.ViewModels.ChatPage
                     {
                         elementsCounter++;
                         if (elementsCounter == result.Count)
-                            _lastUSN = item.Usn;
+                            _lastUsn = item.Usn;
 
                         var chatViewModel = new ChatMessageViewModel(item);
                         Int32 count = _items.Count, index = lastIndex;
@@ -481,7 +479,7 @@ namespace ClientApp.ViewModels.ChatPage
                         for (var i = index; i < count; i++)
                         {
                             //if (_items[i].DispatchDate > item.DispatchDate)
-                            if (_items[i].USN > item.Usn)
+                            if (_items[i].Usn > item.Usn)
                             {
                                 index = i;
                                 isFound = true;
@@ -518,7 +516,7 @@ namespace ClientApp.ViewModels.ChatPage
                                 for (var i = indexFiltered; i < countFiltered; i++)
                                 {
                                     //if (_filteredItems[i].DispatchDate > item.DispatchDate)
-                                    if (_filteredItems[i].USN > item.Usn)
+                                    if (_filteredItems[i].Usn > item.Usn)
                                     {
                                         indexFiltered = i;
                                         isFoundFiltered = true;

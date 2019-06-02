@@ -1,17 +1,9 @@
-﻿using ClientApp.Validators;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using ClientApp.DataSuppliers;
-using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ChatPage.Design
 {
-    public class ChatDesignViewModel : ChatViewModel
+	internal class ChatDesignViewModel : ChatViewModel
     {
         public static ChatDesignViewModel Instance => new ChatDesignViewModel();
      

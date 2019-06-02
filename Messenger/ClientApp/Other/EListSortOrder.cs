@@ -1,6 +1,6 @@
 ﻿namespace ClientApp.Other
 {
-    public enum EListSortOrder
+	internal enum EListSortOrder
     {
         None,
         ByStringAsc,

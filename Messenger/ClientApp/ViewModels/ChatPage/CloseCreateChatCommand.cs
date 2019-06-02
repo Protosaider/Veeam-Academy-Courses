@@ -1,9 +1,10 @@
 ﻿using ClientApp.Other;
 using System;
+using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-    public sealed class CCloseCreateChatCommand : CBaseCommand
+	internal sealed class CCloseCreateChatCommand : CBaseCommand
     {
         protected override Boolean CanExecute<T>(Object parameter)
         {

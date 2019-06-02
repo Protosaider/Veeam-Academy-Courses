@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Standard;
 
 namespace ClientApp.AttachedProperties
 {
@@ -11,7 +12,7 @@ namespace ClientApp.AttachedProperties
     /// A base class to run any animation method when a boolean is set to true
     /// and a reverse animation when set to false
     /// </summary>
-    /// <typeparam name="Parent"></typeparam>
+    /// <typeparam name="TParent"></typeparam>
     public abstract class AnimateBaseProperty<TParent> : BaseAttachedProperty<TParent, Boolean> where 
         TParent : BaseAttachedProperty<TParent, Boolean>, new()
     {
@@ -36,10 +37,12 @@ namespace ClientApp.AttachedProperties
                 return;
 
             // Try and get the already loaded reference
-            var alreadyLoadedReference = _alreadyLoaded.FirstOrDefault(f => f.Key == sender);
+            //var alreadyLoadedReference = _alreadyLoaded.FirstOrDefault(f => f.Key == sender);
+            var alreadyLoadedReference = _alreadyLoaded.FirstOrDefault(f => ReferenceEquals(f.Key, sender));
 
             // Try and get the first load reference
-            var firstLoadReference = _firstLoadValue.FirstOrDefault(f => f.Key == sender);
+            //var firstLoadReference = _firstLoadValue.FirstOrDefault(f => f.Key == sender);
+            var firstLoadReference = _firstLoadValue.FirstOrDefault(f => ReferenceEquals(f.Key, sender));
 
             // Don't fire if the value doesn't change
             if ((Boolean)sender.GetValue(ValueProperty) == (Boolean)value && alreadyLoadedReference.Key != null)
@@ -60,23 +63,22 @@ namespace ClientApp.AttachedProperties
                 element.Visibility = Visibility.Hidden;
 
                 // Create a single self-unhookable event for the elements Loaded event
-                RoutedEventHandler OnLoaded = null;
+				async void OnLoaded(object s, RoutedEventArgs e)
+				{
+					element.Loaded -= OnLoaded; //so, the function OnLoaded will fire only once
 
-                OnLoaded = async (s, e) =>
-                {
-                    element.Loaded -= OnLoaded; //so, the function OnLoaded will fire only once
+					// Slight delay after load is needed for some elements to get laid out and their width/heights correctly calculated
+					await Task.Delay(5);
+					// Refresh the first load value in case it changed since the 5ms delay
+					//firstLoadReference = _firstLoadValue.FirstOrDefault(f => f.Key == sender);
+					firstLoadReference = _firstLoadValue.FirstOrDefault(f => ReferenceEquals(f.Key, sender));
+					DoAnimation(element, firstLoadReference.Key != null ? firstLoadReference.Value : (Boolean)value, true);
 
-                    // Slight delay after load is needed for some elements to get laid out and their width/heights correctly calculated
-                    await Task.Delay(5);
-                    // Refresh the first load value in case it changed since the 5ms delay
-                    firstLoadReference = _firstLoadValue.FirstOrDefault(f => f.Key == sender);
-                    DoAnimation(element, firstLoadReference.Key != null ? firstLoadReference.Value : (Boolean)value, true);
+					// Flag that we have finished first load
+					_alreadyLoaded[obj] = true;
+				}
 
-                    // Flag that we have finished first load
-                    _alreadyLoaded[obj] = true;
-                };
-
-                //hook into the loaded event of the element - animation will fire on item loaded
+				//hook into the loaded event of the element - animation will fire on item loaded
                 element.Loaded += OnLoaded;
             }
             // If we have started a first load but not fired the animation yet, update the property
@@ -109,10 +111,10 @@ namespace ClientApp.AttachedProperties
         {
             if (value)
                 // Animate in
-                await element.SlideAndFadeInAsync(AnimationSlideInDirection.Left, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
+                await element.SlideAndFadeInAsync(EAnimationSlideInDirection.Left, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
             else
                 // Animate out
-                await element.SlideAndFadeOutAsync(AnimationSlideInDirection.Left, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
+                await element.SlideAndFadeOutAsync(EAnimationSlideInDirection.Left, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
         }
     }
 
@@ -122,10 +124,10 @@ namespace ClientApp.AttachedProperties
         {
             if (value)
                 // Animate in
-                await element.SlideAndFadeInAsync(AnimationSlideInDirection.Left, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
+                await element.SlideAndFadeInAsync(EAnimationSlideInDirection.Left, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
             else
                 // Animate out
-                await element.SlideAndFadeOutAsync(AnimationSlideInDirection.Left, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
+                await element.SlideAndFadeOutAsync(EAnimationSlideInDirection.Left, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
         }
     }
 
@@ -152,10 +154,10 @@ namespace ClientApp.AttachedProperties
         {
             if (value)
                 // Animate in
-                await element.SlideAndFadeInAsync(AnimationSlideInDirection.Right, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
+                await element.SlideAndFadeInAsync(EAnimationSlideInDirection.Right, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
             else
                 // Animate out
-                await element.SlideAndFadeOutAsync(AnimationSlideInDirection.Right, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
+                await element.SlideAndFadeOutAsync(EAnimationSlideInDirection.Right, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
         }
     }
 
@@ -165,10 +167,10 @@ namespace ClientApp.AttachedProperties
         {
             if (value)
                 // Animate in
-                await element.SlideAndFadeInAsync(AnimationSlideInDirection.Right, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
+                await element.SlideAndFadeInAsync(EAnimationSlideInDirection.Right, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
             else
                 // Animate out
-                await element.SlideAndFadeOutAsync(AnimationSlideInDirection.Right, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
+                await element.SlideAndFadeOutAsync(EAnimationSlideInDirection.Right, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
         }
     }
 
@@ -178,10 +180,10 @@ namespace ClientApp.AttachedProperties
         {
             if (value)
                 // Animate in
-                await element.SlideAndFadeInAsync(AnimationSlideInDirection.Top, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
+                await element.SlideAndFadeInAsync(EAnimationSlideInDirection.Top, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
             else
                 // Animate out
-                await element.SlideAndFadeOutAsync(AnimationSlideInDirection.Top, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
+                await element.SlideAndFadeOutAsync(EAnimationSlideInDirection.Top, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
         }
     }
 
@@ -191,10 +193,10 @@ namespace ClientApp.AttachedProperties
         {
             if (value)
                 // Animate in
-                await element.SlideAndFadeInAsync(AnimationSlideInDirection.Bottom, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
+                await element.SlideAndFadeInAsync(EAnimationSlideInDirection.Bottom, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
             else
                 // Animate out
-                await element.SlideAndFadeOutAsync(AnimationSlideInDirection.Bottom, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
+                await element.SlideAndFadeOutAsync(EAnimationSlideInDirection.Bottom, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: false);
         }
     }
 
@@ -203,7 +205,7 @@ namespace ClientApp.AttachedProperties
         protected override async void DoAnimation(FrameworkElement element, Boolean value, Boolean firstLoad)
         {
             // Animate in
-            await element.SlideAndFadeInAsync(AnimationSlideInDirection.Bottom, !value, !value ? 0 : DefaultDurationInSeconds, keepMargin: false);
+            await element.SlideAndFadeInAsync(EAnimationSlideInDirection.Bottom, !value, !value ? 0 : DefaultDurationInSeconds, keepMargin: false);
         }
     }
 
@@ -213,10 +215,10 @@ namespace ClientApp.AttachedProperties
         {
             if (value)
                 // Animate in
-                await element.SlideAndFadeInAsync(AnimationSlideInDirection.Bottom, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
+                await element.SlideAndFadeInAsync(EAnimationSlideInDirection.Bottom, firstLoad, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
             else
                 // Animate out
-                await element.SlideAndFadeOutAsync(AnimationSlideInDirection.Bottom, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
+                await element.SlideAndFadeOutAsync(EAnimationSlideInDirection.Bottom, firstLoad ? 0 : DefaultDurationInSeconds, keepMargin: true);
         }
     }
 }

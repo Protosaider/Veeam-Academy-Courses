@@ -4,7 +4,7 @@ using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-    public class ChatParticipantListItemViewModel : BaseViewModel
+	internal sealed class ChatParticipantListItemViewModel : BaseViewModel
     {
         private String _name;
         private Int32 _activityStatus;

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClientApp.Animations
+﻿namespace ClientApp.Animations
 {
-    public enum AnimationSlideInDirection
+	internal enum EAnimationSlideInDirection
     {
         /// <summary>
         /// Slide in from the left

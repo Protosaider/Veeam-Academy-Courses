@@ -1,18 +1,6 @@
 ﻿using ClientApp.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ClientApp
 {
@@ -30,13 +18,13 @@ namespace ClientApp
         private void AppWindow_Deactivated(Object sender, EventArgs e)
         {
             // Show overlay if we lose focus
-            (DataContext as WindowViewModel).DimmableOverlayVisible = true;
+            ((WindowViewModel)DataContext).DimmableOverlayVisible = true;
         }
 
         private void AppWindow_Activated(Object sender, EventArgs e)
         {
             // Hide overlay if we are focused
-            (DataContext as WindowViewModel).DimmableOverlayVisible = false;
+            ((WindowViewModel)DataContext).DimmableOverlayVisible = false;
         }
     }
 }

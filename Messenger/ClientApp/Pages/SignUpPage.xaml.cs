@@ -5,7 +5,7 @@ namespace ClientApp.Pages
     /// <summary>
     /// Interaction logic for SignUpPage.xaml
     /// </summary>
-    public partial class SignUpPage : BasePage<CSignUpViewModel>
+	internal partial class SignUpPage : BasePage<CSignUpViewModel>
     {
         public SignUpPage()
         {

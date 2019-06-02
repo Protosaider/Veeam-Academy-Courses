@@ -1,18 +1,14 @@
 ﻿using Common.ServiceLocator;
 using DataStorage.DataProviders;
 using log4net;
-using Other;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using MaintenanceService.Other;
 
 namespace MaintenanceService.Controllers
 {
-    public class MaintenanceController : ApiController
+    public sealed class MaintenanceController : ApiController
     {
         private static readonly ILog s_log = SLogger.GetLogger();
         private readonly ICUserInfoDataProvider _userDataProvider;

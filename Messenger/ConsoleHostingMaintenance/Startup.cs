@@ -1,14 +1,9 @@
-﻿using Owin;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Owin;
 
-namespace ConsoleHosting
+namespace ConsoleHostingMaintenance
 {
-    public class Startup
+	internal class Startup
     {
         // This code configures Web API. The Startup class is specified as a type
         // parameter in the WebApp.Start method.

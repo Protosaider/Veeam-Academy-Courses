@@ -6,18 +6,17 @@ using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ContactAdd
 {
-    public class ContactAddListItemViewModel : BaseViewModel
+	internal sealed class ContactAddListItemViewModel : BaseViewModel
     {
-        private readonly Guid _id;
-        private String _name;
+		private String _name;
         private String _lastActiveTime;
         private String _initials;
         private String _profilePictureRgb;
         private Boolean _isSelected;
 
-        public Guid Id => _id;
+        public Guid Id { get; }
 
-        public String Name
+		public String Name
         {
             get => _name;
             set
@@ -73,7 +72,7 @@ namespace ClientApp.ViewModels.ContactAdd
 
         public ContactAddListItemViewModel(CContactData contactData)
         {
-            _id = contactData.UserId;
+            Id = contactData.UserId;
             Name = contactData.Login;
             Initials = Name.Substring(0, 2);
             ProfilePictureRgb = Name.FromLogin().ToColorCode();
@@ -81,8 +80,8 @@ namespace ClientApp.ViewModels.ContactAdd
 
         public ContactAddListItemViewModel() { }
 
-        private AddContactCommand _addContactCommandClass;
-        public AddContactCommand AddContactCommandClass => _addContactCommandClass ?? (_addContactCommandClass = new AddContactCommand());
+        private CAddContactCommand _addContactCommandClass;
+		private CAddContactCommand AddContactCommandClass => _addContactCommandClass ?? (_addContactCommandClass = new CAddContactCommand());
         private ICommand _addContactCommand;
         public ICommand AddContactCommand => _addContactCommand ?? (_addContactCommand = AddContactCommandClass);
 

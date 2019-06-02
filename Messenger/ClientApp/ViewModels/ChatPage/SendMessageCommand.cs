@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Windows.Input;
 using ClientApp.DataSuppliers;
 using ClientApp.DataSuppliers.Data;
 using ClientApp.ServiceProxies;
-using DTO;
+using ClientApp.ViewModels.Base;
 
-namespace ClientApp.ViewModels
+namespace ClientApp.ViewModels.ChatPage
 {
-    public sealed class CSendCommand : CBaseCommand
+	internal sealed class CSendCommand : CBaseCommand
     {
         private readonly Int32 MAX_MESSAGE_LENGTH = 2028;
         private readonly Int32 AVG_MESSAGE_LENGTH = 256;

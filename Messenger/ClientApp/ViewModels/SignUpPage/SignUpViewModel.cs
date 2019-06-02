@@ -7,10 +7,8 @@ using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.SignUpPage
 {
-    public sealed class CSignUpViewModel : BaseViewModel
+	internal sealed class CSignUpViewModel : BaseViewModel
     {
-        public String Avatar = "Default avatar";
-
         private String _login;
         public String Login
         {
@@ -52,8 +50,7 @@ namespace ClientApp.ViewModels.SignUpPage
 
 
         private CSignUpCommand _signUpCommandClass;
-
-        public CSignUpCommand SignUpCommandClass => _signUpCommandClass ?? (_signUpCommandClass =
+		private CSignUpCommand SignUpCommandClass => _signUpCommandClass ?? (_signUpCommandClass =
                                                         new CSignUpCommand(_authSupplier, () => !HasErrors,
                                                             HandleTryGetUser));
         private ICommand _signUpCommand;
@@ -61,7 +58,7 @@ namespace ClientApp.ViewModels.SignUpPage
 
 
         private CGoToLogInPageCommand _goToLogInPageCommandClass;
-        public CGoToLogInPageCommand GoToLogInPageCommandClass =>
+		private CGoToLogInPageCommand GoToLogInPageCommandClass =>
             _goToLogInPageCommandClass ?? (_goToLogInPageCommandClass = new CGoToLogInPageCommand());
         private ICommand _goToLogInPageCommand;
         public ICommand GoToLogInPageCommand => _goToLogInPageCommand ?? (_goToLogInPageCommand = GoToLogInPageCommandClass);
@@ -69,7 +66,7 @@ namespace ClientApp.ViewModels.SignUpPage
 
         public CSignUpViewModel()
         {
-            _authSupplier = new CAuthSupplier();
+            _authSupplier = CAuthSupplier.Create();
             _loginValidator = new CLoginValidator();
 
             //validate on creation

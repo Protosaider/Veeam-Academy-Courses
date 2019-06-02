@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DTO
 {
-    public class CUserDto
+    public sealed class CUserDto
     {
-        public String Login { get; set; }
-        public DateTimeOffset LastActiveTime { get; set; }
-        public Int32 ActivityStatus { get; set; }
+        public String Login { get; }
+        public DateTimeOffset LastActiveTime { get; }
+        public Int32 ActivityStatus { get; }
 
         public CUserDto(String login, DateTimeOffset lastActiveTime, Int32 activityStatus)
         {

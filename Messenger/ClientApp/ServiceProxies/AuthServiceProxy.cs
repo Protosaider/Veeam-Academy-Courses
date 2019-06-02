@@ -3,11 +3,10 @@ using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
+using ClientApp.Other;
 using DTO;
 using log4net;
 using Newtonsoft.Json;
-using Other;
 
 namespace ClientApp.ServiceProxies
 {
@@ -48,6 +47,7 @@ namespace ClientApp.ServiceProxies
             catch (Exception e)
             {
                 Console.WriteLine(e);
+				_logger.LogError(@"MessengerService Error", e);
                 throw;
             }
         }
@@ -70,6 +70,7 @@ namespace ClientApp.ServiceProxies
             catch (Exception e)
             {
                 Console.WriteLine(e);
+				_logger.LogError(@"MessengerService Error", e);
                 throw;
             }
         }

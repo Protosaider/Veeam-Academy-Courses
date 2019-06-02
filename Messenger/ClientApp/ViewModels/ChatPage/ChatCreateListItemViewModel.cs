@@ -1,20 +1,14 @@
 ﻿using ClientApp.DataSuppliers.Data;
 using ClientApp.ViewModels.Base;
-using DTO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using ClientApp.Other;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-	public sealed class ChatCreateListItemViewModel : BaseViewModel
+	internal sealed class ChatCreateListItemViewModel : BaseViewModel
     {
-        private Guid _id;
-        private String _name;
+		private String _name;
         private String _initials;
         private String _profilePictureRgb;
 
@@ -48,8 +42,9 @@ namespace ClientApp.ViewModels.ChatPage
             }
         }
 
-        public Guid ContactId => _id;
-        private Boolean _isSelected;
+        public Guid ContactId { get; }
+
+		private Boolean _isSelected;
         public Boolean IsSelected
         {
             get => _isSelected;
@@ -57,7 +52,7 @@ namespace ClientApp.ViewModels.ChatPage
             {
                 _isSelected = value;
                 OnPropertyChanged();
-                OnSelection?.Invoke(_id, _isSelected);
+                OnSelection?.Invoke(ContactId, _isSelected);
             }
         }
 
@@ -67,7 +62,7 @@ namespace ClientApp.ViewModels.ChatPage
         public ICommand UncheckCommand { get; }
         public ChatCreateListItemViewModel(CContactData contactData)
         {
-            _id = contactData.UserId;
+            ContactId = contactData.UserId;
             Name = contactData.Login;
             Initials = Name.Substring(0, 2);
             ProfilePictureRgb = Name.FromLogin().ToColorCode();

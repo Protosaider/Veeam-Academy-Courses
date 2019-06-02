@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DataStorage.Test
 {
-    public static class SWholeRepositoryStub
+	internal static class SWholeRepositoryStub
     {
 		internal static IReadOnlyList<CChatInfo> Chats { get; private set; }
 		private static IReadOnlyList<CChatsParticipantInfo> ChatsParticipants { get; set; }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace ClientApp.AttachedProperties
@@ -14,7 +10,7 @@ namespace ClientApp.AttachedProperties
     /// <typeparam name="TProperty">The type of this attached property</typeparam>
     public abstract class BaseAttachedProperty<TParent, TProperty> where TParent : new()
     {
-        //Singletone instance
+        //Singleton instance
 		private static TParent Instance { get; } = new TParent();
 
         #region Attached Property definition
@@ -35,10 +31,10 @@ namespace ClientApp.AttachedProperties
         private static void OnValuePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             // Call the parent function
-            (Instance as BaseAttachedProperty<TParent, Boolean>).OnValueChanged(d, e);
+            (Instance as BaseAttachedProperty<TParent, Boolean>)?.OnValueChanged(d, e);
 
             // Call event listeners
-            (Instance as BaseAttachedProperty<TParent, Boolean>).ValueChanged?.Invoke(d, e);
+            (Instance as BaseAttachedProperty<TParent, Boolean>)?.ValueChanged?.Invoke(d, e);
         }
 
         /// <summary>
@@ -50,10 +46,10 @@ namespace ClientApp.AttachedProperties
         private static Object OnValuePropertyUpdated(DependencyObject d, Object baseValue)
         {
             // Call the parent function
-            (Instance as BaseAttachedProperty<TParent, Boolean>).OnValueUpdated(d, baseValue);
+            (Instance as BaseAttachedProperty<TParent, Boolean>)?.OnValueUpdated(d, baseValue);
 
             // Call event listeners
-            (Instance as BaseAttachedProperty<TParent, Boolean>).ValueUpdated?.Invoke(d, baseValue);
+            (Instance as BaseAttachedProperty<TParent, Boolean>)?.ValueUpdated?.Invoke(d, baseValue);
 
             return baseValue;
         }

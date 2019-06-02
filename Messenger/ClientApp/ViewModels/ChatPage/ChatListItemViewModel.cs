@@ -1,13 +1,8 @@
 ﻿using ClientApp.Other;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using ClientApp.ViewModels.Base;
 using System.Windows.Input;
-using DTO;
 using System.Threading;
 using ClientApp.DataSuppliers;
 using ClientApp.DataSuppliers.Data;
@@ -15,7 +10,7 @@ using ClientApp.ServiceProxies;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-    public sealed class ChatListItemViewModel : BaseViewModel, IDisposable
+	internal sealed class ChatListItemViewModel : BaseViewModel, IDisposable
     {
         private EChatType _type;
         private Boolean _isPersonal;

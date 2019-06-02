@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using DataStorage.DataProviders;
-using Info;
+﻿using System.Web.Http;
 
 namespace MessengerService.Controllers
 {
-    public class MessageController : ApiController
+    public sealed class MessageController : ApiController
     {
         //public IHttpActionResult GetAllMessagesFromChat(Guid chatId)
         //{

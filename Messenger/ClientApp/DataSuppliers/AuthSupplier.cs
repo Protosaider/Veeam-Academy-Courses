@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
+using ClientApp.Other;
 using ClientApp.ServiceProxies;
 using DTO;
 using log4net;
-using Other;
 
 namespace ClientApp.DataSuppliers
 {

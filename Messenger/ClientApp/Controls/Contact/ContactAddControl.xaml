@@ -10,7 +10,7 @@
              xmlns:attachedProperties="clr-namespace:ClientApp.AttachedProperties"
              xmlns:local="clr-namespace:ClientApp.Controls.Contact"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="400">
+             d:DesignHeight="450" d:DesignWidth="400" x:ClassModifier="internal">
     <UserControl.Template>
         <ControlTemplate TargetType="UserControl">
             
@@ -90,7 +90,7 @@
                         Command="{Binding CloseAddContactCommand}"
                         />
                     </StackPanel>
-                    <Grid attachedProperties:AnimateSlideInFromLeftMarginProperty.Value="True">
+                    <Grid Grid.Column="0" attachedProperties:AnimateSlideInFromLeftMarginProperty.Value="True">
                         <TextBox 
                         Tag="Search text..."
                         attachedProperties:FocusProperty.Value="True"

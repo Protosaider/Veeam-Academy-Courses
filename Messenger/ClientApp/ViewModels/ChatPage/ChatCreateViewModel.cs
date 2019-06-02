@@ -1,22 +1,17 @@
 ﻿using ClientApp.DataSuppliers;
 using ClientApp.ServiceProxies;
 using ClientApp.ViewModels.Base;
-using ClientApp.ViewModels.Contact;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using ClientApp.DataSuppliers.Data;
 using ClientApp.Other;
-using ClientApp.ViewModels.ContactAdd;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-    public sealed class ChatCreateViewModel : BaseViewModel
+	internal sealed class ChatCreateViewModel : BaseViewModel
     {
         private ObservableCollection<ChatCreateListItemViewModel> _items;
         public ObservableCollection<ChatCreateListItemViewModel> FilteredItems
@@ -76,12 +71,7 @@ namespace ClientApp.ViewModels.ChatPage
 
             OnPropertyChanged(nameof(HasSelectedItems));
 
-            if (_selectedItemsIdList.Count == 1)
-                HasDialog = _hasDialogContactsId.Contains(_selectedItemsIdList.Single());
-            else
-            {
-                HasDialog = false;
-            }
+            HasDialog = _selectedItemsIdList.Count == 1 && _hasDialogContactsId.Contains(_selectedItemsIdList.Single());
         }
 
         private readonly IContactsSupplier _contactsSupplier;

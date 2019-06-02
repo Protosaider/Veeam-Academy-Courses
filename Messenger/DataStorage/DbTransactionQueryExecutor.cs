@@ -1,11 +1,11 @@
 ﻿using DataStorage.Mappers;
 using log4net;
-using Other;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Transactions;
+using DataStorage.Other;
 
 namespace DataStorage
 {
@@ -248,7 +248,7 @@ namespace DataStorage
 
 		private Int32 ExecuteNonQuery(IDbCommand command, String queryString, params SqlParameter[] parameters)
         {
-            Int32 rowsAffected = 0;
+            Int32 rowsAffected;
 
             try
             {
@@ -277,7 +277,7 @@ namespace DataStorage
 		internal void Commit()
         {
             _transaction?.Complete();
-            s_log.LogInfo($"Transaction is committed");
+            s_log.LogInfo(@"Transaction is committed");
         }
 
         public void Dispose()

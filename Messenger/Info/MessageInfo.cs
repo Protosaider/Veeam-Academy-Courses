@@ -5,7 +5,7 @@ namespace Info
     public sealed class CMessageInfo
     {
         public Guid Id { get; }
-        public Int64 USN { get; }        
+        public Int64 Usn { get; }        
         public DateTimeOffset DispatchDate { get; }
         public String MessageText { get; }
         public Int32 Type { get; }
@@ -24,7 +24,7 @@ namespace Info
             FromUserId = fromUserId;
             IsRead = isRead;
             Login = login;
-            USN = usn;
+            Usn = usn;
         }
     }
 }

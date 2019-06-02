@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using ClientApp.Animations;
-using ClientApp.ViewModels;
 using ClientApp.ViewModels.Base;
 
 namespace ClientApp.Pages
@@ -66,9 +65,11 @@ namespace ClientApp.Pages
             {
                 case EFrameworkAnimation.SlideAndFadeInFromRight:
                     // Start the animation
-                    await this.SlideAndFadeInAsync(AnimationSlideInDirection.Right, false, SlideDurationInSeconds, size: (Int32)Application.Current.MainWindow.Width);
+					if (Application.Current.MainWindow != null)
+						await this.SlideAndFadeInAsync(EAnimationSlideInDirection.Right, false, SlideDurationInSeconds,
+							size: (Int32)Application.Current.MainWindow.Width);
 
-                    break;
+					break;
 
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -83,7 +84,7 @@ namespace ClientApp.Pages
             switch (PageUnloadAnimation)
             {
                 case EFrameworkAnimation.SlideAndFadeOutToLeft:
-                    await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Left, SlideDurationInSeconds);
+                    await this.SlideAndFadeOutAsync(EAnimationSlideInDirection.Left, SlideDurationInSeconds);
 
                     break;
                 default:
@@ -113,8 +114,8 @@ namespace ClientApp.Pages
             }
         }
 
-		protected BasePage() : base()
-        {
+		protected BasePage()
+		{
             // If in design time mode...
             if (DesignerProperties.GetIsInDesignMode(this))
                 // Just use a new instance of the VM
@@ -127,8 +128,8 @@ namespace ClientApp.Pages
         }
 
         // Constructor with specific view model
-		protected BasePage(TViewModel specificViewModel = null) : base()
-        {
+		protected BasePage(TViewModel specificViewModel = null)
+		{
             if (specificViewModel != null)
             {
                 ViewModel = specificViewModel;

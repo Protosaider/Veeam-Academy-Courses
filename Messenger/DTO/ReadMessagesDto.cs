@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DTO
 {
-    public class CReadMessagesDto
+    public sealed class CReadMessagesDto
     {
         //public Guid UserId { get; set; }
         //public Guid ChatId { get; set; }
@@ -16,8 +16,8 @@ namespace DTO
         //    ReadMessages = readMessages;
         //}
 
-        public Guid UserId { get; set; }
-        public List<Guid> ReadMessages { get; set; }
+        public Guid UserId { get; }
+        public List<Guid> ReadMessages { get; }
         public CReadMessagesDto(Guid userId, List<Guid> readMessages)
         {
             UserId = userId;

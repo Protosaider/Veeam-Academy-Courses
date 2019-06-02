@@ -2,13 +2,13 @@
 
 namespace DTO
 {
-    public class CContactDto
+    public sealed class CContactDto
     {
-        public Guid Id { get; set; }
-        public Guid OwnerId { get; set; }
-        public Guid UserId { get; set; }
-        public Boolean IsBlocked { get; set; }
-        public CUserDto UserData { get; set; }
+        public Guid Id { get; }
+        public Guid OwnerId { get; }
+        public Guid UserId { get; }
+        public Boolean IsBlocked { get; }
+        public CUserDto UserData { get; }
 
         public CContactDto(Guid id, Guid ownerId, Guid userId, Boolean isBlocked, CUserDto userData)
         {

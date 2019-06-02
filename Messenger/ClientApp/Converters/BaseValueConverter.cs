@@ -7,7 +7,7 @@ namespace ClientApp.Converters
 {
     public abstract class BaseValueConverter<T> : MarkupExtension, IValueConverter where T : class, new()
     {
-        private static T s_converter = null;
+        private static T s_converter;
 
         #region MarkupExtension
         public override Object ProvideValue(IServiceProvider serviceProvider)
@@ -24,7 +24,7 @@ namespace ClientApp.Converters
 
     public abstract class BaseMultiValueConverter<T> : MarkupExtension, IMultiValueConverter where T : class, new()
     {
-        private static T s_converter = null;
+        private static T s_converter;
 
         #region MarkupExtension
         public override Object ProvideValue(IServiceProvider serviceProvider)

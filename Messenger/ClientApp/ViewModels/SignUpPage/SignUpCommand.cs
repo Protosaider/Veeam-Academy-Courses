@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using ClientApp.DataSuppliers;
 using ClientApp.Other;
+using ClientApp.ViewModels.Base;
 using DTO;
 
 namespace ClientApp.ViewModels.SignUpPage
 {
-    public sealed class CSignUpCommand : CBaseCommand
+	internal sealed class CSignUpCommand : CBaseCommand
     {
         private readonly IAuthSupplier _authSupplier;
         private readonly Func<Boolean> _getValidationResult;
@@ -20,12 +21,12 @@ namespace ClientApp.ViewModels.SignUpPage
             _returnValidationResult = returnValidationResult ?? throw new ArgumentNullException(nameof(returnValidationResult));
         }
 
-        protected sealed override Boolean CanExecute<T>(Object parameter)
+        protected override Boolean CanExecute<T>(Object parameter)
         {
             return _getValidationResult();
         }
 
-        protected sealed override void Execute<T>(Object parameter)
+        protected override void Execute<T>(Object parameter)
         {
             //TODO Добавить логгер
             if (parameter == null)

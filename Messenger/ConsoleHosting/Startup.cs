@@ -1,17 +1,10 @@
-﻿using MessengerService;
-using Other;
-using Owin;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Owin;
 using System.Web.Http;
-using SLogger = Other.SLogger;
+using ConsoleHosting.Other;
 
 namespace ConsoleHosting
 {
-    public class Startup
+	internal class Startup
     {
         // This code configures Web API. The Startup class is specified as a type
         // parameter in the WebApp.Start method.
@@ -22,7 +15,7 @@ namespace ConsoleHosting
             HttpConfiguration config = new HttpConfiguration();
 
             //LogRequestAndResponseHandler
-            config.MessageHandlers.Add(new LogRequestAndResponseHandler());
+            config.MessageHandlers.Add(new CLogRequestAndResponseHandler());
 
             SLogger.GetLogger().LogInfo("Register WebApi Middleware");
             //! WebApiMiddleware

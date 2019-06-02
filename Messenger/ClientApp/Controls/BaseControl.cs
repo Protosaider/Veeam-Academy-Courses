@@ -4,12 +4,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using ClientApp.Animations;
-using ClientApp.ViewModels;
 using ClientApp.ViewModels.Base;
 
 namespace ClientApp.Controls
 {
-    public class BaseControl : UserControl
+	internal class BaseControl : UserControl
     {
 		private EFrameworkAnimation PageLoadAnimation { get; } = EFrameworkAnimation.SlideAndFadeInFromLeft;
 		private EFrameworkAnimation PageUnloadAnimation { get; } = EFrameworkAnimation.SlideAndFadeOutToBottom;
@@ -42,13 +41,13 @@ namespace ClientApp.Controls
 
             //firstly - If we are animating in, hide to begin with
             if (PageLoadAnimation != EFrameworkAnimation.None)
-                Visibility = System.Windows.Visibility.Collapsed;
+                Visibility = Visibility.Collapsed;
 
             //When window is loaded - start the animation
             Loaded += BasePage_LoadedAsync;
         }
 
-        private async void BasePage_LoadedAsync(Object sender, System.Windows.RoutedEventArgs e)
+        private async void BasePage_LoadedAsync(Object sender, RoutedEventArgs e)
         {
             //If set up to animate 
             if (ShouldAnimateOut)
@@ -66,15 +65,21 @@ namespace ClientApp.Controls
             {
                 case EFrameworkAnimation.SlideAndFadeInFromRight:
                     // Start the animation
-                    await this.SlideAndFadeInAsync(AnimationSlideInDirection.Right, false, SlideDurationInSeconds, size: (Int32)Application.Current.MainWindow.Width);
-                    break;
+					if (Application.Current.MainWindow != null)
+						await this.SlideAndFadeInAsync(EAnimationSlideInDirection.Right, false, SlideDurationInSeconds,
+							size: (Int32)Application.Current.MainWindow.Width);
+
+					break;
 
                 case EFrameworkAnimation.SlideAndFadeInFromLeft:
                     // Start the animation
-                    await this.SlideAndFadeInAsync(AnimationSlideInDirection.Left, false, SlideDurationInSeconds, size: (Int32)Application.Current.MainWindow.Width);
-                    break;
+					if (Application.Current.MainWindow != null)
+						await this.SlideAndFadeInAsync(EAnimationSlideInDirection.Left, false, SlideDurationInSeconds,
+							size: (Int32)Application.Current.MainWindow.Width);
 
-                default:
+					break;
+
+				default:
                     throw new ArgumentOutOfRangeException();
             }
         }
@@ -87,10 +92,10 @@ namespace ClientApp.Controls
             switch (PageUnloadAnimation)
             {
                 case EFrameworkAnimation.SlideAndFadeOutToLeft:
-                    await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Left, SlideDurationInSeconds);
+                    await this.SlideAndFadeOutAsync(EAnimationSlideInDirection.Left, SlideDurationInSeconds);
                     break;
                 case EFrameworkAnimation.SlideAndFadeOutToBottom:
-                    await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Bottom, SlideDurationInSeconds);
+                    await this.SlideAndFadeOutAsync(EAnimationSlideInDirection.Bottom, SlideDurationInSeconds);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -103,7 +108,7 @@ namespace ClientApp.Controls
         }
     }
 
-    public class BaseControl<TViewModel> : BaseControl where TViewModel : BaseViewModel, new()
+	internal class BaseControl<TViewModel> : BaseControl where TViewModel : BaseViewModel, new()
     {
         private TViewModel _viewModel;
 
@@ -119,8 +124,8 @@ namespace ClientApp.Controls
             }
         }
 
-		protected BaseControl() : base()
-        {
+		protected BaseControl()
+		{
             // If in design time mode...
             if (DesignerProperties.GetIsInDesignMode(this))
                 // Just use a new instance of the VM
@@ -133,8 +138,8 @@ namespace ClientApp.Controls
         }
 
         // Constructor with specific view model
-		protected BaseControl(TViewModel specificViewModel = null) : base()
-        {
+		protected BaseControl(TViewModel specificViewModel = null)
+		{
             if (specificViewModel != null)
             {
                 ViewModel = specificViewModel;

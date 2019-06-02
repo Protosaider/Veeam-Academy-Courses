@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Xml;
 using log4net;
 using log4net.Config;
 
@@ -20,9 +19,9 @@ using log4net.Config;
  * Why did the application fail?
  */
 
-namespace MessengerService
+namespace ConsoleHosting
 {
-    public static class SLogger
+	internal static class SLogger
     {
         //public static ILog Log { get; } = LogManager.GetLogger("WebService");
         //public static ILog Log { get; } = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);

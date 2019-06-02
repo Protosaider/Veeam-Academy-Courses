@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using ClientApp.DataSuppliers.Data;
-using ClientApp.ViewModels.ChatPage;
-using ClientApp.ViewModels.Contact;
-using ClientApp.ViewModels.ContactAdd;
-using DTO;
 
 namespace ClientApp.DataSuppliers
 {

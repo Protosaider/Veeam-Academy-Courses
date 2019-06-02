@@ -12,7 +12,7 @@
              xmlns:local="clr-namespace:ClientApp.Controls.Contact"
              xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="400">
+             d:DesignHeight="400" d:DesignWidth="400" x:ClassModifier="internal">
     <UserControl.Template>
         <ControlTemplate TargetType="UserControl">
             <Grid>
@@ -45,7 +45,7 @@
                         />
                     </StackPanel>
                     <!--Search Overlay-->
-                    <Grid Grid.ColumnSpan="2"
+                    <Grid Grid.ColumnSpan="2" Grid.Column="0"
                           attachedProperties:AnimateSlideInFromLeftMarginProperty.Value="{Binding SearchIsOpen}"
                     >
                         <Grid.ColumnDefinitions>
@@ -76,8 +76,8 @@
                         </TextBox>
                     </Grid>
                     <!-- Filter Overlay -->
-                    <Grid Grid.ColumnSpan="2"
-                  attachedProperties:AnimateSlideInFromLeftMarginProperty.Value="{Binding FilterIsOpen}"
+                    <Grid Grid.ColumnSpan="2" Grid.Column="0"
+                          attachedProperties:AnimateSlideInFromLeftMarginProperty.Value="{Binding FilterIsOpen}"
                   Background="{StaticResource ForegroundDarkBrush}"
                   >
 

@@ -7,7 +7,7 @@ using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.LogInPage
 {
-    public sealed class CLogInViewModel : BaseViewModel
+	internal sealed class CLogInViewModel : BaseViewModel
     {
         private String _login;
         public String Login
@@ -61,14 +61,14 @@ namespace ClientApp.ViewModels.LogInPage
 
 
         private CLogInCommandAsync _logInCommandAsyncClass;
-        public CLogInCommandAsync LogInCommandAsyncClass => _logInCommandAsyncClass ?? (_logInCommandAsyncClass =
+		private CLogInCommandAsync LogInCommandAsyncClass => _logInCommandAsyncClass ?? (_logInCommandAsyncClass =
             new CLogInCommandAsync(_authSupplier, () => !HasErrors, HandleTryGetUser));
         private ICommand _logInCommand;
         public ICommand LogInCommand => _logInCommand ?? (_logInCommand = LogInCommandAsyncClass);
 
 
         private CGoToSignUpPageCommand _goToSignUpPageCommandClass;
-        public CGoToSignUpPageCommand GoToSignUpPageCommandClass =>
+		private CGoToSignUpPageCommand GoToSignUpPageCommandClass =>
             _goToSignUpPageCommandClass ?? (_goToSignUpPageCommandClass = new CGoToSignUpPageCommand());
 
         private ICommand _goToSignUpPageCommand;
@@ -78,7 +78,7 @@ namespace ClientApp.ViewModels.LogInPage
 
         public CLogInViewModel()
         {
-            _authSupplier = new CAuthSupplier();
+            _authSupplier = CAuthSupplier.Create();
             _loginValidator = new CLoginValidator();
 
             //validate on creation

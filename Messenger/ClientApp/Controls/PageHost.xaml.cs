@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using ClientApp.Other;
 using ClientApp.Pages;
-using ClientApp.ViewModels;
 using ClientApp.ViewModels.Base;
 
 namespace ClientApp.Controls
@@ -54,9 +54,15 @@ namespace ClientApp.Controls
             var currentPage = (EApplicationPage)value;
             var currentPageViewModel = d.GetValue(CurrentPageViewModelProperty);
 
+			if (!(d is PageHost))
+			{
+				Debugger.Break();
+				return value;
+			}
+
             //get frames from xaml
-            var newPageFrame = (d as PageHost).NewPage;
-            var oldPageFrame = (d as PageHost).OldPage;
+            var newPageFrame = ((PageHost)d).NewPage;
+            var oldPageFrame = ((PageHost)d).OldPage;
 
             // If the current page hasn't changed just update the view model
             if (newPageFrame.Content is BasePage page &&

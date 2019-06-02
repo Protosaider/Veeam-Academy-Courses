@@ -2,21 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using Info;
 using Newtonsoft.Json.Linq;
 using log4net;
-using Other;
 using DTO;
 using System.Web.Http.Description;
 using Common.ServiceLocator;
 using DataStorage;
+using MessengerService.Other;
 
 namespace MessengerService.Controllers
 {
-    public class ContactsController : ApiController
+    public sealed class ContactsController : ApiController
     {
         private static readonly ILog s_log = SLogger.GetLogger();
         private readonly ICContactInfoDataProvider _contactDataProvider;
@@ -44,7 +42,7 @@ namespace MessengerService.Controllers
             if (ownerId == Guid.Empty)
             {
                 ModelState.AddModelError($"{nameof(ownerId)}", "Incoming data is null");
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({ownerId})", new ArgumentNullException(nameof(ownerId), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({ownerId})", new ArgumentNullException(nameof(ownerId), "Incoming data is null"));
                 return BadRequest(ModelState);
             }
 
@@ -52,7 +50,7 @@ namespace MessengerService.Controllers
 
             if (contactInfos == null)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({ownerId})", new Exception("Failed to get all contacts"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({ownerId})", new Exception("Failed to get all contacts"));
                 return NotFound();
             }
 
@@ -78,13 +76,13 @@ namespace MessengerService.Controllers
             if (String.IsNullOrEmpty(q))
             {
                 ModelState.AddModelError($"{nameof(q)}", "Incoming data is null");
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({q})", new ArgumentNullException(nameof(q), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({q})", new ArgumentNullException(nameof(q), "Incoming data is null"));
                 hasError = true;
             }
             else if (ownerId == default(Guid))
             {
                 ModelState.AddModelError($"{nameof(ownerId)}", "Incoming data is null");
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({q})", new ArgumentNullException(nameof(ownerId), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({q})", new ArgumentNullException(nameof(ownerId), "Incoming data is null"));
                 hasError = true;
             }
 
@@ -95,7 +93,7 @@ namespace MessengerService.Controllers
 
             if (contactInfos == null)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({ownerId})", new Exception("Search of new contacts was failed "));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({ownerId})", new Exception("Search of new contacts was failed "));
                 return NotFound();
             }
 
@@ -143,7 +141,7 @@ namespace MessengerService.Controllers
             if (ownerId == default(Guid))
             {
                 ModelState.AddModelError($"{nameof(ownerId)}", "Incoming data is null");
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({ownerId})", new ArgumentNullException(nameof(ownerId), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({ownerId})", new ArgumentNullException(nameof(ownerId), "Incoming data is null"));
                 return BadRequest(ModelState);
             }
 
@@ -151,7 +149,7 @@ namespace MessengerService.Controllers
 
             if (contactInfos == null)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({ownerId})", new Exception("Failed to get contacts without dialogs"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({ownerId})", new Exception("Failed to get contacts without dialogs"));
                 return NotFound();
             }
 
@@ -173,7 +171,7 @@ namespace MessengerService.Controllers
             if (ownerId == default(Guid))
             {
                 ModelState.AddModelError($"{nameof(ownerId)}", "Incoming data is null");
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({ownerId})", new ArgumentNullException(nameof(ownerId), "Incoming data is null"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({ownerId})", new ArgumentNullException(nameof(ownerId), "Incoming data is null"));
                 return BadRequest(ModelState);
             }
 
@@ -181,7 +179,7 @@ namespace MessengerService.Controllers
 
             if (contactInfos == null)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({ownerId})", new Exception("Failed to get contacts without dialogs"));
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({ownerId})", new Exception("Failed to get contacts without dialogs"));
                 return NotFound();
             }
 

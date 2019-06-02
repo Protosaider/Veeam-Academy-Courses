@@ -1,13 +1,10 @@
 ﻿using ClientApp.Other;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.Contact
 {
-    public sealed class COpenAddContactCommand : CBaseCommand
+	internal sealed class COpenAddContactCommand : CBaseCommand
     {
         protected override Boolean CanExecute<T>(Object parameter)
         {

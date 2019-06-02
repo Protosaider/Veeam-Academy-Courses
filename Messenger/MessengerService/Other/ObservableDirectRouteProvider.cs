@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Routing;
 
 namespace MessengerService.Other
 {
-    public class ObservableDirectRouteProvider : IDirectRouteProvider
+    public sealed class CObservableDirectRouteProvider : IDirectRouteProvider
     {
-        public IReadOnlyList<RouteEntry> DirectRoutes { get; private set; }
+		internal IReadOnlyList<RouteEntry> DirectRoutes { get; private set; }
 
         public IReadOnlyList<RouteEntry> GetDirectRoutes(HttpControllerDescriptor controllerDescriptor, IReadOnlyList<HttpActionDescriptor> actionDescriptors, IInlineConstraintResolver constraintResolver)
         {

@@ -5,12 +5,12 @@ using System.Windows.Input;
 
 namespace ClientApp.ViewModels
 {
-    public class CSendMessageCommand : ICommand
+	internal sealed class CSendMessageCommand : ICommand
     {
-        public Int32 MAX_MESSAGE_LENGTH = 2028;
-        public Int32 AVG_MESSAGE_LENGTH = 256;
+		private readonly Int32 MAX_MESSAGE_LENGTH = 2028;
+		private readonly Int32 AVG_MESSAGE_LENGTH = 256;
 
-        public Boolean IsWaitingForExecution { get; private set; } = true;
+		private Boolean IsWaitingForExecution { get; set; } = true;
 
         private readonly Predicate<Object> _canExecute;
         private readonly Action<String> _sendAction;

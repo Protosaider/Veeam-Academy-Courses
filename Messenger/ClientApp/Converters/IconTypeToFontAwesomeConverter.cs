@@ -1,18 +1,17 @@
 ﻿using ClientApp.Other;
 using System;
 using System.Globalization;
-using System.Windows;
 
 namespace ClientApp.Converters
 {
-    /// <summary>
-    /// A converter that takes in a <see cref="IconType"/> and returns 
-    /// the FontAwesome string for that icon
-    /// </summary>
-    public class ChatTypeToFontAwesomeIconConverter : BaseValueConverter<ChatTypeToFontAwesomeIconConverter>
+
+    public sealed class ChatTypeToFontAwesomeIconConverter : BaseValueConverter<ChatTypeToFontAwesomeIconConverter>
     {
         public override Object Convert(Object value, Type targetType, Object parameter, CultureInfo culture)
-        {
+		{
+			if (value == null)
+				return EChatType.Common;
+
             return ((EChatType)value).ToFontAwesome();
         }
 

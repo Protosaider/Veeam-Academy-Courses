@@ -2,9 +2,9 @@
 
 namespace DTO
 {
-    public class CTokenDto
+    public sealed class CTokenDto
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; }
 
         public CTokenDto(Guid id)
         {

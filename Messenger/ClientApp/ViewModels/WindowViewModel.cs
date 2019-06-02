@@ -1,11 +1,6 @@
 ﻿using ClientApp.ViewModels.Base;
 using ClientApp.WindowHelpers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -16,13 +11,13 @@ namespace ClientApp.ViewModels
     ///  Taken from angelsix (Luke Malpass)
     /// Source: https://github.com/angelsix/fasetto-word/blob/develop/Source/Fasetto.Word/WPFViewModels/WindowViewModel.cs
     /// </summary>
-    public class WindowViewModel : BaseViewModel
+	internal sealed class WindowViewModel : BaseViewModel
     {
-        private System.Windows.Window _window;
+        private readonly System.Windows.Window _window;
         private WindowDockPosition _dockPosition = WindowDockPosition.Undocked;
 
         // The window resizer helper that keeps the window size correct in various states
-        private WindowResizer _windowResizer;
+        private readonly WindowResizer _windowResizer;
 
         // Size of the resize border around the window - на полном экране площадь, за которую можно потянуть должна быть внутри
         public Int32 ResizeBorder => Borderless ? 0 : 6;
@@ -69,10 +64,10 @@ namespace ClientApp.ViewModels
         public Boolean DimmableOverlayVisible { get; set; }
 
 
-        public ICommand MinimizeCommand { get; set; }
-        public ICommand MaximizeCommand { get; set; }
-        public ICommand CloseCommand { get; set; }
-        public ICommand MenuCommand { get; set; }
+        public ICommand MinimizeCommand { get; }
+        public ICommand MaximizeCommand { get; }
+        public ICommand CloseCommand { get; }
+        public ICommand MenuCommand { get; }
 
 
         public WindowViewModel(System.Windows.Window window)
@@ -107,12 +102,14 @@ namespace ClientApp.ViewModels
             };
 
             // Fix dropping an undocked window at top which should be positioned at the very top of screen
-            _windowResizer.WindowFinishedMove += () =>
+			Double tolerance = Single.Epsilon * 1.0E30;
+
+			_windowResizer.WindowFinishedMove += () =>
             {
                 BeingMoved = false;
 
-                // Check for moved to top of window and not at an edge
-                if (_dockPosition == WindowDockPosition.Undocked && _window.Top == _windowResizer.CurrentScreenSize.Top)
+				// Check for moved to top of window and not at an edge
+                if (_dockPosition == WindowDockPosition.Undocked && Math.Abs(_window.Top - _windowResizer.CurrentScreenSize.Top) < tolerance)
                     // If so, move it to the true top (the border size)
                     _window.Top = -OuterMarginSizeThickness.Top;
             };

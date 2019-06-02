@@ -4,22 +4,23 @@ using System.Threading.Tasks;
 using ClientApp.DataSuppliers;
 using ClientApp.Other;
 using ClientApp.ServiceProxies;
+using ClientApp.ViewModels.Base;
 using DTO;
 
 namespace ClientApp.ViewModels.LogInPage
 {
-    public sealed class CLogInCommandAsync : CBaseAsyncCommand
+	internal sealed class CLogInCommandAsync : CBaseAsyncCommand
     {             
         private readonly IAuthSupplier _authSupplier;
         private readonly Func<Boolean> _getValidationResult;
         private readonly Action<ICollection<String>> _returnValidationResult;
 
-        protected sealed override Boolean CanExecute<T>(T parameter)
+        protected override Boolean CanExecute<T>(T parameter)
         {
             return _getValidationResult();
         }
 
-        protected sealed override async Task ExecuteAsync(Object parameter)
+        protected override async Task ExecuteAsync(Object parameter)
         {
             //TODO Добавить логгер
             if (parameter == null)

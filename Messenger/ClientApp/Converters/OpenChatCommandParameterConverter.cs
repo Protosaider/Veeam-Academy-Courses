@@ -1,14 +1,11 @@
-﻿using DTO;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Globalization;
 using ClientApp.DataSuppliers.Data;
 using ClientApp.Other;
-using ClientApp.ViewModels.ChatPage;
 
 namespace ClientApp.Converters
 {
-    public class OpenChatCommandParameterConverter : BaseMultiValueConverter<OpenChatCommandParameterConverter>
+    public sealed class OpenChatCommandParameterConverter : BaseMultiValueConverter<OpenChatCommandParameterConverter>
     {
         public override Object Convert(Object[] values, Type targetType, Object parameter, CultureInfo culture)
         {

@@ -1,10 +1,10 @@
 ﻿using DataStorage.Mappers;
 using log4net;
-using Other;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using DataStorage.Other;
 
 namespace DataStorage
 {
@@ -97,7 +97,7 @@ namespace DataStorage
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                throw ex;
+                throw;
             }
 
             return result;
@@ -152,7 +152,7 @@ namespace DataStorage
             }
             catch (Exception ex)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({connection}, {mapper}, {queryString}, {parameters})", ex);
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({connection}, {mapper}, {queryString}, {parameters})", ex);
                 Console.WriteLine(ex.Message);
             }
 
@@ -206,7 +206,7 @@ namespace DataStorage
             }
             catch (Exception ex)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({connection}, {mapper}, {queryString}, {parameters})", ex);
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({connection}, {mapper}, {queryString}, {parameters})", ex);
                 Console.WriteLine(ex.Message);
             }
 
@@ -250,7 +250,7 @@ namespace DataStorage
             }
             catch (Exception ex)
             {
-                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({connection}, {queryString}, {parameters})", ex);
+                s_log.LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({connection}, {queryString}, {parameters})", ex);
                 Console.WriteLine(ex.Message);
             }
 

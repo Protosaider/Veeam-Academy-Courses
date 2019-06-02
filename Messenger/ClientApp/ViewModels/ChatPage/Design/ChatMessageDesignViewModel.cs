@@ -1,10 +1,8 @@
 ﻿using System;
-using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.ChatPage.Design
 {
-
-    public class ChatMessageDesignViewModel : ChatMessageViewModel
+	internal sealed class ChatMessageDesignViewModel : ChatMessageViewModel
     {
         public static ChatMessageDesignViewModel Instance => new ChatMessageDesignViewModel();
 

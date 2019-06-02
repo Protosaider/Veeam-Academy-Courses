@@ -1,18 +1,12 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
-using ClientApp.DataSuppliers;
 using ClientApp.DataSuppliers.Data;
+using ClientApp.Other;
 using ClientApp.ServiceProxies;
 using DTO;
 using log4net;
-using Other;
 
-namespace ClientApp.Models.DataSuppliers
+namespace ClientApp.DataSuppliers
 {
 	internal sealed class CUserSupplier : IUserSupplier, IDisposable
     {

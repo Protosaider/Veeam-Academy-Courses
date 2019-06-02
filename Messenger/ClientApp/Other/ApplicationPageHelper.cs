@@ -8,12 +8,12 @@ using ClientApp.ViewModels.SignUpPage;
 namespace ClientApp.Other
 {
     /// <summary>
-    /// Converts the <see cref="ApplicationPage"/> to an actual view/page
+    /// Converts the <see cref="EApplicationPage"/> to an actual view/page
     /// </summary>
 	internal static class SApplicationPageHelpers
     {
         /// <summary>
-        /// Takes a <see cref="ApplicationPage"/> and a view model, if any, and creates the desired page
+        /// Takes a <see cref="EApplicationPage"/> and a view model, if any, and creates the desired page
         /// </summary>
         /// <param name="page"></param>
         /// <param name="viewModel"></param>
@@ -39,7 +39,7 @@ namespace ClientApp.Other
         }
 
         /// <summary>
-        /// Converts a <see cref="BasePage"/> to the specific <see cref="ApplicationPage"/> that is for that type of page
+        /// Converts a <see cref="BasePage"/> to the specific <see cref="EApplicationPage"/> that is for that type of page
         /// </summary>
         /// <param name="page"></param>
         /// <returns></returns>

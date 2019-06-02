@@ -1,9 +1,10 @@
 ﻿using System;
 using ClientApp.Other;
+using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.LogInPage
 {
-    public sealed class CGoToSignUpPageCommand : CBaseCommand
+	internal sealed class CGoToSignUpPageCommand : CBaseCommand
     {
         protected override Boolean CanExecute<T>(Object parameter) => true;
 

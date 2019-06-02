@@ -15,7 +15,7 @@ namespace MessengerService.Controllers
     /// </code>  
     /// </summary>
     [AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = true)]
-    public class ValidateModelAttribute : ActionFilterAttribute
+	internal sealed class ValidateModelAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(HttpActionContext actionContext)
         {

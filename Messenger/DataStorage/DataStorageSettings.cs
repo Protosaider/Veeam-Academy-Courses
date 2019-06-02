@@ -1,9 +1,5 @@
-﻿using Other;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using DataStorage.Other;
 
 namespace DataStorage
 {
@@ -16,7 +12,7 @@ namespace DataStorage
         {
             if (String.IsNullOrEmpty(dbConnectionString))
             {
-                SLogger.GetLogger().LogError($"{System.Reflection.MethodBase.GetCurrentMethod().ToString()}({dbConnectionString})", new ArgumentException(nameof(dbConnectionString)));
+                SLogger.GetLogger().LogError($"{System.Reflection.MethodBase.GetCurrentMethod()}({dbConnectionString})", new ArgumentException(nameof(dbConnectionString)));
                 throw new ArgumentException(nameof(dbConnectionString));
             }
 

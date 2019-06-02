@@ -2,14 +2,14 @@
 
 namespace DTO
 {
-    public class CMessageInChatDto
+    public sealed class CMessageInChatDto
     {
-        public Guid Id { get; set; }
-        public Guid MessageId { get; set; }
-        public Guid ChatId { get; set; }
-        public Guid FromUserId { get; set; }
-        public Guid ToUserId { get; set; }
-        public Boolean IsRead { get; set; }
+        public Guid Id { get; }
+        public Guid MessageId { get; }
+        public Guid ChatId { get; }
+        public Guid FromUserId { get; }
+        public Guid ToUserId { get; }
+        public Boolean IsRead { get; }
 
         public CMessageInChatDto(Guid id, Guid messageId, Guid chatId, Guid fromUserId, Guid toUserId, Boolean isRead)
         {

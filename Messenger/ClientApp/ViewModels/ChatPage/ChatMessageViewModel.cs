@@ -3,15 +3,13 @@ using System.Threading.Tasks;
 using ClientApp.DataSuppliers.Data;
 using ClientApp.Other;
 using ClientApp.ViewModels.Base;
-using DTO;
 
 namespace ClientApp.ViewModels.ChatPage
 {
-
-    public class ChatMessageViewModel : BaseViewModel
+	internal class ChatMessageViewModel : BaseViewModel
     {
         public Guid Id { get; }
-        public Int64 USN { get; }
+        public Int64 Usn { get; }
         private DateTimeOffset _dispatchDate;
         private DateTimeOffset _convertedDispatchDate;
         public DateTimeOffset DispatchDate
@@ -43,7 +41,7 @@ namespace ClientApp.ViewModels.ChatPage
         public ChatMessageViewModel(CMessageData messageDto)
         {
             Id = messageDto.Id;
-            USN = messageDto.Usn;
+            Usn = messageDto.Usn;
             Message = messageDto.Message;
             DispatchDate = messageDto.DispatchDate;
             IsRead = messageDto.IsRead;

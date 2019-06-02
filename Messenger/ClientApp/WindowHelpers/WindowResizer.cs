@@ -5,14 +5,13 @@ using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
 
-/// <summary>
-/// Taken from angelsix (Luke Malpass)
-/// Source: https://github.com/angelsix/fasetto-word/blob/develop/Source/Fasetto.Word/Window/WindowResizer.cs
-/// </summary>
+// Taken from angelsix (Luke Malpass)
+// Source: https://github.com/angelsix/fasetto-word/blob/develop/Source/Fasetto.Word/Window/WindowResizer.cs
 
 namespace ClientApp.WindowHelpers
 {
-    public enum WindowDockPosition
+	// ReSharper disable once InconsistentNaming
+	internal enum WindowDockPosition
     {
         Undocked = 0,
         Left = 1,
@@ -27,24 +26,19 @@ namespace ClientApp.WindowHelpers
     /// <summary>
     /// Fixes the issue with Windows of Style <see cref="WindowStyle.None"/> covering the taskbar
     /// </summary>
-    public class WindowResizer
+	internal sealed class WindowResizer
     {
         #region Private Members
 
         /// <summary>
         /// The window to handle the resizing for
         /// </summary>
-        private System.Windows.Window _window;
+        private readonly System.Windows.Window _window;
 
-        /// <summary>
-        /// The last calculated available screen size
-        /// </summary>
-        private Rect _screenSize = new Rect();
-
-        /// <summary>
+		/// <summary>
         /// How close to the edge the window has to be to be detected as at the edge of the screen
         /// </summary>
-        private Int32 _edgeTolerance = 1;
+        private readonly Int32 _edgeTolerance = 1;
 
         /// <summary>
         /// The transform matrix used to convert WPF sizes to screen pixels
@@ -64,7 +58,7 @@ namespace ClientApp.WindowHelpers
         /// <summary>
         /// A flag indicating if the window is currently being moved/dragged
         /// </summary>
-        private Boolean _beingMoved = false;
+        private Boolean _beingMoved;
 
         #endregion
 
@@ -72,16 +66,16 @@ namespace ClientApp.WindowHelpers
 
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
-        static extern Boolean GetCursorPos(out POINT lpPoint);
+		private static extern Boolean GetCursorPos(out POINT lpPoint);
 
         [DllImport("user32.dll")]
-        static extern Boolean GetMonitorInfo(IntPtr hMonitor, MONITORINFO lpmi);
+		private static extern Boolean GetMonitorInfo(IntPtr hMonitor, MONITORINFO lpmi);
 
         [DllImport("user32.dll", SetLastError = true)]
-        static extern IntPtr MonitorFromPoint(POINT pt, MonitorOptions dwFlags);
+		private static extern IntPtr MonitorFromPoint(POINT pt, MonitorOptions dwFlags);
 
         [DllImport("user32.dll")]
-        static extern IntPtr MonitorFromWindow(IntPtr hwnd, MonitorOptions dwFlags);
+		private static extern IntPtr MonitorFromWindow(IntPtr hwnd, MonitorOptions dwFlags);
         #endregion
 
         #region Public Events
@@ -108,22 +102,22 @@ namespace ClientApp.WindowHelpers
         /// <summary>
         /// The size and position of the current monitor the window is on
         /// </summary>
-        public Rectangle CurrentMonitorSize { get; set; } = new Rectangle();
+        public Rectangle CurrentMonitorSize { get; set; }
 
         /// <summary>
         /// The margin around the window for the current window to compensate for any non-usable area
         /// such as the task bar
         /// </summary>
-        public Thickness CurrentMonitorMargin { get; private set; } = new Thickness();
+        public Thickness CurrentMonitorMargin { get; private set; }
 
-        /// <summary>
-        /// The size and position of the current screen in relation to the multi-screen desktop
-        /// For example a second monitor on the right will have a Left position of
-        /// the X resolution of the screens on the left
-        /// </summary>
-        public Rect CurrentScreenSize => _screenSize;
+		/// <summary>
+		/// The size and position of the current screen in relation to the multi-screen desktop
+		/// For example a second monitor on the right will have a Left position of
+		/// the X resolution of the screens on the left
+		/// </summary>
+        public Rect CurrentScreenSize { get; private set; }
 
-        #endregion
+		#endregion
 
         #region Constructor
 
@@ -131,7 +125,6 @@ namespace ClientApp.WindowHelpers
         /// Default constructor
         /// </summary>
         /// <param name="window">The window to monitor and correctly maximize</param>
-        /// <param name="adjustSize">The callback for the host to adjust the maximum available size if needed</param>
         public WindowResizer(System.Windows.Window window)
         {
             _window = window;
@@ -160,12 +153,9 @@ namespace ClientApp.WindowHelpers
             var handleSource = HwndSource.FromHwnd(handle);
 
             // If not found, end
-            if (handleSource == null)
-                return;
-
-            // Hook into it's Windows messages
-            handleSource.AddHook(WindowProc);
-        }
+			// Hook into it's Windows messages
+			handleSource?.AddHook(WindowProc);
+		}
 
         #endregion
 
@@ -210,10 +200,10 @@ namespace ClientApp.WindowHelpers
             var windowBottomRight = new Point(right * _monitorDpi.Value.DpiScaleX, bottom * _monitorDpi.Value.DpiScaleX);
 
             // Check for edges docked
-            var edgedTop = windowTopLeft.Y <= (_screenSize.Top + _edgeTolerance) && windowTopLeft.Y >= (_screenSize.Top - _edgeTolerance);
-            var edgedLeft = windowTopLeft.X <= (_screenSize.Left + _edgeTolerance) && windowTopLeft.X >= (_screenSize.Left - _edgeTolerance);
-            var edgedBottom = windowBottomRight.Y >= (_screenSize.Bottom - _edgeTolerance) && windowBottomRight.Y <= (_screenSize.Bottom + _edgeTolerance);
-            var edgedRight = windowBottomRight.X >= (_screenSize.Right - _edgeTolerance) && windowBottomRight.X <= (_screenSize.Right + _edgeTolerance);
+            var edgedTop = windowTopLeft.Y <= (CurrentScreenSize.Top + _edgeTolerance) && windowTopLeft.Y >= (CurrentScreenSize.Top - _edgeTolerance);
+            var edgedLeft = windowTopLeft.X <= (CurrentScreenSize.Left + _edgeTolerance) && windowTopLeft.X >= (CurrentScreenSize.Left - _edgeTolerance);
+            var edgedBottom = windowBottomRight.Y >= (CurrentScreenSize.Bottom - _edgeTolerance) && windowBottomRight.Y <= (CurrentScreenSize.Bottom + _edgeTolerance);
+            var edgedRight = windowBottomRight.X >= (CurrentScreenSize.Right - _edgeTolerance) && windowBottomRight.X <= (CurrentScreenSize.Right + _edgeTolerance);
 
 
             // Get docked position
@@ -351,8 +341,6 @@ namespace ClientApp.WindowHelpers
             var primaryRatio = (Single)primaryWidth / (Single)primaryHeight;
 
 
-
-
             if (lParam != IntPtr.Zero)
             {
                 // Get min/max structure to fill with information
@@ -391,7 +379,7 @@ namespace ClientApp.WindowHelpers
                 );
 
             // Store new size
-            _screenSize = new Rect(lCurrentScreenInfo.RCWork.Left, lCurrentScreenInfo.RCWork.Top, currentWidth, currentHeight);
+            CurrentScreenSize = new Rect(lCurrentScreenInfo.RCWork.Left, lCurrentScreenInfo.RCWork.Top, currentWidth, currentHeight);
 
         }
 
@@ -400,18 +388,23 @@ namespace ClientApp.WindowHelpers
         /// </summary>
         /// <returns></returns>
         public Point GetCursorPosition()
-        {
-            // Get mouse position
+		{
+			// Get mouse position
             GetCursorPos(out var lMousePosition);
 
             // Apply DPI scaling
-            return new Point(lMousePosition.X / _monitorDpi.Value.DpiScaleX, lMousePosition.Y / _monitorDpi.Value.DpiScaleY);
-        }
+			if (_monitorDpi != null)
+				return new Point(lMousePosition.X / _monitorDpi.Value.DpiScaleX,
+					lMousePosition.Y / _monitorDpi.Value.DpiScaleY);
+
+			Debugger.Break();
+            return new Point(lMousePosition.X, lMousePosition.Y);
+		}
     }
 
     #region Dll Helper Structures
 
-    enum MonitorOptions : UInt32
+	internal enum MonitorOptions : UInt32
     {
         MONITOR_DEFAULTTONULL = 0x00000000,
         MONITOR_DEFAULTTOPRIMARY = 0x00000001,
@@ -420,7 +413,7 @@ namespace ClientApp.WindowHelpers
 
 
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
-    public class MONITORINFO
+	internal sealed class MONITORINFO
     {
 #pragma warning disable IDE1006 // Naming Styles
         public Int32 CBSize = Marshal.SizeOf(typeof(MONITORINFO));
@@ -431,10 +424,13 @@ namespace ClientApp.WindowHelpers
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public struct Rectangle
+	internal struct Rectangle
     {
 #pragma warning disable IDE1006 // Naming Styles
-        public Int32 Left, Top, Right, Bottom;
+        public readonly Int32 Left;
+		public readonly Int32 Top;
+		public readonly Int32 Right;
+		public readonly Int32 Bottom;
 #pragma warning restore IDE1006 // Naming Styles
 
         public Rectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
@@ -447,11 +443,11 @@ namespace ClientApp.WindowHelpers
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public struct MINMAXINFO
+	internal struct MINMAXINFO
     {
 #pragma warning disable IDE1006 // Naming Styles
-        public POINT PointReserved;
-        public POINT PointMaxSize;
+		public POINT PointReserved;
+		public POINT PointMaxSize;
         public POINT PointMaxPosition;
         public POINT PointMinTrackSize;
         public POINT PointMaxTrackSize;
@@ -459,7 +455,7 @@ namespace ClientApp.WindowHelpers
     };
 
     [StructLayout(LayoutKind.Sequential)]
-    public struct POINT
+	internal struct POINT
     {
         /// <summary>
         /// x coordinate of point.

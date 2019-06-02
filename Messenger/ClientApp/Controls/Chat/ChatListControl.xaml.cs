@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using ClientApp.ViewModels.ChatPage;
 
 namespace ClientApp.Controls.Chat
 {
@@ -27,9 +25,7 @@ namespace ClientApp.Controls.Chat
                 case Key.Tab:
                     e.Handled = true;
                     break;
-                default:
-                    break;
-            }
+			}
         }
 
         private void FrameworkElement_MouseDown(Object sender, MouseButtonEventArgs e)

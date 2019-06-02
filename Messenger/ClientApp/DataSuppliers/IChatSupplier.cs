@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ClientApp.DataSuppliers.Data;
-using ClientApp.ViewModels.ChatPage;
-using DTO;
 
 namespace ClientApp.DataSuppliers
 {
-    public interface IChatSupplier
+	internal interface IChatSupplier
     {
         IReadOnlyCollection<CMessageData> GetAllMessages(Guid userId, Guid chatId, Int32 limit, Int32 offset);
         Task<IReadOnlyCollection<CMessageData>> GetNewMessages(Guid userId, Guid chatId, DateTimeOffset lastRequestDate, Int64 lastUsn, Int32 limit, Int32 offset);

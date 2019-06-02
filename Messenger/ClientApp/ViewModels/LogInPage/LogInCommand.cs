@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using ClientApp.DataSuppliers;
 using ClientApp.Other;
-using ClientApp.ServiceProxies;
-using DTO;
+using ClientApp.ViewModels.Base;
 
 namespace ClientApp.ViewModels.LogInPage
 {

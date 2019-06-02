@@ -2,7 +2,7 @@
 
 namespace ClientApp.DataSuppliers.Data
 {
-	internal class CMessageData
+	internal sealed class CMessageData
     {
         public Guid Id { get; }
         public DateTimeOffset DispatchDate { get; }

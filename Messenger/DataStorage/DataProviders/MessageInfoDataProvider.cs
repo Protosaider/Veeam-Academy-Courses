@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using DataStorage.Mappers;
+using DataStorage.Other;
 using Info;
 using log4net;
-using Other;
 
 namespace DataStorage.DataProviders
 {

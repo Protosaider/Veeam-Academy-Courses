@@ -183,7 +183,7 @@
                                 </ScrollViewer>
 
                                 <TextBlock IsHitTestVisible="False"
-                                   Grid.ColumnSpan="2"
+                                   Grid.ColumnSpan="2" Grid.Column="0"
                                    Text="{TemplateBinding Tag}"
                                    x:Name="placeholder"
                                    FontFamily="{StaticResource ExoThin}"
@@ -207,7 +207,7 @@
 
                                 <TextBlock IsHitTestVisible="True"
                                    Focusable="False"
-                                           Grid.ColumnSpan="2"
+                                           Grid.ColumnSpan="2" Grid.Column="0"
                                    Text="{Binding Text, Converter={converters:TextToPasswordCharConverter}, RelativeSource={RelativeSource TemplatedParent}}"
                                    x:Name="hiddenText"
                                    FontFamily="{StaticResource FontAwesome}"
