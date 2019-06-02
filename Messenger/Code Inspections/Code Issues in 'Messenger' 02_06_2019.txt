@@ -1,0 +1,1393 @@
+﻿Solution Messenger.sln
+    Project AuthenticationService
+      AuthenticationService\App_Start\WebApiConfig.cs:5 Name 'WebApiConfig' does not match rule 'Classes'. Suggested name is 'CWebApiConfig'.
+      AuthenticationService\Global.asax.cs:5 Name 'WebApiApplication' does not match rule 'Classes'. Suggested name is 'CWebApiApplication'.
+    
+    Project ClientApp
+      ClientApp\Activities\UpdateLastActiveDateActivity.cs:44 Use 'var' (simple types)
+      ClientApp\Activities\UpdateLastActiveDateActivity.cs:53 Redundant lambda signature parentheses
+      ClientApp\Animations\FrameworkElementAnimations.cs:8 Name 'FrameworkElementAnimations' does not match rule 'Classes'. Suggested name is 'CFrameworkElementAnimations'.
+      ClientApp\Animations\FrameworkElementAnimations.cs:44 Use 'var' (built-in types)
+      ClientApp\Animations\FrameworkElementAnimations.cs:44 Convert to constant
+      ClientApp\Animations\FrameworkElementAnimations.cs:88 Use 'var' (built-in types)
+      ClientApp\Animations\FrameworkElementAnimations.cs:88 Convert to constant
+      ClientApp\Animations\FrameworkElementAnimations.cs:111 Use 'var' (built-in types)
+      ClientApp\Animations\FrameworkElementAnimations.cs:111 Convert to constant
+      ClientApp\Animations\FrameworkElementAnimations.cs:132 Use 'var' (built-in types)
+      ClientApp\Animations\FrameworkElementAnimations.cs:132 Convert to constant
+      ClientApp\Animations\StoryboardHelpers.cs:7 Name 'StoryboardHelpers' does not match rule 'Classes'. Suggested name is 'CStoryboardHelpers'.
+      ClientApp\App.xaml:7 Typo in comment: "Коллекция"
+      ClientApp\App.xaml:7 Typo in comment: "словарей"
+      ClientApp\App.xaml:7 Typo in comment: "ресурсов"
+      ClientApp\App.xaml.cs:10 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\App.xaml.cs:10 Base type 'Application' is already specified in other parts
+      ClientApp\AttachedProperties\BaseAttachedProperty.cs:11 Name 'BaseAttachedProperty' does not match rule 'Classes'. Suggested name is 'CBaseAttachedProperty'.
+      ClientApp\AttachedProperties\BaseAttachedProperty.cs:21 Redundant explicit delegate creation
+      ClientApp\AttachedProperties\BaseAttachedProperty.cs:21 Redundant explicit delegate creation
+      ClientApp\AttachedProperties\BaseAttachedProperty.cs:75 Event 'ValueChanged' is never subscribed to
+      ClientApp\AttachedProperties\BaseAttachedProperty.cs:77 Event 'ValueUpdated' is never subscribed to
+      ClientApp\AttachedProperties\ButtonAttachedProperties.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:7 Using directive is not required by the code and can be safely removed
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:16 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:21 Property 'IsFirstLoad' is never used
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:45 Value assigned is not used in any execution path
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:65 Typo in comment: "unhookable"
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:108 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:114 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:117 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:121 Name 'AnimateSlideInFromLeftMarginProperty' does not match rule 'Classes'. Suggested name is 'CAnimateSlideInFromLeftMarginProperty'.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:127 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:127 The parameter keepMargin has the same default value
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:130 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:130 The parameter keepMargin has the same default value
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:138 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:151 Class 'AnimateSlideInFromRightProperty' is never used
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:151 Name 'AnimateSlideInFromRightProperty' does not match rule 'Classes'. Suggested name is 'CAnimateSlideInFromRightProperty'.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:157 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:160 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:164 Name 'AnimateSlideInFromRightMarginProperty' does not match rule 'Classes'. Suggested name is 'CAnimateSlideInFromRightMarginProperty'.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:170 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:170 The parameter keepMargin has the same default value
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:173 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:173 The parameter keepMargin has the same default value
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:177 Name 'AnimateSlideInFromTopProperty' does not match rule 'Classes'. Suggested name is 'CAnimateSlideInFromTopProperty'.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:183 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:186 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:190 Class 'AnimateSlideInFromBottomProperty' is never used
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:190 Name 'AnimateSlideInFromBottomProperty' does not match rule 'Classes'. Suggested name is 'CAnimateSlideInFromBottomProperty'.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:196 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:199 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:203 Name 'AnimateSlideInFromBottomOnLoadProperty' does not match rule 'Classes'. Suggested name is 'CAnimateSlideInFromBottomOnLoadProperty'.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:208 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:212 Class 'AnimateSlideInFromBottomMarginProperty' is never used
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:212 Name 'AnimateSlideInFromBottomMarginProperty' does not match rule 'Classes'. Suggested name is 'CAnimateSlideInFromBottomMarginProperty'.
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:218 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:218 The parameter keepMargin has the same default value
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:221 Inconsistent argument style: redundant name identifier
+      ClientApp\AttachedProperties\FrameworkElementAnimationAttachedProperties.cs:221 The parameter keepMargin has the same default value
+      ClientApp\AttachedProperties\PasswordBoxProperties.cs:7 Name 'HasTextProperty' does not match rule 'Classes'. Suggested name is 'CHasTextProperty'.
+      ClientApp\AttachedProperties\PasswordBoxProperties.cs:16 Class 'MonitorPasswordProperty' is never used
+      ClientApp\AttachedProperties\PasswordBoxProperties.cs:16 Name 'MonitorPasswordProperty' does not match rule 'Classes'. Suggested name is 'CMonitorPasswordProperty'.
+      ClientApp\AttachedProperties\PasswordBoxProperties.cs:21 Use pattern matching
+      ClientApp\AttachedProperties\PasswordBoxProperties.cs:31 Invert 'if' statement to reduce nesting
+      ClientApp\AttachedProperties\PasswordBoxProperties.cs:40 Method 'PasswordBox_PasswordChanged' can be made static
+      ClientApp\AttachedProperties\ScrollViewerAttachedProperties.cs:9 Name 'ScrollToBottomOnLoadProperty' does not match rule 'Classes'. Suggested name is 'CScrollToBottomOnLoadProperty'.
+      ClientApp\AttachedProperties\ScrollViewerAttachedProperties.cs:26 Method 'Control_DataContextChanged' can be made static
+      ClientApp\AttachedProperties\ScrollViewerAttachedProperties.cs:33 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\AttachedProperties\ScrollViewerAttachedProperties.cs:50 Method 'Control_ScrollChanged' can be made static
+      ClientApp\AttachedProperties\TextAttachedProperties.cs:11 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\AttachedProperties\TextAttachedProperties.cs:22 Name 'FocusProperty' does not match rule 'Classes'. Suggested name is 'CFocusProperty'.
+      ClientApp\AttachedProperties\TextAttachedProperties.cs:34 Class 'FocusAndSelectProperty' is never used
+      ClientApp\AttachedProperties\TextAttachedProperties.cs:34 Name 'FocusAndSelectProperty' does not match rule 'Classes'. Suggested name is 'CFocusAndSelectProperty'.
+      ClientApp\AttachedProperties\TextAttachedProperties.cs:39 Convert 'if' statement to 'switch' statement
+      ClientApp\AttachedProperties\TextAttachedProperties.cs:49 Invert 'if' statement to reduce nesting
+      ClientApp\AttachedProperties\TextAttachedProperties.cs:51 Invert 'if' statement to reduce nesting
+      ClientApp\Controls\BaseControl.cs:11 Name 'BaseControl' does not match rule 'Classes'. Suggested name is 'CBaseControl'.
+      ClientApp\Controls\BaseControl.cs:24 Accessor 'ViewModelObject.get' is never used
+      ClientApp\Controls\BaseControl.cs:64 Some values of the enum are not processed inside switch: None, SlideAndFadeOutToLeft, SlideAndFadeOutToBottom
+      ClientApp\Controls\BaseControl.cs:92 Some values of the enum are not processed inside switch: None, SlideAndFadeInFromRight, SlideAndFadeInFromLeft
+      ClientApp\Controls\BaseControl.cs:105 Virtual method 'OnViewModelChanged' is never overridden
+      ClientApp\Controls\BaseControl.cs:111 Name 'BaseControl' does not match rule 'Classes'. Suggested name is 'CBaseControl'.
+      ClientApp\Controls\BaseControl.cs:117 Accessor 'ViewModel.get' is never used
+      ClientApp\Controls\BaseControl.cs:130 Convert to '?:' expression
+      ClientApp\Controls\BaseControl.cs:135 Typo in comment: "ninject"
+      ClientApp\Controls\BaseControl.cs:135 Typo in comment: "autofac"
+      ClientApp\Controls\BaseControl.cs:150 Convert to '?:' expression
+      ClientApp\Controls\BaseControl.cs:155 Typo in comment: "ninject"
+      ClientApp\Controls\BaseControl.cs:155 Typo in comment: "autofac"
+      ClientApp\Controls\ChatMessage\ChatMessageListControl.xaml:1 Class 'ChatMessageListControl' can be made internal
+      ClientApp\Controls\ChatMessage\ChatMessageListControl.xaml.cs:8 Class 'ChatMessageListControl' can be made internal
+      ClientApp\Controls\ChatMessage\ChatMessageListControl.xaml.cs:8 Class 'ChatMessageListControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\ChatMessage\ChatMessageListControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\ChatMessage\ChatMessageListControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\ChatMessage\ChatMessageListControl.xaml.cs:10 Constructor 'ChatMessageListControl' can be made internal
+      ClientApp\Controls\ChatMessage\ChatMessageListItemControl.xaml:1 Class 'ChatMessageListItemControl' can be made internal
+      ClientApp\Controls\ChatMessage\ChatMessageListItemControl.xaml.cs:8 Class 'ChatMessageListItemControl' can be made internal
+      ClientApp\Controls\ChatMessage\ChatMessageListItemControl.xaml.cs:8 Class 'ChatMessageListItemControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\ChatMessage\ChatMessageListItemControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\ChatMessage\ChatMessageListItemControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\ChatMessage\ChatMessageListItemControl.xaml.cs:10 Constructor 'ChatMessageListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatCreateControl.xaml.cs:8 Class 'ChatCreateControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatCreateControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatCreateControl.xaml.cs:8 Base type 'BaseControl<ChatCreateViewModel>' is already specified in other parts
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml:1 Class 'ChatCreateListControl' can be made internal
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml.cs:10 Class 'ChatCreateListControl' can be made internal
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml.cs:10 Class 'ChatCreateListControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml.cs:10 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml.cs:10 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml.cs:12 Constructor 'ChatCreateListControl' can be made internal
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml.cs:19 Some values of the enum are not processed inside switch: None, Cancel, Back...
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml.cs:28 Redundant empty switch section
+      ClientApp\Controls\Chat\ChatCreateListControl.xaml.cs:35 Use 'var' (simple types)
+      ClientApp\Controls\Chat\ChatCreateListItemControl.xaml:1 Class 'ChatCreateListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatCreateListItemControl.xaml.cs:8 Class 'ChatCreateListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatCreateListItemControl.xaml.cs:8 Class 'ChatCreateListItemControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatCreateListItemControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatCreateListItemControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Chat\ChatCreateListItemControl.xaml.cs:10 Constructor 'ChatCreateListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatIconControl.xaml:1 Class 'ChatIconControl' can be made internal
+      ClientApp\Controls\Chat\ChatIconControl.xaml.cs:8 Class 'ChatIconControl' can be made internal
+      ClientApp\Controls\Chat\ChatIconControl.xaml.cs:8 Class 'ChatIconControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatIconControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatIconControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Chat\ChatIconControl.xaml.cs:10 Constructor 'ChatIconControl' can be made internal
+      ClientApp\Controls\Chat\ChatListControl.xaml:2 Class 'ChatListControl' can be made internal
+      ClientApp\Controls\Chat\ChatListControl.xaml.cs:10 Class 'ChatListControl' can be made internal
+      ClientApp\Controls\Chat\ChatListControl.xaml.cs:10 Class 'ChatListControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatListControl.xaml.cs:10 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatListControl.xaml.cs:10 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Chat\ChatListControl.xaml.cs:12 Constructor 'ChatListControl' can be made internal
+      ClientApp\Controls\Chat\ChatListControl.xaml.cs:19 Some values of the enum are not processed inside switch: None, Cancel, Back...
+      ClientApp\Controls\Chat\ChatListControl.xaml.cs:33 Use 'var' (simple types)
+      ClientApp\Controls\Chat\ChatListHolderControl.xaml:160 Field 'ChatList' is never used
+      ClientApp\Controls\Chat\ChatListHolderControl.xaml.cs:8 Class 'ChatListHolderControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatListHolderControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatListHolderControl.xaml.cs:8 Base type 'BaseControl<ChatListViewModel>' is already specified in other parts
+      ClientApp\Controls\Chat\ChatListItemControl.xaml:1 Class 'ChatListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatListItemControl.xaml.cs:8 Class 'ChatListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatListItemControl.xaml.cs:8 Class 'ChatListItemControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatListItemControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatListItemControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Chat\ChatListItemControl.xaml.cs:10 Constructor 'ChatListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatParticipantListControl.xaml:1 Class 'ChatParticipantListControl' can be made internal
+      ClientApp\Controls\Chat\ChatParticipantListControl.xaml.cs:10 Class 'ChatParticipantListControl' can be made internal
+      ClientApp\Controls\Chat\ChatParticipantListControl.xaml.cs:10 Class 'ChatParticipantListControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatParticipantListControl.xaml.cs:10 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatParticipantListControl.xaml.cs:10 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Chat\ChatParticipantListControl.xaml.cs:12 Constructor 'ChatParticipantListControl' can be made internal
+      ClientApp\Controls\Chat\ChatParticipantListControl.xaml.cs:19 Some values of the enum are not processed inside switch: None, Cancel, Back...
+      ClientApp\Controls\Chat\ChatParticipantListItemControl.xaml:1 Class 'ChatParticipantListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatParticipantListItemControl.xaml.cs:8 Class 'ChatParticipantListItemControl' can be made internal
+      ClientApp\Controls\Chat\ChatParticipantListItemControl.xaml.cs:8 Class 'ChatParticipantListItemControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Chat\ChatParticipantListItemControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Chat\ChatParticipantListItemControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Chat\ChatParticipantListItemControl.xaml.cs:10 Constructor 'ChatParticipantListItemControl' can be made internal
+      ClientApp\Controls\Contact\ContactAddControl.xaml:117 Field 'ContactList' is never used
+      ClientApp\Controls\Contact\ContactAddControl.xaml.cs:10 Class 'ContactAddControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Contact\ContactAddControl.xaml.cs:10 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Contact\ContactAddControl.xaml.cs:10 Typo in identifier: "ontact"
+      ClientApp\Controls\Contact\ContactAddControl.xaml.cs:10 Base type 'BaseControl<ContactAddListViewModel>' is already specified in other parts
+      ClientApp\Controls\Contact\ContactAddControl.xaml.cs:22 Method 'UIElement_OnPreviewKeyDown' is never used
+      ClientApp\Controls\Contact\ContactAddControl.xaml.cs:22 Parameter 'sender' is never used
+      ClientApp\Controls\Contact\ContactAddControl.xaml.cs:24 Some values of the enum are not processed inside switch: None, Cancel, Back...
+      ClientApp\Controls\Contact\ContactAddListControl.xaml:2 Class 'ContactAddListControl' can be made internal
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:10 Class 'ContactAddListControl' can be made internal
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:10 Class 'ContactAddListControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:10 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:10 Typo in identifier: "ontact"
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:10 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:12 Constructor 'ContactAddListControl' can be made internal
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:19 Some values of the enum are not processed inside switch: None, Cancel, Back...
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:28 Redundant empty switch section
+      ClientApp\Controls\Contact\ContactAddListControl.xaml.cs:35 Use 'var' (simple types)
+      ClientApp\Controls\Contact\ContactAddListItemControl.xaml:1 Class 'ContactAddListItemControl' can be made internal
+      ClientApp\Controls\Contact\ContactAddListItemControl.xaml.cs:8 Class 'ContactAddListItemControl' can be made internal
+      ClientApp\Controls\Contact\ContactAddListItemControl.xaml.cs:8 Class 'ContactAddListItemControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Contact\ContactAddListItemControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Contact\ContactAddListItemControl.xaml.cs:8 Typo in identifier: "ontact"
+      ClientApp\Controls\Contact\ContactAddListItemControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Contact\ContactAddListItemControl.xaml.cs:10 Constructor 'ContactAddListItemControl' can be made internal
+      ClientApp\Controls\Contact\ContactListControl.xaml:2 Class 'ContactListControl' can be made internal
+      ClientApp\Controls\Contact\ContactListControl.xaml.cs:10 Class 'ContactListControl' can be made internal
+      ClientApp\Controls\Contact\ContactListControl.xaml.cs:10 Class 'ContactListControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Contact\ContactListControl.xaml.cs:10 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Contact\ContactListControl.xaml.cs:10 Typo in identifier: "ontact"
+      ClientApp\Controls\Contact\ContactListControl.xaml.cs:10 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Contact\ContactListControl.xaml.cs:12 Constructor 'ContactListControl' can be made internal
+      ClientApp\Controls\Contact\ContactListControl.xaml.cs:19 Some values of the enum are not processed inside switch: None, Cancel, Back...
+      ClientApp\Controls\Contact\ContactListControl.xaml.cs:33 Use 'var' (simple types)
+      ClientApp\Controls\Contact\ContactListHolderControl.xaml:157 Field 'ContactList' is never used
+      ClientApp\Controls\Contact\ContactListHolderControl.xaml.cs:8 Class 'ContactListHolderControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Contact\ContactListHolderControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Contact\ContactListHolderControl.xaml.cs:8 Typo in identifier: "ontact"
+      ClientApp\Controls\Contact\ContactListHolderControl.xaml.cs:8 Base type 'BaseControl<ContactListViewModel>' is already specified in other parts
+      ClientApp\Controls\Contact\ContactListItemControl.xaml:1 Class 'ContactListItemControl' can be made internal
+      ClientApp\Controls\Contact\ContactListItemControl.xaml.cs:8 Class 'ContactListItemControl' can be made internal
+      ClientApp\Controls\Contact\ContactListItemControl.xaml.cs:8 Class 'ContactListItemControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\Contact\ContactListItemControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\Contact\ContactListItemControl.xaml.cs:8 Typo in identifier: "ontact"
+      ClientApp\Controls\Contact\ContactListItemControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\Contact\ContactListItemControl.xaml.cs:10 Constructor 'ContactListItemControl' can be made internal
+      ClientApp\Controls\ControlHost.xaml:1 Class 'ControlHost' can be made internal
+      ClientApp\Controls\ControlHost.xaml.cs:15 Class 'ControlHost' can be made internal
+      ClientApp\Controls\ControlHost.xaml.cs:15 Class 'ControlHost' has no inheritors and can be marked sealed
+      ClientApp\Controls\ControlHost.xaml.cs:15 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\ControlHost.xaml.cs:15 Typo in identifier: "ontrol"
+      ClientApp\Controls\ControlHost.xaml.cs:15 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\ControlHost.xaml.cs:17 Property 'CurrentControl' can be made internal
+      ClientApp\Controls\ControlHost.xaml.cs:19 Accessor 'CurrentControl.get' is never used
+      ClientApp\Controls\ControlHost.xaml.cs:28 Property 'CurrentControlViewModel' can be made internal
+      ClientApp\Controls\ControlHost.xaml.cs:30 Accessor 'CurrentControlViewModel.get' is never used
+      ClientApp\Controls\ControlHost.xaml.cs:38 Constructor 'ControlHost' can be made internal
+      ClientApp\Controls\ControlHost.xaml.cs:84 Redundant lambda signature parentheses
+      ClientApp\Controls\PageHost.xaml:1 Class 'PageHost' can be made internal
+      ClientApp\Controls\PageHost.xaml.cs:16 Class 'PageHost' can be made internal
+      ClientApp\Controls\PageHost.xaml.cs:16 Class 'PageHost' has no inheritors and can be marked sealed
+      ClientApp\Controls\PageHost.xaml.cs:16 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\PageHost.xaml.cs:16 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\PageHost.xaml.cs:19 Property 'CurrentPage' can be made internal
+      ClientApp\Controls\PageHost.xaml.cs:21 Accessor 'CurrentPage.get' is never used
+      ClientApp\Controls\PageHost.xaml.cs:30 Property 'CurrentPageViewModel' can be made internal
+      ClientApp\Controls\PageHost.xaml.cs:32 Accessor 'CurrentPageViewModel.get' is never used
+      ClientApp\Controls\PageHost.xaml.cs:40 Constructor 'PageHost' can be made internal
+      ClientApp\Controls\PageHost.xaml.cs:87 Redundant lambda signature parentheses
+      ClientApp\Controls\PasswordTextBox.xaml:1 Class 'PasswordTextBox' is never used
+      ClientApp\Controls\PasswordTextBox.xaml.cs:8 Class 'PasswordTextBox' is never used
+      ClientApp\Controls\PasswordTextBox.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\PasswordTextBox.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\SideMenuControl.xaml:1 Class 'SideMenuControl' can be made internal
+      ClientApp\Controls\SideMenuControl.xaml.cs:8 Class 'SideMenuControl' can be made internal
+      ClientApp\Controls\SideMenuControl.xaml.cs:8 Class 'SideMenuControl' has no inheritors and can be marked sealed
+      ClientApp\Controls\SideMenuControl.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Controls\SideMenuControl.xaml.cs:8 Base type 'UserControl' is already specified in other parts
+      ClientApp\Controls\SideMenuControl.xaml.cs:41 Constructor 'SideMenuControl' can be made internal
+      ClientApp\Converters\ActiveStatusPropertyValueToEllipseBrushConverter.cs:9 Name 'ActivityStatusPropertyValueToEllipseBrushConverter' does not match rule 'Classes'. Suggested name is 'CActivityStatusPropertyValueToEllipseBrushConverter'.
+      ClientApp\Converters\BaseValueConverter.cs:8 Name 'BaseValueConverter' does not match rule 'Classes'. Suggested name is 'CBaseValueConverter'.
+      ClientApp\Converters\BaseValueConverter.cs:25 Name 'BaseMultiValueConverter' does not match rule 'Classes'. Suggested name is 'CBaseMultiValueConverter'.
+      ClientApp\Converters\BooleanInvertConverter.cs:6 Name 'BooleanInvertConverter' does not match rule 'Classes'. Suggested name is 'CBooleanInvertConverter'.
+      ClientApp\Converters\BooleanToBorderThicknessConverter.cs:6 Name 'BooleanToBorderThicknessConverter' does not match rule 'Classes'. Suggested name is 'CBooleanToBorderThicknessConverter'.
+      ClientApp\Converters\BooleanToVisibilityInverseValueConverter.cs:7 Name 'BooleanToVisibilityInverseValueConverter' does not match rule 'Classes'. Suggested name is 'CBooleanToVisibilityInverseValueConverter'.
+      ClientApp\Converters\BooleanToVisibilityValueConverter.cs:7 Name 'BooleanToVisibilityValueConverter' does not match rule 'Classes'. Suggested name is 'CBooleanToVisibilityValueConverter'.
+      ClientApp\Converters\IconTypeToFontAwesomeConverter.cs:8 Name 'ChatTypeToFontAwesomeIconConverter' does not match rule 'Classes'. Suggested name is 'CHatTypeToFontAwesomeIconConverter'.
+      ClientApp\Converters\IsPersonalPropertyValueToFontAwesomeConverter.cs:7 Name 'IsPersonalPropertyValueToFontAwesomeConverter' does not match rule 'Classes'. Suggested name is 'CIsPersonalPropertyValueToFontAwesomeConverter'.
+      ClientApp\Converters\IsSentByMeToAlignmentConverter.cs:7 Name 'IsSentByMeToAlignmentConverter' does not match rule 'Classes'. Suggested name is 'CIsSentByMeToAlignmentConverter'.
+      ClientApp\Converters\IsSentByMeToAlignmentConverter.cs:12 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToAlignmentConverter.cs:14 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToBackgroundConverter.cs:7 Name 'IsSentByMeToBackgroundConverter' does not match rule 'Classes'. Suggested name is 'CIsSentByMeToBackgroundConverter'.
+      ClientApp\Converters\IsSentByMeToBackgroundConverter.cs:11 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToBubbleAnchorDataConverter.cs:7 Name 'IsSentByMeToBubbleAnchorDataConverter' does not match rule 'Classes'. Suggested name is 'CIsSentByMeToBubbleAnchorDataConverter'.
+      ClientApp\Converters\IsSentByMeToBubbleAnchorDataConverter.cs:12 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToBubbleAnchorDataConverter.cs:14 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToBubbleAnchorMarginConverter.cs:7 Name 'IsSentByMeToBubbleAnchorMarginConverter' does not match rule 'Classes'. Suggested name is 'CIsSentByMeToBubbleAnchorMarginConverter'.
+      ClientApp\Converters\IsSentByMeToBubbleAnchorMarginConverter.cs:12 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToBubbleAnchorMarginConverter.cs:14 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToMarginConverter.cs:7 Name 'IsSentByMeToMarginConverter' does not match rule 'Classes'. Suggested name is 'CIsSentByMeToMarginConverter'.
+      ClientApp\Converters\IsSentByMeToMarginConverter.cs:12 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToMarginConverter.cs:14 Redundant parentheses
+      ClientApp\Converters\IsSentByMeToPaddingConverter.cs:7 Name 'IsSentByMeToPaddingConverter' does not match rule 'Classes'. Suggested name is 'CIsSentByMeToPaddingConverter'.
+      ClientApp\Converters\IsSentByMeToSentTimeMarginConverter.cs:7 Name 'IsSentByMeToSentTimeMarginConverter' does not match rule 'Classes'. Suggested name is 'CIsSentByMeToSentTimeMarginConverter'.
+      ClientApp\Converters\LogInCommandParameterConverter.cs:7 Name 'LogInCommandParameterConverter' does not match rule 'Classes'. Suggested name is 'CLogInCommandParameterConverter'.
+      ClientApp\Converters\OpenChatCommandParameterConverter.cs:8 Name 'OpenChatCommandParameterConverter' does not match rule 'Classes'. Suggested name is 'COpenChatCommandParameterConverter'.
+      ClientApp\Converters\SendMessageCommandParameterConverter.cs:7 Name 'SendMessageCommandParameterConverter' does not match rule 'Classes'. Suggested name is 'CSendMessageCommandParameterConverter'.
+      ClientApp\Converters\StringRGBToBrushConverter.cs:8 Name 'StringRGBToBrushConverter' does not match rule 'Classes'. Suggested name is 'CStringRgbToBrushConverter'.
+      ClientApp\Converters\StringRGBToBrushConverter.cs:13 Redundant parentheses
+      ClientApp\Converters\StringRGBToBrushConverter.cs:14 Redundant parentheses
+      ClientApp\Converters\TextToPasswordCharConverter.cs:6 Name 'TextToPasswordCharConverter' does not match rule 'Classes'. Suggested name is 'CTextToPasswordCharConverter'.
+      ClientApp\Converters\TimeToDisplayTimeConverter.cs:6 Name 'TimeToDisplayTimeConverter' does not match rule 'Classes'. Suggested name is 'CTimeToDisplayTimeConverter'.
+      ClientApp\Converters\TimeToDisplayTimeConverter.cs:11 Invert 'if' statement to reduce nesting
+      ClientApp\Converters\TimeToLastActiveTimeConverter.cs:6 Name 'TimeToLastActiveTimeConverter' does not match rule 'Classes'. Suggested name is 'CTimeToLastActiveTimeConverter'.
+      ClientApp\Converters\TimeToLastActiveTimeConverter.cs:8 Convert to constant
+      ClientApp\Converters\TimeToLastActiveTimeConverter.cs:12 Invert 'if' statement to reduce nesting
+      ClientApp\Converters\TimeToReadTimeConverter.cs:6 Class 'TimeToReadTimeConverter' is never used
+      ClientApp\Converters\TimeToReadTimeConverter.cs:6 Name 'TimeToReadTimeConverter' does not match rule 'Classes'. Suggested name is 'CTimeToReadTimeConverter'.
+      ClientApp\DataSuppliers\AuthSupplier.cs:49 Use 'var' (simple types)
+      ClientApp\DataSuppliers\AuthSupplier.cs:63 Use 'var' (simple types)
+      ClientApp\DataSuppliers\AuthSupplier.cs:71 Type argument specification is redundant
+      ClientApp\DataSuppliers\AuthSupplier.cs:80 Use 'var' (simple types)
+      ClientApp\DataSuppliers\ChatsSupplier.cs:47 Type argument specification is redundant
+      ClientApp\DataSuppliers\ChatsSupplier.cs:54 Type argument specification is redundant
+      ClientApp\DataSuppliers\ChatsSupplier.cs:66 Type argument specification is redundant
+      ClientApp\DataSuppliers\ChatsSupplier.cs:79 Use 'var' (simple types)
+      ClientApp\DataSuppliers\ChatsSupplier.cs:80 Type argument specification is redundant
+      ClientApp\DataSuppliers\ChatSupplier.cs:72 Type argument specification is redundant
+      ClientApp\DataSuppliers\ContactsSupplier.cs:71 Type argument specification is redundant
+      ClientApp\DataSuppliers\ContactsSupplier.cs:73 Use collection initializer
+      ClientApp\DataSuppliers\ContactsSupplier.cs:83 Use collection initializer
+      ClientApp\DataSuppliers\Data\ChatData.cs:21 Field 'Null' is never used
+      ClientApp\DataSuppliers\Data\ContactData.cs:8 Property 'OwnerId' can be made private
+      ClientApp\DataSuppliers\Data\ContactData.cs:8 Auto-property accessor is never used
+      ClientApp\DataSuppliers\Data\ContactData.cs:10 Property 'IsBlocked' can be made private
+      ClientApp\DataSuppliers\Data\ContactData.cs:10 Auto-property accessor is never used
+      ClientApp\DataSuppliers\Data\UserData.cs:7 Property 'Login' can be made private
+      ClientApp\DataSuppliers\Data\UserData.cs:7 Auto-property accessor is never used
+      ClientApp\DataSuppliers\IContactsSupplier.cs:11 Method 'DeleteContact' is never used
+      ClientApp\DataSuppliers\IUserSupplier.cs:10 Method 'GetUserData' is never used
+      ClientApp\DataSuppliers\UserSupplier.cs:45 Use 'var' (simple types)
+      ClientApp\DataSuppliers\UserSupplier.cs:53 Use 'var' (simple types)
+      ClientApp\MainWindow.xaml:1 Class 'MainWindow' can be made internal
+      ClientApp\MainWindow.xaml:30 Typo in comment: "dropshadow"
+      ClientApp\MainWindow.xaml:122 Typo in comment: "cornenrs"
+      ClientApp\MainWindow.xaml.cs:10 Class 'MainWindow' can be made internal
+      ClientApp\MainWindow.xaml.cs:10 Class 'MainWindow' has no inheritors and can be marked sealed
+      ClientApp\MainWindow.xaml.cs:10 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\MainWindow.xaml.cs:10 Base type 'Window' is already specified in other parts
+      ClientApp\MainWindow.xaml.cs:12 Constructor 'MainWindow' can be made internal
+      ClientApp\Other\ApplicationPageHelper.cs:13 Name 'SApplicationPageHelpers' does not match rule 'Classes'. Suggested name is 'CApplicationPageHelpers'.
+      ClientApp\Other\ApplicationPageHelper.cs:49 Convert 'if' statement to 'switch' statement
+      ClientApp\Other\ChatIconExtension.cs:5 Name 'SChatIconExtension' does not match rule 'Classes'. Suggested name is 'CChatIconExtension'.
+      ClientApp\Other\ExpressionHelper.cs:6 Name 'SExpressionHelper' does not match rule 'Classes'. Suggested name is 'CExpressionHelper'.
+      ClientApp\Other\ExpressionHelper.cs:37 Type cast is redundant
+      ClientApp\Other\ExpressionHelper.cs:37 Use pattern matching
+      ClientApp\Other\ExpressionHelper.cs:39 Invert 'if' statement to reduce nesting
+      ClientApp\Other\IHavePassword.cs:6 Interface 'IHavePassword' is never used
+      ClientApp\Other\IHavePassword.cs:8 Property 'SecurePassword' is never used
+      ClientApp\Other\ProfilePictureColor.cs:13 Name 'SProfilePictureColorExtension' does not match rule 'Classes'. Suggested name is 'CProfilePictureColorExtension'.
+      ClientApp\Other\ProfilePictureColor.cs:15 Name 's_profilePictureColorCount' does not match rule 'Static readonly fields (private)'. Suggested name is 'ProfilePictureColorCount'.
+      ClientApp\Other\SideMenuControlHelper.cs:16 Name 'SSideMenuContentHelpers' does not match rule 'Classes'. Suggested name is 'CSideMenuContentHelpers'.
+      ClientApp\Other\SideMenuControlHelper.cs:61 Convert 'if' statement to 'switch' statement
+      ClientApp\Other\SLogger.cs:7 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      ClientApp\Other\SLogger.cs:9 Method 'LogDebug' is never used
+      ClientApp\Other\SLogger.cs:19 Method 'LogWarn' is never used
+      ClientApp\Other\SLogger.cs:29 Method 'LogFatal' is never used
+      ClientApp\Pages\BasePage.cs:11 Name 'BasePage' does not match rule 'Classes'. Suggested name is 'CBasePage'.
+      ClientApp\Pages\BasePage.cs:18 Accessor 'ShouldAnimateOut.get' can be made private
+      ClientApp\Pages\BasePage.cs:24 Accessor 'ViewModelObject.get' is never used
+      ClientApp\Pages\BasePage.cs:44 Qualifier is redundant
+      ClientApp\Pages\BasePage.cs:49 Qualifier is redundant
+      ClientApp\Pages\BasePage.cs:64 Some values of the enum are not processed inside switch: None, SlideAndFadeInFromLeft, SlideAndFadeOutToLeft...
+      ClientApp\Pages\BasePage.cs:84 Some values of the enum are not processed inside switch: None, SlideAndFadeInFromRight, SlideAndFadeInFromLeft...
+      ClientApp\Pages\BasePage.cs:101 Class 'BasePage' can be made internal
+      ClientApp\Pages\BasePage.cs:101 Name 'BasePage' does not match rule 'Classes'. Suggested name is 'CBasePage'.
+      ClientApp\Pages\BasePage.cs:107 Accessor 'ViewModel.get' is never used
+      ClientApp\Pages\BasePage.cs:120 Convert to '?:' expression
+      ClientApp\Pages\BasePage.cs:125 Typo in comment: "ninject"
+      ClientApp\Pages\BasePage.cs:125 Typo in comment: "autofac"
+      ClientApp\Pages\BasePage.cs:140 Convert to '?:' expression
+      ClientApp\Pages\BasePage.cs:145 Typo in comment: "ninject"
+      ClientApp\Pages\BasePage.cs:145 Typo in comment: "autofac"
+      ClientApp\Pages\BasePage.cs:175 Typo in comment: "ninject"
+      ClientApp\Pages\BasePage.cs:175 Typo in comment: "autofac"
+      ClientApp\Pages\ChatPage.xaml:199 Typo in comment: "Emoji"
+      ClientApp\Pages\ChatPage.xaml:202 Typo in comment: "Emoji"
+      ClientApp\Pages\ChatPage.xaml.cs:14 Class 'ChatPage' has no inheritors and can be marked sealed
+      ClientApp\Pages\ChatPage.xaml.cs:14 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Pages\ChatPage.xaml.cs:14 Base type 'BasePage<ChatViewModel>' is already specified in other parts
+      ClientApp\Pages\ChatPage.xaml.cs:35 Inconsistent argument style: redundant name identifier
+      ClientApp\Pages\ChatPage.xaml.cs:50 Typo in identifier: "textbox"
+      ClientApp\Pages\ChatPage.xaml.cs:53 Invert 'if' statement to reduce nesting
+      ClientApp\Pages\ChatPage.xaml.cs:56 Invert 'if' statement to reduce nesting
+      ClientApp\Pages\LogInPage.xaml:40 Field 'ErrorText' is never used
+      ClientApp\Pages\LogInPage.xaml.cs:9 Class 'LogInPage' has no inheritors and can be marked sealed
+      ClientApp\Pages\LogInPage.xaml.cs:9 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Pages\LogInPage.xaml.cs:9 Base type 'BasePage<CLogInViewModel>' is already specified in other parts
+      ClientApp\Pages\SignUpPage.xaml:35 Field 'ErrorText' is never used
+      ClientApp\Pages\SignUpPage.xaml.cs:8 Class 'SignUpPage' has no inheritors and can be marked sealed
+      ClientApp\Pages\SignUpPage.xaml.cs:8 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      ClientApp\Pages\SignUpPage.xaml.cs:8 Base type 'BasePage<CSignUpViewModel>' is already specified in other parts
+      ClientApp\ServiceProxies\AuthServiceProxy.cs:22 Use 'var' (built-in types)
+      ClientApp\ServiceProxies\AuthServiceProxy.cs:29 Typo in comment: "bsod"
+      ClientApp\ServiceProxies\AuthServiceProxy.cs:39 Use 'var' (simple types)
+      ClientApp\ServiceProxies\AuthServiceProxy.cs:43 Redundant parentheses
+      ClientApp\ServiceProxies\AuthServiceProxy.cs:61 Use 'var' (simple types)
+      ClientApp\ServiceProxies\AuthServiceProxy.cs:62 Redundant string interpolation
+      ClientApp\ServiceProxies\AuthServiceProxy.cs:62 Typo in string: "signup"
+      ClientApp\ServiceProxies\AuthServiceProxy.cs:66 Redundant parentheses
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:17 Field '_logger' is never used
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:23 Use 'var' (built-in types)
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:29 Typo in comment: "bsod"
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:37 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:41 Redundant parentheses
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:52 Return type can be 'IEnumerable<CMessageDto>'
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:56 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:62 Redundant parentheses
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:73 Typo in comment: "sendmsg"
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:78 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:79 Redundant string interpolation
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:83 Redundant parentheses
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:98 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:99 Redundant string interpolation
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:103 Simplify conditional ternary expression
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:118 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatServiceProxy.cs:122 Redundant parentheses
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:17 Field '_logger' is never used
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:23 Use 'var' (built-in types)
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:29 Typo in comment: "bsod"
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:37 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:41 Redundant parentheses
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:56 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:60 Redundant parentheses
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:75 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:79 Redundant parentheses
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:94 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:98 Redundant parentheses
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:113 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:114 Redundant string interpolation
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:117 Redundant parentheses
+      ClientApp\ServiceProxies\ChatsServiceProxy.cs:117 Simplify conditional ternary expression
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:23 Use 'var' (built-in types)
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:35 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:39 Redundant parentheses
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:56 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:60 Redundant parentheses
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:77 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:81 Redundant parentheses
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:110 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:115 Redundant parentheses
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:135 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:139 Redundant parentheses
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:156 Use 'var' (simple types)
+      ClientApp\ServiceProxies\ContactsServiceProxy.cs:160 Redundant parentheses
+      ClientApp\ServiceProxies\TokenProvider.cs:6 Name 'STokenProvider' does not match rule 'Classes'. Suggested name is 'CTokenProvider'.
+      ClientApp\ServiceProxies\UserServiceProxy.cs:22 Use 'var' (built-in types)
+      ClientApp\ServiceProxies\UserServiceProxy.cs:27 Typo in comment: "Здесь"
+      ClientApp\ServiceProxies\UserServiceProxy.cs:27 Typo in comment: "понимаю"
+      ClientApp\ServiceProxies\UserServiceProxy.cs:27 Typo in comment: "указываем"
+      ClientApp\ServiceProxies\UserServiceProxy.cs:27 Typo in comment: "который"
+      ClientApp\ServiceProxies\UserServiceProxy.cs:27 Typo in comment: "должны"
+      ClientApp\ServiceProxies\UserServiceProxy.cs:27 Typo in comment: "данные"
+      ClientApp\ServiceProxies\UserServiceProxy.cs:27 Typo in comment: "сериализоваться"
+      ClientApp\ServiceProxies\UserServiceProxy.cs:27 Typo in comment: "передаваться"
+      ClientApp\ServiceProxies\UserServiceProxy.cs:38 Use 'var' (simple types)
+      ClientApp\ServiceProxies\UserServiceProxy.cs:39 Redundant string interpolation
+      ClientApp\ServiceProxies\UserServiceProxy.cs:43 Redundant parentheses
+      ClientApp\ServiceProxies\UserServiceProxy.cs:43 Simplify conditional ternary expression
+      ClientApp\ServiceProxies\UserServiceProxy.cs:60 Use 'var' (simple types)
+      ClientApp\ServiceProxies\UserServiceProxy.cs:63 Redundant string interpolation
+      ClientApp\ServiceProxies\UserServiceProxy.cs:67 Redundant parentheses
+      ClientApp\ServiceProxies\UserServiceProxy.cs:67 Simplify conditional ternary expression
+      ClientApp\ServiceProxies\UserServiceProxy.cs:84 Use 'var' (simple types)
+      ClientApp\ServiceProxies\UserServiceProxy.cs:88 Redundant parentheses
+      ClientApp\Styles\Buttons.xaml:12 Typo in comment: "Hoverless"
+      ClientApp\Styles\Buttons.xaml:13 Typo in identifier: "Hoverless"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "Чтобы"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "могли"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "элемента"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "которому"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "применяется"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "шаблон"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "влиять"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "свойства"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "определенные"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "этом"
+      ClientApp\Styles\Buttons.xaml:20 Typo in comment: "шаблоне"
+      ClientApp\Styles\Buttons.xaml:22 Typo in comment: "Отображает"
+      ClientApp\Styles\Buttons.xaml:22 Typo in comment: "содержимое"
+      ClientApp\Styles\Buttons.xaml:22 Typo in comment: "элемента"
+      ClientApp\Styles\Buttons.xaml:22 Typo in comment: "управления"
+      ClientApp\Styles\Colors.xaml:4 Typo in comment: "способ"
+      ClientApp\Styles\Colors.xaml:4 Typo in comment: "идентификации"
+      ClientApp\Styles\Colors.xaml:4 Typo in comment: "ресурса"
+      ClientApp\Styles\Colors.xaml:4 Typo in comment: "словаре"
+      ClientApp\Styles\Colors.xaml:4 Typo in comment: "ресурсов"
+      ClientApp\Styles\Fonts.xaml:5 Typo in comment: "шрифта"
+      ClientApp\Styles\Fonts.xaml:5 Typo in comment: "когда"
+      ClientApp\Styles\Fonts.xaml:5 Typo in comment: "открываешь"
+      ClientApp\Styles\Fonts.xaml:5 Typo in comment: "файла"
+      ClientApp\Styles\Fonts.xaml:46 Typo in identifier: "Emoji"
+      ClientApp\Validators\LoginValidator.cs:37 Method 'ValidateSpelling' can be made static
+      ClientApp\Validators\LoginValidator.cs:50 Use 'var' (simple types)
+      ClientApp\Validators\MessageValidator.cs:9 Method 'Validate' can be made static
+      ClientApp\Validators\MessageValidator.cs:19 Use 'var' (built-in types)
+      ClientApp\Validators\MessageValidator.cs:19 Convert to constant
+      ClientApp\Validators\MessageValidator.cs:20 Use 'var' (simple types)
+      ClientApp\Validators\MessageValidator.cs:22 Invert 'if' statement to reduce nesting
+      ClientApp\ViewModels\ApplicationViewModel.cs:40 Accessor 'CurrentSideMenuViewModel.get' is never used
+      ClientApp\ViewModels\ApplicationViewModel.cs:87 Auto-property accessor is never used
+      ClientApp\ViewModels\ApplicationViewModel.cs:88 Auto-property accessor is never used
+      ClientApp\ViewModels\ApplicationViewModel.cs:135 Method 'CancelUpdateLastActiveDateActivity' is never used
+      ClientApp\ViewModels\Base\BaseAsyncCommand.cs:21 Accessor 'IsExecuting.set' is never used
+      ClientApp\ViewModels\Base\BaseCommand.cs:10 Class 'CBaseCommand' is never used
+      ClientApp\ViewModels\Base\BaseCommand.cs:17 Accessor 'IsExecuting.set' is never used
+      ClientApp\ViewModels\Base\BaseCommand.cs:24 Property 'IsExecutingRef' is never used
+      ClientApp\ViewModels\Base\BaseCommand.cs:83 Accessor 'IsExecuting.set' is never used
+      ClientApp\ViewModels\Base\BaseCommand.cs:90 Property 'IsExecutingRef' is never used
+      ClientApp\ViewModels\Base\BaseCommand.cs:122 Method 'RaiseCanExecuteChanged' is never used
+      ClientApp\ViewModels\Base\BaseViewModel.cs:13 Name 'BaseViewModel' does not match rule 'Classes'. Suggested name is 'CBaseViewModel'.
+      ClientApp\ViewModels\Base\BaseViewModel.cs:23 Method return value is never used
+      ClientApp\ViewModels\Base\BaseViewModel.cs:25 Inline 'out' variable declaration
+      ClientApp\ViewModels\Base\BaseViewModel.cs:26 Use 'var' (built-in types)
+      ClientApp\ViewModels\Base\BaseViewModel.cs:33 Method 'ValidatePropertyByErrorMessages' is never used
+      ClientApp\ViewModels\Base\BaseViewModel.cs:35 Use 'var' (built-in types)
+      ClientApp\ViewModels\Base\BaseViewModel.cs:115 Method 'RunCommandAsync' is never used
+      ClientApp\ViewModels\Base\BaseViewModel.cs:140 Method 'RunCommandAsync' is never used
+      ClientApp\ViewModels\Base\EventArgs.cs:12 Auto-property accessor is never used
+      ClientApp\ViewModels\Base\EventRaiser.cs:12 Method 'Raise' is never used
+      ClientApp\ViewModels\Base\EventRaiser.cs:17 Method 'Raise' is never used
+      ClientApp\ViewModels\Base\EventRaiser.cs:22 Method 'Raise' is never used
+      ClientApp\ViewModels\Base\IAsyncCommand.cs:7 Interface 'IAsyncCommand' is never used
+      ClientApp\ViewModels\Base\IAsyncCommand.cs:9 Method 'ExecuteAsync' is never used
+      ClientApp\ViewModels\Base\IAsyncCommand.cs:10 Method 'CanExecute' is never used
+      ClientApp\ViewModels\Base\RelayCommand.cs:10 Class 'CRelayCommand' is never used
+      ClientApp\ViewModels\Base\RelayCommand.cs:17 Accessor 'IsExecuting.set' is never used
+      ClientApp\ViewModels\Base\RelayCommand.cs:24 Property 'IsExecutingRef' is never used
+      ClientApp\ViewModels\Base\RelayCommand.cs:85 Accessor 'IsExecuting.set' is never used
+      ClientApp\ViewModels\Base\RelayCommand.cs:92 Property 'IsExecutingRef' is never used
+      ClientApp\ViewModels\Base\RelayCommand.cs:136 Method 'RaiseCanExecuteChanged' is never used
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:9 Name 'ChatCreateListItemViewModel' does not match rule 'Classes'. Suggested name is 'CHatCreateListItemViewModel'.
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:15 Property 'Name' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:25 Property 'Initials' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:27 Accessor 'Initials.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:35 Property 'ProfilePictureRgb' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:37 Accessor 'ProfilePictureRgb.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:51 Accessor 'IsSelected.set' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:62 Property 'UncheckCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:62 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatCreateListItemViewModel.cs:69 Redundant lambda signature parentheses
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:14 Name 'ChatCreateViewModel' does not match rule 'Classes'. Suggested name is 'CHatCreateViewModel'.
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:17 Property 'FilteredItems' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:30 Property 'DisplayTitle' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:33 Accessor 'DisplayTitle.set' is never used
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:41 Property 'IsPersonal' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:44 Accessor 'IsPersonal.set' is never used
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:53 Property 'HasSelectedItems' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:55 Property 'HasDialog' can be made private
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:77 The field is always assigned before being used and can be converted to local variable
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:117 Use 'var' (built-in types)
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:122 Redundant control flow jump statement
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:130 Redundant lambda signature parentheses
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:132 Property 'CreateChatCommand' is never used
+      ClientApp\ViewModels\ChatPage\ChatCreateViewModel.cs:137 Property 'CloseCreateChatCommand' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:13 Name 'ChatListItemViewModel' does not match rule 'Classes'. Suggested name is 'CHatListItemViewModel'.
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:26 Property 'Id' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:28 Property 'IsPersonal' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:30 Accessor 'IsPersonal.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:41 Accessor 'Name.set' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:48 Property 'Message' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:50 Accessor 'Message.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:58 Property 'MessageAuthor' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:60 Accessor 'MessageAuthor.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:68 Property 'Initials' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:70 Accessor 'Initials.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:82 Property 'ProfilePictureRgb' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:84 Accessor 'ProfilePictureRgb.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:92 Property 'NewContentAvailable' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:94 Accessor 'NewContentAvailable.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:105 Accessor 'NewMessagesCount.set' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:114 Accessor 'IsChatOpened.get' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:122 Property 'Type' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:124 Accessor 'Type.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:138 Property 'OpenChatCommand' is never used
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:155 Typo in comment: "resu"
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:156 Typo in comment: "terst"
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:156 Typo in comment: "resu"
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:157 Typo in comment: "resu"
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:188 Constructor 'ChatListItemViewModel' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListItemViewModel.cs:207 Parameter 'token' is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:12 Name 'ChatListViewModel' does not match rule 'Classes'. Suggested name is 'CHatListViewModel'.
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:24 Property 'SelectedValue' is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:40 Property 'Items' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:52 Property 'FilteredItems' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:54 Accessor 'FilteredItems.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:62 Property 'SearchText' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:79 Property 'SearchIsOpen' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:95 Property 'FilterIsOpen' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:108 Property 'IsMainButtonsBlocked' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:112 Redundant explicit delegate creation
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:113 Redundant explicit delegate creation
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:114 Redundant explicit delegate creation
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:115 Redundant explicit delegate creation
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:118 Property 'SortOrder' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:120 Property 'ChangeSortOrderCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:120 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:121 Property 'OpenFilterCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:121 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:122 Property 'CloseFilterCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:122 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:126 Property 'SearchCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:126 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:127 Property 'OpenSearchCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:127 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:128 Property 'CloseSearchCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:128 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:129 Property 'ClearSearchCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:129 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:137 Property 'OpenCreateChatCommand' is never used
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:140 The field is always assigned before being used and can be converted to local variable
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:277 Redundant lambda signature parentheses
+      ClientApp\ViewModels\ChatPage\ChatListViewModel.cs:343 Redundant parentheses
+      ClientApp\ViewModels\ChatPage\ChatMessageViewModel.cs:9 Name 'ChatMessageViewModel' does not match rule 'Classes'. Suggested name is 'CHatMessageViewModel'.
+      ClientApp\ViewModels\ChatPage\ChatMessageViewModel.cs:33 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatMessageViewModel.cs:35 Accessor 'SenderName.get' can be made private
+      ClientApp\ViewModels\ChatPage\ChatMessageViewModel.cs:39 Property 'IsSelected' is never used
+      ClientApp\ViewModels\ChatPage\ChatMessageViewModel.cs:62 Redundant parentheses
+      ClientApp\ViewModels\ChatPage\ChatParticipantListItemViewModel.cs:7 Name 'ChatParticipantListItemViewModel' does not match rule 'Classes'. Suggested name is 'CHatParticipantListItemViewModel'.
+      ClientApp\ViewModels\ChatPage\ChatParticipantListItemViewModel.cs:13 Property 'Name' can be made private
+      ClientApp\ViewModels\ChatPage\ChatParticipantListItemViewModel.cs:23 Property 'Initials' can be made private
+      ClientApp\ViewModels\ChatPage\ChatParticipantListItemViewModel.cs:25 Accessor 'Initials.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatParticipantListItemViewModel.cs:33 Property 'ActivityStatus' can be made private
+      ClientApp\ViewModels\ChatPage\ChatParticipantListItemViewModel.cs:35 Accessor 'ActivityStatus.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatParticipantListItemViewModel.cs:42 Property 'ProfilePictureRgb' is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:18 Name 'ChatViewModel' does not match rule 'Classes'. Suggested name is 'CHatViewModel'.
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:36 Property 'Id' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:38 Property 'IsPersonal' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:48 Property 'Type' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:50 Accessor 'Type.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:58 Property 'DisplayTitle' can be made protected
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:60 Accessor 'DisplayTitle.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:69 Property 'HasTitle' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:83 Property 'Items' can be made protected
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:85 Accessor 'Items.get' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:99 Property 'FilteredItems' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:109 Property 'PendingMessageText' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:120 Property 'PendingContent' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:130 Property 'SearchText' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:147 Property 'SearchIsOpen' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:169 Property 'SendCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:175 Property 'SearchCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:175 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:176 Property 'OpenSearchCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:176 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:177 Property 'CloseSearchCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:177 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:178 Property 'ClearSearchCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:178 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:183 Property 'ParticipantsIsOpen' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:195 Property 'OpenParticipantsCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:195 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:196 Property 'CloseParticipantsCommand' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:196 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:199 Property 'Participants' can be made private
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:201 Accessor 'Participants.get' is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:212 Property 'SelectedParticipant' is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:230 Invert 'if' statement to reduce nesting
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:304 Redundant lambda signature parentheses
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:322 Redundant lambda signature parentheses
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:327 Method 'Send' is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:362 Redundant parentheses
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:455 Parameter 'token' is never used
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:469 Use 'var' (built-in types)
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:478 Use 'var' (built-in types)
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:482 Invert 'if' statement to reduce nesting
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:511 Invert 'if' statement to reduce nesting
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:514 Use 'var' (built-in types)
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:519 Invert 'if' statement to reduce nesting
+      ClientApp\ViewModels\ChatPage\ChatViewModel.cs:541 Local variable 'isRead' is never used
+      ClientApp\ViewModels\ChatPage\Design\ChatDesignViewModel.cs:6 Class 'ChatDesignViewModel' is never used
+      ClientApp\ViewModels\ChatPage\Design\ChatDesignViewModel.cs:6 Name 'ChatDesignViewModel' does not match rule 'Classes'. Suggested name is 'CHatDesignViewModel'.
+      ClientApp\ViewModels\ChatPage\Design\ChatDesignViewModel.cs:8 Property 'Instance' is never used
+      ClientApp\ViewModels\ChatPage\Design\ChatDesignViewModel.cs:14 Empty argument list is redundant
+      ClientApp\ViewModels\ChatPage\Design\ChatDesignViewModel.cs:16 Empty argument list is redundant
+      ClientApp\ViewModels\ChatPage\Design\ChatDesignViewModel.cs:21 Empty argument list is redundant
+      ClientApp\ViewModels\ChatPage\Design\ChatDesignViewModel.cs:27 Empty argument list is redundant
+      ClientApp\ViewModels\ChatPage\Design\ChatDesignViewModel.cs:37 Empty argument list is redundant
+      ClientApp\ViewModels\ChatPage\Design\ChatMessageDesignViewModel.cs:5 Name 'ChatMessageDesignViewModel' does not match rule 'Classes'. Suggested name is 'CHatMessageDesignViewModel'.
+      ClientApp\ViewModels\ChatPage\Design\ChatMessageDesignViewModel.cs:9 Constructor 'ChatMessageDesignViewModel' can be made private
+      ClientApp\ViewModels\ChatPage\OpenChatCommandArgs.cs:6 Class 'COpenChatCommandArgs' is never used
+      ClientApp\ViewModels\ChatPage\OpenChatCommandArgs.cs:8 Property 'ChatData' can be made private
+      ClientApp\ViewModels\ChatPage\OpenChatCommandArgs.cs:8 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\OpenChatCommandArgs.cs:9 Property 'IsSelected' can be made private
+      ClientApp\ViewModels\ChatPage\OpenChatCommandArgs.cs:9 Auto-property accessor is never used
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:13 Convert to constant
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:14 Convert to constant
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:20 Convert to constant
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:34 Use 'var' (simple types)
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:36 Use 'var' (built-in types)
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:37 Use 'var' (simple types)
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:50 Use 'var' (built-in types)
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:63 Use 'var' (simple types)
+      ClientApp\ViewModels\ChatPage\SendMessageCommand.cs:70 Use 'var' (built-in types)
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:9 Name 'ContactAddListItemViewModel' does not match rule 'Classes'. Suggested name is 'COntactAddListItemViewModel'.
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:9 Typo in identifier: "ontact"
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:17 Property 'Id' can be made private
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:17 Auto-property accessor is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:19 Property 'Name' can be made private
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:29 Property 'LastActiveTime' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:39 Property 'Initials' can be made private
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:41 Accessor 'Initials.get' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:53 Property 'ProfilePictureRgb' can be made private
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:55 Accessor 'ProfilePictureRgb.get' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:63 Property 'IsSelected' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:81 Constructor 'ContactAddListItemViewModel' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListItemViewModel.cs:86 Property 'AddContactCommand' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:11 Name 'ContactAddListViewModel' does not match rule 'Classes'. Suggested name is 'COntactAddListViewModel'.
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:11 Typo in identifier: "ontact"
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:17 Property 'FilteredItems' can be made private
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:19 Accessor 'FilteredItems.get' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:27 Property 'SearchText' can be made private
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:42 Property 'SearchCommand' can be made private
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:42 Auto-property accessor is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:43 Property 'ClearSearchCommand' can be made private
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:43 Auto-property accessor is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:46 Property 'AddContactCommand' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:51 Property 'CloseAddContactCommand' is never used
+      ClientApp\ViewModels\ContactAdd\ContactAddListViewModel.cs:99 Redundant parentheses
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:9 Name 'ContactListItemViewModel' does not match rule 'Classes'. Suggested name is 'COntactListItemViewModel'.
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:9 Typo in identifier: "ontact"
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:21 Accessor 'Name.set' can be made private
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:31 Accessor 'LastActiveTime.set' can be made private
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:38 Property 'Initials' can be made private
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:40 Accessor 'Initials.get' is never used
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:48 Property 'ActivityStatus' can be made private
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:50 Accessor 'ActivityStatus.get' is never used
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:62 Property 'ProfilePictureRgb' can be made private
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:64 Accessor 'ProfilePictureRgb.get' is never used
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:72 Property 'IsSelected' is never used
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:82 Property 'Id' can be made private
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:82 Auto-property accessor is never used
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:87 Accessor 'IsChatOpened.get' can be made private
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:105 Constructor 'ContactListItemViewModel' is never used
+      ClientApp\ViewModels\Contact\ContactListItemViewModel.cs:110 Property 'OpenChatCommand' is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:13 Name 'ContactListViewModel' does not match rule 'Classes'. Suggested name is 'COntactListViewModel'.
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:13 Typo in identifier: "ontact"
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:23 Property 'Items' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:36 Property 'FilteredItems' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:38 Accessor 'FilteredItems.get' is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:47 Property 'SelectedValue' is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:63 Property 'SearchText' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:80 Property 'SearchIsOpen' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:96 Property 'FilterIsOpen' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:109 Property 'IsMainButtonsBlocked' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:113 Redundant explicit delegate creation
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:114 Redundant explicit delegate creation
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:115 Redundant explicit delegate creation
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:116 Redundant explicit delegate creation
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:120 Property 'SortOrder' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:122 Property 'ChangeSortOrderCommand' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:122 Auto-property accessor is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:123 Property 'OpenFilterCommand' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:123 Auto-property accessor is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:124 Property 'CloseFilterCommand' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:124 Auto-property accessor is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:127 Property 'SearchCommand' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:127 Auto-property accessor is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:128 Property 'OpenSearchCommand' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:128 Auto-property accessor is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:129 Property 'CloseSearchCommand' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:129 Auto-property accessor is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:130 Property 'ClearSearchCommand' can be made private
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:130 Auto-property accessor is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:133 Property 'OpenAddContactCommand' is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:137 The field is always assigned before being used and can be converted to local variable
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:207 Local variable 'lastActiveDates' is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:209 Qualifier is redundant
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:211 Local variable 'contactListItemViewModel' is never used
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:223 Redundant lambda signature parentheses
+      ClientApp\ViewModels\Contact\ContactListViewModel.cs:283 Redundant parentheses
+      ClientApp\ViewModels\Contact\OpenChatCommand.cs:39 Use 'var' (simple types)
+      ClientApp\ViewModels\Contact\OpenChatCommand.cs:40 Use 'var' (simple types)
+      ClientApp\ViewModels\LogInPage\LogInCommand.cs:9 Class 'CLogInCommand' is never used
+      ClientApp\ViewModels\LogInPage\LogInCommand.cs:11 Field '_authSupplier' is assigned but its value is never used
+      ClientApp\ViewModels\LogInPage\LogInCommand.cs:13 Field '_returnValidationResult' is assigned but its value is never used
+      ClientApp\ViewModels\LogInPage\LogInCommand.cs:22 Use 'var' (built-in types)
+      ClientApp\ViewModels\LogInPage\LogInCommand.cs:22 Local variable 'login' is never used
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:25 Typo in comment: "Добавить"
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:25 Typo in comment: "логгер"
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:32 Use 'var' (elsewhere)
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:32 Use pattern matching
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:39 Use 'var' (built-in types)
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:40 Use 'var' (built-in types)
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:43 Use 'var' (simple types)
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:44 Use 'var' (simple types)
+      ClientApp\ViewModels\LogInPage\LogInCommandAsync.cs:45 Use 'var' (built-in types)
+      ClientApp\ViewModels\LogInPage\LogInViewModel.cs:13 Property 'Login' can be made private
+      ClientApp\ViewModels\LogInPage\LogInViewModel.cs:15 Accessor 'Login.get' is never used
+      ClientApp\ViewModels\LogInPage\LogInViewModel.cs:28 Property 'Password' is never used
+      ClientApp\ViewModels\LogInPage\LogInViewModel.cs:43 Property 'SignUpText' is never used
+      ClientApp\ViewModels\LogInPage\LogInViewModel.cs:67 Property 'LogInCommand' is never used
+      ClientApp\ViewModels\LogInPage\LogInViewModel.cs:75 Property 'GoToSignUpPageCommand' is never used
+      ClientApp\ViewModels\RefreshMessageListCommand.cs:6 Class 'CRefreshMessageListCommand' is never used
+      ClientApp\ViewModels\SendMessageCommand.cs:8 Class 'CSendMessageCommand' is never used
+      ClientApp\ViewModels\SendMessageCommand.cs:10 Convert to constant
+      ClientApp\ViewModels\SendMessageCommand.cs:11 Convert to constant
+      ClientApp\ViewModels\SendMessageCommand.cs:28 Use 'var' (built-in types)
+      ClientApp\ViewModels\SendMessageCommand.cs:28 Convert to constant
+      ClientApp\ViewModels\SendMessageCommand.cs:29 Use 'var' (simple types)
+      ClientApp\ViewModels\SendMessageCommand.cs:32 Use 'var' (built-in types)
+      ClientApp\ViewModels\SendMessageCommand.cs:45 Use 'var' (simple types)
+      ClientApp\ViewModels\SendMessageCommand.cs:52 Use 'var' (built-in types)
+      ClientApp\ViewModels\SideMenuContent.cs:3 Name 'SideMenuContent' does not match rule 'Enums'. Suggested name is 'ESideMenuContent'.
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:31 Typo in comment: "Добавить"
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:31 Typo in comment: "логгер"
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:38 Use 'var' (elsewhere)
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:38 Use pattern matching
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:45 Use 'var' (built-in types)
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:46 Use 'var' (built-in types)
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:49 Use 'var' (simple types)
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:50 Use 'var' (built-in types)
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:53 Empty argument list is redundant
+      ClientApp\ViewModels\SignUpPage\SignUpCommand.cs:58 Use 'var' (built-in types)
+      ClientApp\ViewModels\SignUpPage\SignUpViewModel.cs:13 Property 'Login' can be made private
+      ClientApp\ViewModels\SignUpPage\SignUpViewModel.cs:15 Accessor 'Login.get' is never used
+      ClientApp\ViewModels\SignUpPage\SignUpViewModel.cs:28 Property 'Password' is never used
+      ClientApp\ViewModels\SignUpPage\SignUpViewModel.cs:42 Property 'LogInText' is never used
+      ClientApp\ViewModels\SignUpPage\SignUpViewModel.cs:57 Property 'SignUpCommand' is never used
+      ClientApp\ViewModels\SignUpPage\SignUpViewModel.cs:64 Property 'GoToLogInPageCommand' is never used
+      ClientApp\ViewModels\WindowViewModel.cs:11 Typo in comment: "angelsix"
+      ClientApp\ViewModels\WindowViewModel.cs:11 Typo in comment: "Malpass"
+      ClientApp\ViewModels\WindowViewModel.cs:14 Name 'WindowViewModel' does not match rule 'Classes'. Suggested name is 'CWindowViewModel'.
+      ClientApp\ViewModels\WindowViewModel.cs:16 Qualifier is redundant
+      ClientApp\ViewModels\WindowViewModel.cs:19 Typo in comment: "resizer"
+      ClientApp\ViewModels\WindowViewModel.cs:20 Typo in identifier: "Resizer"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "полном"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "экране"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "площадь"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "которую"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "можно"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "потянуть"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "должна"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "быть"
+      ClientApp\ViewModels\WindowViewModel.cs:22 Typo in comment: "внутри"
+      ClientApp\ViewModels\WindowViewModel.cs:23 Property 'ResizeBorder' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:24 Property 'ResizeBorderThickness' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:28 Typo in comment: "accound"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "создает"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "проблемы"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "когда"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "окно"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "полном"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "экране"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "будто"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "окружено"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "пустой"
+      ClientApp\ViewModels\WindowViewModel.cs:30 Typo in comment: "рамкой"
+      ClientApp\ViewModels\WindowViewModel.cs:32 Property 'OuterMarginSizeThickness' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:35 Redundant parentheses
+      ClientApp\ViewModels\WindowViewModel.cs:39 Typo in comment: "полном"
+      ClientApp\ViewModels\WindowViewModel.cs:39 Typo in comment: "экране"
+      ClientApp\ViewModels\WindowViewModel.cs:39 Typo in comment: "надо"
+      ClientApp\ViewModels\WindowViewModel.cs:39 Typo in comment: "скруглять"
+      ClientApp\ViewModels\WindowViewModel.cs:39 Typo in comment: "окно"
+      ClientApp\ViewModels\WindowViewModel.cs:41 Property 'WindowRadius' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:42 Property 'WindowCornerRadius' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:45 Property 'FlatBorderThickness' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:48 Property 'TitleHeight' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:48 Auto-property can be made get-only
+      ClientApp\ViewModels\WindowViewModel.cs:49 Property 'TitleHeightGridLength' is never used
+      ClientApp\ViewModels\WindowViewModel.cs:52 Property 'WindowMinimumHeight' is never used
+      ClientApp\ViewModels\WindowViewModel.cs:53 Property 'WindowMinimumWidth' is never used
+      ClientApp\ViewModels\WindowViewModel.cs:56 Property 'BeingMoved' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:56 Auto-property accessor is never used
+      ClientApp\ViewModels\WindowViewModel.cs:58 Property 'InnerContentPaddingThickness' is never used
+      ClientApp\ViewModels\WindowViewModel.cs:60 Typo in comment: "borderless"
+      ClientApp\ViewModels\WindowViewModel.cs:61 Property 'Borderless' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:61 Typo in identifier: "Borderless"
+      ClientApp\ViewModels\WindowViewModel.cs:64 Typo in identifier: "Dimmable"
+      ClientApp\ViewModels\WindowViewModel.cs:64 Auto-property accessor is never used
+      ClientApp\ViewModels\WindowViewModel.cs:67 Property 'MinimizeCommand' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:67 Auto-property accessor is never used
+      ClientApp\ViewModels\WindowViewModel.cs:68 Property 'MaximizeCommand' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:68 Auto-property accessor is never used
+      ClientApp\ViewModels\WindowViewModel.cs:69 Property 'CloseCommand' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:69 Auto-property accessor is never used
+      ClientApp\ViewModels\WindowViewModel.cs:70 Property 'MenuCommand' can be made private
+      ClientApp\ViewModels\WindowViewModel.cs:70 Auto-property accessor is never used
+      ClientApp\ViewModels\WindowViewModel.cs:73 Qualifier is redundant
+      ClientApp\ViewModels\WindowViewModel.cs:84 Redundant lambda signature parentheses
+      ClientApp\ViewModels\WindowViewModel.cs:85 Redundant lambda signature parentheses
+      ClientApp\ViewModels\WindowViewModel.cs:85 Bitwise operation on enum which is not marked by [Flags] attribute
+      ClientApp\ViewModels\WindowViewModel.cs:86 Redundant lambda signature parentheses
+      ClientApp\ViewModels\WindowViewModel.cs:87 Redundant lambda signature parentheses
+      ClientApp\ViewModels\WindowViewModel.cs:92 Redundant lambda signature parentheses
+      ClientApp\ViewModels\WindowViewModel.cs:104 Typo in comment: "undocked"
+      ClientApp\ViewModels\WindowViewModel.cs:105 Use 'var' (built-in types)
+      ClientApp\ViewModels\WindowViewModel.cs:105 Convert to constant
+      ClientApp\WindowHelpers\WindowResizer.cs:8 Typo in comment: "angelsix"
+      ClientApp\WindowHelpers\WindowResizer.cs:8 Typo in comment: "Malpass"
+      ClientApp\WindowHelpers\WindowResizer.cs:16 Typo in identifier: "Undocked"
+      ClientApp\WindowHelpers\WindowResizer.cs:27 Typo in comment: "taskbar"
+      ClientApp\WindowHelpers\WindowResizer.cs:29 Name 'WindowResizer' does not match rule 'Classes'. Suggested name is 'CWindowResizer'.
+      ClientApp\WindowHelpers\WindowResizer.cs:29 Typo in identifier: "Resizer"
+      ClientApp\WindowHelpers\WindowResizer.cs:36 Qualifier is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:41 Convert to constant
+      ClientApp\WindowHelpers\WindowResizer.cs:51 Field '_lastScreen' is assigned but its value is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:72 Typo in identifier: "lpmi"
+      ClientApp\WindowHelpers\WindowResizer.cs:78 Typo in identifier: "hwnd"
+      ClientApp\WindowHelpers\WindowResizer.cs:86 Redundant lambda signature parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:105 Property 'CurrentMonitorSize' can be made private
+      ClientApp\WindowHelpers\WindowResizer.cs:105 Auto-property accessor is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:128 Typo in identifier: "Resizer"
+      ClientApp\WindowHelpers\WindowResizer.cs:128 Qualifier is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:149 Qualifier is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:152 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:176 Typo in comment: "Aero"
+      ClientApp\WindowHelpers\WindowResizer.cs:203 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:203 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:204 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:204 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:205 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:205 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:206 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:206 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:210 Value assigned is not used in any execution path
+      ClientApp\WindowHelpers\WindowResizer.cs:259 Typo in identifier: "hwnd"
+      ClientApp\WindowHelpers\WindowResizer.cs:261 Some cases are not processed: default
+      ClientApp\WindowHelpers\WindowResizer.cs:264 Typo in comment: "GETMINMAXINFO"
+      ClientApp\WindowHelpers\WindowResizer.cs:270 Typo in comment: "ENTERSIZEMOVE"
+      ClientApp\WindowHelpers\WindowResizer.cs:276 Typo in comment: "EXITSIZEMOVE"
+      ClientApp\WindowHelpers\WindowResizer.cs:289 Typo in comment: "taskbar"
+      ClientApp\WindowHelpers\WindowResizer.cs:293 Qualifier is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:293 Typo in identifier: "hwnd"
+      ClientApp\WindowHelpers\WindowResizer.cs:293 Qualifier is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:296 Inline 'out' variable declaration
+      ClientApp\WindowHelpers\WindowResizer.cs:333 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:334 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:335 Local variable 'currentRatio' is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:335 Type cast is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:335 Type cast is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:337 Local variable 'primaryX' is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:338 Local variable 'primaryY' is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:339 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:340 Redundant parentheses
+      ClientApp\WindowHelpers\WindowResizer.cs:341 Local variable 'primaryRatio' is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:341 Type cast is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:341 Type cast is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:407 Name 'MonitorOptions' does not match rule 'Enums'. Suggested name is 'EMonitorOptions'.
+      ClientApp\WindowHelpers\WindowResizer.cs:409 Name 'MONITOR_DEFAULTTONULL' does not match rule 'Enum members'. Suggested name is 'MonitorDefaulttonull'.
+      ClientApp\WindowHelpers\WindowResizer.cs:409 Typo in identifier: "DEFAULTTONULL"
+      ClientApp\WindowHelpers\WindowResizer.cs:410 Name 'MONITOR_DEFAULTTOPRIMARY' does not match rule 'Enum members'. Suggested name is 'MonitorDefaulttoprimary'.
+      ClientApp\WindowHelpers\WindowResizer.cs:410 Typo in identifier: "DEFAULTTOPRIMARY"
+      ClientApp\WindowHelpers\WindowResizer.cs:411 Enum member 'MONITOR_DEFAULTTONEAREST' is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:411 Name 'MONITOR_DEFAULTTONEAREST' does not match rule 'Enum members'. Suggested name is 'MonitorDefaulttonearest'.
+      ClientApp\WindowHelpers\WindowResizer.cs:411 Typo in identifier: "DEFAULTTONEAREST"
+      ClientApp\WindowHelpers\WindowResizer.cs:416 Name 'MONITORINFO' does not match rule 'Classes'. Suggested name is 'CMonitorinfo'.
+      ClientApp\WindowHelpers\WindowResizer.cs:416 Typo in identifier: "MONITORINFO"
+      ClientApp\WindowHelpers\WindowResizer.cs:419 Field 'CBSize' is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:422 Field 'DWFlags' is assigned but its value is never used
+      ClientApp\WindowHelpers\WindowResizer.cs:427 Name 'Rectangle' does not match rule 'Structs'. Suggested name is 'SRectangle'.
+      ClientApp\WindowHelpers\WindowResizer.cs:446 Name 'MINMAXINFO' does not match rule 'Structs'. Suggested name is 'SMinmaxinfo'.
+      ClientApp\WindowHelpers\WindowResizer.cs:446 Typo in identifier: "MINMAXINFO"
+      ClientApp\WindowHelpers\WindowResizer.cs:449 Field 'PointReserved' can be made private
+      ClientApp\WindowHelpers\WindowResizer.cs:453 Field 'PointMaxTrackSize' can be made private
+      ClientApp\WindowHelpers\WindowResizer.cs:455 Semicolon after struct declaration is redundant
+      ClientApp\WindowHelpers\WindowResizer.cs:458 Name 'POINT' does not match rule 'Structs'. Suggested name is 'SPoint'.
+    
+    Project Common.ServiceLocator
+      Common.ServiceLocator\Container.cs:43 Invert 'if' statement to reduce nesting
+      Common.ServiceLocator\IContainer.cs:7 Only implementations of method 'Register' are used
+      Common.ServiceLocator\IContainer.cs:8 Only implementations of method 'Register' are used
+      Common.ServiceLocator\IContainer.cs:9 Only implementations of method 'Resolve' are used
+      Common.ServiceLocator\IContainer.cs:10 Method 'Resolve' is never used
+      Common.ServiceLocator\LifeCycle.cs:6 Enum member 'Singleton' is never used
+      Common.ServiceLocator\Other\Logger.cs:7 Class 'SLogger' is never used
+      Common.ServiceLocator\Other\Logger.cs:7 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      Common.ServiceLocator\Other\Logger.cs:9 Method 'LogDebug' is never used
+      Common.ServiceLocator\Other\Logger.cs:14 Method 'LogInfo' is never used
+      Common.ServiceLocator\Other\Logger.cs:19 Method 'LogWarn' is never used
+      Common.ServiceLocator\Other\Logger.cs:24 Method 'LogError' is never used
+      Common.ServiceLocator\Other\Logger.cs:29 Method 'LogFatal' is never used
+      Common.ServiceLocator\Other\Logger.cs:35 Method 'GetLogger' is never used
+      Common.ServiceLocator\ServiceLocator.cs:3 Name 'SServiceLocator' does not match rule 'Classes'. Suggested name is 'CServiceLocator'.
+      Common.ServiceLocator\TypeNotRegisteredException.cs:7 Class 'TypeNotRegisteredException' is never used
+      Common.ServiceLocator\TypeNotRegisteredException.cs:7 Name 'TypeNotRegisteredException' does not match rule 'Classes'. Suggested name is 'CTypeNotRegisteredException'.
+    
+    Project ConsoleHosting
+      ConsoleHosting\Logger.cs:24 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      ConsoleHosting\Logger.cs:30 Method 'InitLogger' is never used
+      ConsoleHosting\Logger.cs:38 Join declaration and assignment
+      ConsoleHosting\Logger.cs:44 Use 'var' (simple types)
+      ConsoleHosting\Logger.cs:44 Typo in identifier: "finfo"
+      ConsoleHosting\Logger.cs:49 Qualifier is redundant
+      ConsoleHosting\Logger.cs:52 Use 'var' (simple types)
+      ConsoleHosting\Logger.cs:52 Local variable 'message' is never used
+      ConsoleHosting\Logger.cs:52 Qualifier is redundant
+      ConsoleHosting\LogRequestAndResponseHandler.cs:12 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      ConsoleHosting\LogRequestAndResponseHandler.cs:13 Convert to constant
+      ConsoleHosting\LogRequestAndResponseHandler.cs:14 Convert to constant
+      ConsoleHosting\LogRequestAndResponseHandler.cs:20 Use 'var' (built-in types)
+      ConsoleHosting\LogRequestAndResponseHandler.cs:32 Invert 'if' statement to reduce nesting
+      ConsoleHosting\Other\Logger.cs:7 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      ConsoleHosting\Other\Logger.cs:9 Method 'LogDebug' is never used
+      ConsoleHosting\Other\Logger.cs:19 Method 'LogWarn' is never used
+      ConsoleHosting\Other\Logger.cs:24 Method 'LogError' is never used
+      ConsoleHosting\Other\Logger.cs:29 Method 'LogFatal' is never used
+      ConsoleHosting\Other\Logger.cs:35 Method 'GetLogger' is never used
+      ConsoleHosting\Program.cs:9 Class 'Program' is never instantiated
+      ConsoleHosting\Program.cs:9 Name 'Program' does not match rule 'Classes'. Suggested name is 'CProgram'.
+      ConsoleHosting\Program.cs:11 Parameter 'args' is never used
+      ConsoleHosting\Program.cs:16 Typo in comment: "Работа"
+      ConsoleHosting\Program.cs:16 Typo in comment: "временем"
+      ConsoleHosting\Program.cs:22 Use 'var' (built-in types)
+      ConsoleHosting\Program.cs:22 Convert to constant
+      ConsoleHosting\Program.cs:27 Qualifier is redundant
+      ConsoleHosting\Startup.cs:7 Class 'Startup' is never instantiated
+      ConsoleHosting\Startup.cs:7 Name 'Startup' does not match rule 'Classes'. Suggested name is 'CStartup'.
+      ConsoleHosting\Startup.cs:11 Method 'Configuration' is never used
+      ConsoleHosting\Startup.cs:11 Qualifier is redundant
+      ConsoleHosting\Startup.cs:15 Use 'var' (simple types)
+    
+    Project ConsoleHostingAuthentication
+      ConsoleHostingAuthentication\Program.cs:3 Class 'Program' is never instantiated
+      ConsoleHostingAuthentication\Program.cs:3 Name 'Program' does not match rule 'Classes'. Suggested name is 'CProgram'.
+      ConsoleHostingAuthentication\Program.cs:5 Parameter 'args' is never used
+    
+    Project ConsoleHostingMaintenance
+      ConsoleHostingMaintenance\Program.cs:6 Class 'Program' is never instantiated
+      ConsoleHostingMaintenance\Program.cs:6 Name 'Program' does not match rule 'Classes'. Suggested name is 'CProgram'.
+      ConsoleHostingMaintenance\Program.cs:8 Parameter 'args' is never used
+      ConsoleHostingMaintenance\Program.cs:13 Use 'var' (built-in types)
+      ConsoleHostingMaintenance\Program.cs:13 Convert to constant
+      ConsoleHostingMaintenance\Program.cs:18 Qualifier is redundant
+      ConsoleHostingMaintenance\Program.cs:32 Redundant empty finally block
+      ConsoleHostingMaintenance\Startup.cs:6 Class 'Startup' is never instantiated
+      ConsoleHostingMaintenance\Startup.cs:6 Name 'Startup' does not match rule 'Classes'. Suggested name is 'CStartup'.
+      ConsoleHostingMaintenance\Startup.cs:10 Method 'Configuration' is never used
+      ConsoleHostingMaintenance\Startup.cs:10 Qualifier is redundant
+      ConsoleHostingMaintenance\Startup.cs:13 Use 'var' (simple types)
+    
+    Project DTO
+      DTO\ChatDto.cs:9 Property 'OwnerId' can be made private
+      DTO\ChatDto.cs:9 Auto-property accessor is never used
+      DTO\CredentialsDto.cs:22 Constructor 'CCredentialsDto' is never used
+      DTO\LastActiveDateDto.cs:16 Constructor 'CLastActiveDateDto' is never used
+      DTO\MessageDto.cs:10 Property 'Type' can be made private
+      DTO\MessageDto.cs:10 Auto-property accessor is never used
+      DTO\MessageDto.cs:11 Property 'ContentUri' can be made private
+      DTO\MessageDto.cs:11 Auto-property accessor is never used
+      DTO\MessageInChatDto.cs:5 Class 'CMessageInChatDto' is never used
+      DTO\MessageInChatDto.cs:7 Property 'Id' can be made private
+      DTO\MessageInChatDto.cs:7 Auto-property accessor is never used
+      DTO\MessageInChatDto.cs:8 Property 'MessageId' can be made private
+      DTO\MessageInChatDto.cs:8 Auto-property accessor is never used
+      DTO\MessageInChatDto.cs:9 Property 'ChatId' can be made private
+      DTO\MessageInChatDto.cs:9 Auto-property accessor is never used
+      DTO\MessageInChatDto.cs:10 Property 'FromUserId' can be made private
+      DTO\MessageInChatDto.cs:10 Auto-property accessor is never used
+      DTO\MessageInChatDto.cs:11 Property 'ToUserId' can be made private
+      DTO\MessageInChatDto.cs:11 Auto-property accessor is never used
+      DTO\MessageInChatDto.cs:12 Property 'IsRead' can be made private
+      DTO\MessageInChatDto.cs:12 Auto-property accessor is never used
+      DTO\MessagePostedDto.cs:8 Property 'DispatchDate' can be made private
+      DTO\MessagePostedDto.cs:8 Auto-property accessor is never used
+      DTO\Other\Logger.cs:7 Class 'SLogger' is never used
+      DTO\Other\Logger.cs:7 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      DTO\Other\Logger.cs:9 Method 'LogDebug' is never used
+      DTO\Other\Logger.cs:14 Method 'LogInfo' is never used
+      DTO\Other\Logger.cs:19 Method 'LogWarn' is never used
+      DTO\Other\Logger.cs:24 Method 'LogError' is never used
+      DTO\Other\Logger.cs:29 Method 'LogFatal' is never used
+      DTO\Other\Logger.cs:35 Method 'GetLogger' is never used
+    
+    Project DataStorage
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:12 Class 'CChatInfoDataProvider' is never instantiated
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:15 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:205 Convert to constant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:223 Use 'var' (simple types)
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:229 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:251 Convert to constant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:263 Use 'var' (simple types)
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:268 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:269 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:291 Convert to constant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:305 Use 'var' (simple types)
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:330 Convert to constant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:344 Use 'var' (simple types)
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:369 Convert to constant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:400 Use 'var' (simple types)
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:406 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:409 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:432 Convert to constant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:444 Use 'var' (simple types)
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:449 Local variable 'result' is never used
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:451 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:454 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:457 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:460 Qualifier is redundant
+      DataStorage\DataProviders\ChatInfoDataProvider.cs:463 Qualifier is redundant
+      DataStorage\DataProviders\ChatsParticipantInfoDataProvider.cs:10 Class 'CChatsParticipantInfoDataProvider' is never instantiated
+      DataStorage\DataProviders\ChatsParticipantInfoDataProvider.cs:13 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      DataStorage\DataProviders\ChatsParticipantInfoDataProvider.cs:56 Convert to constant
+      DataStorage\DataProviders\ChatsParticipantInfoDataProvider.cs:69 Use 'var' (simple types)
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:12 Class 'CContactInfoDataProvider' is never instantiated
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:15 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:131 Convert to constant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:144 Use 'var' (simple types)
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:150 Qualifier is redundant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:179 Convert to constant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:189 Use 'var' (simple types)
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:195 Qualifier is redundant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:198 Qualifier is redundant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:222 Convert to constant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:231 Use 'var' (simple types)
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:237 Qualifier is redundant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:240 Qualifier is redundant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:265 Convert to constant
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:296 Use 'var' (simple types)
+      DataStorage\DataProviders\ContactInfoDataProvider.cs:302 Qualifier is redundant
+      DataStorage\DataProviders\ICChatInfoDataProvider.cs:11 Method 'GetChatsByOwnerId' is never used
+      DataStorage\DataProviders\ICChatInfoDataProvider.cs:12 Method 'GetChatById' is never used
+      DataStorage\DataProviders\ICUserInfoDataProvider.cs:15 Method 'DeleteUser' is never used
+      DataStorage\DataProviders\MessageInChatInfoDataProvider.cs:10 Class 'CMessageInChatInfoDataProvider' is never instantiated
+      DataStorage\DataProviders\MessageInChatInfoDataProvider.cs:13 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      DataStorage\DataProviders\MessageInChatInfoDataProvider.cs:86 Convert to constant
+      DataStorage\DataProviders\MessageInChatInfoDataProvider.cs:97 Use 'var' (simple types)
+      DataStorage\DataProviders\MessageInChatInfoDataProvider.cs:140 Convert to constant
+      DataStorage\DataProviders\MessageInChatInfoDataProvider.cs:151 Use 'var' (simple types)
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:12 Class 'CMessageInfoDataProvider' is never instantiated
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:15 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:205 Typo in comment: "Нужно"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:205 Typo in comment: "использовать"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:209 Typo in comment: "Надо"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:209 Typo in comment: "добавить"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:209 Typo in comment: "информацию"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:209 Typo in comment: "авторе"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:209 Typo in comment: "сообщения"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:212 Convert to constant
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:255 Use 'var' (simple types)
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "Либо"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "генерировать"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "пользователя"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "передавать"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "либо"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "генерировать"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "здесь"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "возвращать"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "результат"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:281 Typo in comment: "операции"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "Соответственно"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "либо"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "генерируется"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "запросам"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "клиента"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "либо"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "вшить"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "генерацию"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "внутрь"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:282 Typo in comment: "контроллера"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:283 Typo in comment: "когда"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:283 Typo in comment: "посылаем"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:283 Typo in comment: "создаем"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:283 Typo in comment: "сообщениеб"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:283 Typo in comment: "тогда"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:283 Typo in comment: "создаем"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:290 Convert to constant
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:304 Use 'var' (simple types)
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:312 The parameter parameterDirection has the same default value
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:315 The parameter parameterDirection has the same default value
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:351 Convert to constant
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:377 Use 'var' (simple types)
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:403 Typo in comment: "Надо"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:403 Typo in comment: "добавить"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:403 Typo in comment: "информацию"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:403 Typo in comment: "авторе"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:403 Typo in comment: "сообщения"
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:406 Convert to constant
+      DataStorage\DataProviders\MessageInfoDataProvider.cs:452 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:12 Class 'CUserInfoDataProvider' is never instantiated
+      DataStorage\DataProviders\UserInfoDataProvider.cs:15 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      DataStorage\DataProviders\UserInfoDataProvider.cs:124 Typo in comment: "Куда"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:124 Typo in comment: "этот"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:124 Typo in comment: "метод"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:124 Typo in comment: "убрать"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:124 Typo in comment: "оставить"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:124 Typo in comment: "здесь"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:291 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:307 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:313 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:316 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:341 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:356 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:362 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:390 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:406 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:412 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:437 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:447 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:453 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:475 Typo in comment: "Куда"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:475 Typo in comment: "этот"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:475 Typo in comment: "метод"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:475 Typo in comment: "убрать"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:475 Typo in comment: "оставить"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:475 Typo in comment: "здесь"
+      DataStorage\DataProviders\UserInfoDataProvider.cs:482 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:502 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:532 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:542 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:548 Local variable 'result' is never used
+      DataStorage\DataProviders\UserInfoDataProvider.cs:553 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:556 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:559 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:562 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:565 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:589 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:597 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:603 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:628 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:644 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:684 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:706 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:712 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:715 Qualifier is redundant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:740 Convert to constant
+      DataStorage\DataProviders\UserInfoDataProvider.cs:760 Use 'var' (simple types)
+      DataStorage\DataProviders\UserInfoDataProvider.cs:766 Qualifier is redundant
+      DataStorage\DataStorageSettings.cs:22 Constructor 'CDataStorageSettings' is never used
+      DataStorage\DataStorageSettings.cs:27 Typo in comment: "SQLEXPRESS"
+      DataStorage\DbQueryExecutor.cs:11 Class 'CDbQueryExecutor' is never used
+      DataStorage\DbQueryExecutor.cs:56 Name 's_settings' does not match rule 'Static readonly fields (private)'. Suggested name is 'Settings'.
+      DataStorage\DbQueryExecutor.cs:59 Typo in comment: "SQLEXPRESS"
+      DataStorage\DbQueryExecutor.cs:62 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      DataStorage\DbQueryExecutor.cs:66 Method 'GetScalar' is never used
+      DataStorage\DbQueryExecutor.cs:76 Use 'var' (simple types)
+      DataStorage\DbQueryExecutor.cs:80 Qualifier is redundant
+      DataStorage\DbQueryExecutor.cs:93 Use 'var' (simple types)
+      DataStorage\DbQueryExecutor.cs:110 Method 'GetData' is never used
+      DataStorage\DbQueryExecutor.cs:118 Method 'GetDataParametrized' is never used
+      DataStorage\DbQueryExecutor.cs:133 Qualifier is redundant
+      DataStorage\DbQueryExecutor.cs:146 Use 'var' (simple types)
+      DataStorage\DbQueryExecutor.cs:166 Method 'GetItem' is never used
+      DataStorage\DbQueryExecutor.cs:174 Method 'GetItemParametrized' is never used
+      DataStorage\DbQueryExecutor.cs:184 Use 'var' (simple types)
+      DataStorage\DbQueryExecutor.cs:188 Qualifier is redundant
+      DataStorage\DbQueryExecutor.cs:201 Use 'var' (simple types)
+      DataStorage\DbQueryExecutor.cs:217 Method 'CreateItemParametrized' is never used
+      DataStorage\DbQueryExecutor.cs:218 Method 'DeleteItemParametrized' is never used
+      DataStorage\DbQueryExecutor.cs:219 Method 'InsertItemParametrized' is never used
+      DataStorage\DbQueryExecutor.cs:220 Method 'UpdateItemParametrized' is never used
+      DataStorage\DbQueryExecutor.cs:232 Use 'var' (built-in types)
+      DataStorage\DbQueryExecutor.cs:236 Qualifier is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:16 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      DataStorage\DbTransactionQueryExecutor.cs:39 Method 'Create' is never used
+      DataStorage\DbTransactionQueryExecutor.cs:67 Use 'var' (simple types)
+      DataStorage\DbTransactionQueryExecutor.cs:67 Empty argument list is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:91 Use 'var' (simple types)
+      DataStorage\DbTransactionQueryExecutor.cs:91 Empty argument list is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:123 Type argument specification is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:132 Type argument specification is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:149 Method 'InsertItem' is never used
+      DataStorage\DbTransactionQueryExecutor.cs:155 Use 'var' (simple types)
+      DataStorage\DbTransactionQueryExecutor.cs:159 Qualifier is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:169 Use 'var' (simple types)
+      DataStorage\DbTransactionQueryExecutor.cs:190 Qualifier is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:200 Use 'var' (simple types)
+      DataStorage\DbTransactionQueryExecutor.cs:219 Use 'var' (simple types)
+      DataStorage\DbTransactionQueryExecutor.cs:223 Qualifier is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:233 Use 'var' (simple types)
+      DataStorage\DbTransactionQueryExecutor.cs:255 Qualifier is redundant
+      DataStorage\DbTransactionQueryExecutor.cs:294 Invert 'if' statement to reduce nesting
+      DataStorage\Mappers\ChatInfoMapper.cs:16 Type cast is redundant
+      DataStorage\Mappers\ChatsParticipantInfoProvider.cs:7 Class 'CChatsParticipantInfoProvider' is never used
+      DataStorage\Mappers\MessageInChatInfoMapper.cs:7 Class 'CMessageInChatInfoMapper' is never used
+      DataStorage\Mappers\MessageInfoMapper.cs:15 Type cast is redundant
+      DataStorage\Mappers\UserInfoMapper.cs:16 Type cast is redundant
+      DataStorage\Mappers\UserInfoMapper.cs:16 Typo in comment: "Смотри"
+      DataStorage\Mappers\UserInfoMapper.cs:16 Typo in comment: "куда"
+      DataStorage\Mappers\UserInfoMapper.cs:16 Typo in comment: "кастуешь"
+      DataStorage\Other\Logger.cs:7 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      DataStorage\Other\Logger.cs:9 Method 'LogDebug' is never used
+      DataStorage\Other\Logger.cs:19 Method 'LogWarn' is never used
+      DataStorage\Other\Logger.cs:29 Method 'LogFatal' is never used
+      DataStorage\SqlParameterCreator.cs:7 Name 'SSqlParameterCreator' does not match rule 'Classes'. Suggested name is 'CSqlParameterCreator'.
+    
+    Project DataStorage.Test
+      DataStorage.Test\ChatDataProvider\ChatDataProviderTest.cs:43 Typo in comment: "Xunit"
+      DataStorage.Test\ChatDataProvider\ChatDataProviderTest.cs:52 Qualifier is redundant
+      DataStorage.Test\ChatDataProvider\ChatDataProviderTest.cs:52 Type argument specification is redundant
+      DataStorage.Test\WholeRepositoryStub.cs:7 Name 'SWholeRepositoryStub' does not match rule 'Classes'. Suggested name is 'CWholeRepositoryStub'.
+      DataStorage.Test\WholeRepositoryStub.cs:10 Auto-property accessor is never used
+      DataStorage.Test\WholeRepositoryStub.cs:11 Auto-property accessor is never used
+      DataStorage.Test\WholeRepositoryStub.cs:12 Auto-property accessor is never used
+      DataStorage.Test\WholeRepositoryStub.cs:13 Property 'Messages' is never used
+      DataStorage.Test\WholeRepositoryStub.cs:13 Auto-property accessor is never used
+      DataStorage.Test\WholeRepositoryStub.cs:29 Typo in string: "Furi"
+    
+    Project Info
+      Info\ChatsParticipantInfo.cs:7 Property 'Id' can be made private
+      Info\ChatsParticipantInfo.cs:7 Auto-property accessor is never used
+      Info\MessageInChatInfo.cs:7 Property 'Id' can be made private
+      Info\MessageInChatInfo.cs:7 Auto-property accessor is never used
+      Info\Other\Logger.cs:7 Class 'SLogger' is never used
+      Info\Other\Logger.cs:7 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      Info\Other\Logger.cs:9 Method 'LogDebug' is never used
+      Info\Other\Logger.cs:14 Method 'LogInfo' is never used
+      Info\Other\Logger.cs:19 Method 'LogWarn' is never used
+      Info\Other\Logger.cs:24 Method 'LogError' is never used
+      Info\Other\Logger.cs:29 Method 'LogFatal' is never used
+      Info\Other\Logger.cs:35 Method 'GetLogger' is never used
+    
+    Project MaintenanceService
+      MaintenanceService\App_Start\WebApiConfig.cs:5 Name 'WebApiConfig' does not match rule 'Classes'. Suggested name is 'CWebApiConfig'.
+      MaintenanceService\Controllers\UserController.cs:11 Name 'MaintenanceController' does not match rule 'Classes'. Suggested name is 'CMaintenanceController'.
+      MaintenanceService\Controllers\UserController.cs:13 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      MaintenanceService\Controllers\UserController.cs:45 Loop can be converted into LINQ-expression
+      MaintenanceService\Controllers\UserController.cs:47 Invert 'if' statement to reduce nesting
+      MaintenanceService\Global.asax.cs:5 Name 'WebApiApplication' does not match rule 'Classes'. Suggested name is 'CWebApiApplication'.
+      MaintenanceService\Other\Logger.cs:7 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      MaintenanceService\Other\Logger.cs:9 Method 'LogDebug' is never used
+      MaintenanceService\Other\Logger.cs:19 Method 'LogWarn' is never used
+      MaintenanceService\Other\Logger.cs:29 Method 'LogFatal' is never used
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:9 Class 'SUpdateUsersStatusActivity' is never used
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:9 Name 'SUpdateUsersStatusActivity' does not match rule 'Classes'. Suggested name is 'CUpdateUsersStatusActivity'.
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:11 Name 's_logger' does not match rule 'Static readonly fields (private)'. Suggested name is 'Logger'.
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:13 Name 's_cooldown' does not match rule 'Static readonly fields (private)'. Suggested name is 'Cooldown'.
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:14 Name 's_isNowOfflineTimeLimit' does not match rule 'Static readonly fields (private)'. Suggested name is 'IsNowOfflineTimeLimit'.
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:15 Name 's_tokenSource' does not match rule 'Static readonly fields (private)'. Suggested name is 'TokenSource'.
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:17 Name 's_userDataProvider' does not match rule 'Static readonly fields (private)'. Suggested name is 'UserDataProvider'.
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:44 Use 'var' (simple types)
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:55 Use object initializer
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:55 Redundant lambda signature parentheses
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:65 Redundant string interpolation
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:71 Method 'Run' is never used
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:84 Use 'var' (simple types)
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:84 Use object initializer
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:90 Typo in string: "catched"
+      MaintenanceService\Other\UpdateUsersStatusActivity.cs:94 Method 'Cancel' is never used
+    
+    Project MessengerService
+      MessengerService\App_Start\WebApiConfig.cs:8 Name 'WebApiConfig' does not match rule 'Classes'. Suggested name is 'CWebApiConfig'.
+      MessengerService\App_Start\WebApiConfig.cs:22 Typo in comment: "включает"
+      MessengerService\App_Start\WebApiConfig.cs:22 Typo in comment: "маршрутизацию"
+      MessengerService\App_Start\WebApiConfig.cs:22 Typo in comment: "помощью"
+      MessengerService\App_Start\WebApiConfig.cs:22 Typo in comment: "атрибутов"
+      MessengerService\App_Start\WebApiConfig.cs:43 Local variable 'str' is never used
+      MessengerService\App_Start\WebApiConfig.cs:49 Class 'AppSettings' is never used
+      MessengerService\App_Start\WebApiConfig.cs:49 Name 'AppSettings' does not match rule 'Classes'. Suggested name is 'CAppSettings'.
+      MessengerService\App_Start\WebApiConfig.cs:51 Property 'Secret' is never used
+      MessengerService\Controllers\AuthController.cs:15 Name 'AuthController' does not match rule 'Classes'. Suggested name is 'CAuthController'.
+      MessengerService\Controllers\AuthController.cs:17 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      MessengerService\Controllers\AuthController.cs:33 Typo in comment: "Возможно"
+      MessengerService\Controllers\AuthController.cs:33 Typo in comment: "отображать"
+      MessengerService\Controllers\AuthController.cs:33 Typo in comment: "передаваемые"
+      MessengerService\Controllers\AuthController.cs:33 Typo in comment: "данные"
+      MessengerService\Controllers\AuthController.cs:64 Typo in string: "signup"
+      MessengerService\Controllers\AuthController.cs:76 Use 'var' (simple types)
+      MessengerService\Controllers\AuthController.cs:85 Use 'var' (simple types)
+      MessengerService\Controllers\AuthController.cs:87 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\AuthController.cs:94 Typo in comment: "signup"
+      MessengerService\Controllers\ChatController.cs:16 Name 'ChatController' does not match rule 'Classes'. Suggested name is 'CHatController'.
+      MessengerService\Controllers\ChatController.cs:18 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      MessengerService\Controllers\ChatController.cs:57 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatController.cs:88 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatController.cs:162 Typo in comment: "если"
+      MessengerService\Controllers\ChatController.cs:162 Typo in comment: "сами"
+      MessengerService\Controllers\ChatController.cs:162 Typo in comment: "себе"
+      MessengerService\Controllers\ChatController.cs:162 Typo in comment: "пересылаем"
+      MessengerService\Controllers\ChatController.cs:162 Typo in comment: "сообщение"
+      MessengerService\Controllers\ChatController.cs:179 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatController.cs:213 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatController.cs:238 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatsController.cs:16 Name 'ChatsController' does not match rule 'Classes'. Suggested name is 'CHatsController'.
+      MessengerService\Controllers\ChatsController.cs:18 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      MessengerService\Controllers\ChatsController.cs:63 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatsController.cs:94 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatsController.cs:110 Use 'var' (built-in types)
+      MessengerService\Controllers\ChatsController.cs:128 Use 'var' (built-in types)
+      MessengerService\Controllers\ChatsController.cs:146 Use 'var' (simple types)
+      MessengerService\Controllers\ChatsController.cs:148 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatsController.cs:172 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatsController.cs:196 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ChatsController.cs:243 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ContactsController.cs:17 Name 'ContactsController' does not match rule 'Classes'. Suggested name is 'COntactsController'.
+      MessengerService\Controllers\ContactsController.cs:17 Typo in identifier: "ontacts"
+      MessengerService\Controllers\ContactsController.cs:19 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      MessengerService\Controllers\ContactsController.cs:59 Loop can be converted into LINQ-expression
+      MessengerService\Controllers\ContactsController.cs:74 Use 'var' (built-in types)
+      MessengerService\Controllers\ContactsController.cs:94 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ContactsController.cs:100 Redundant lambda signature parentheses
+      MessengerService\Controllers\ContactsController.cs:158 Loop can be converted into LINQ-expression
+      MessengerService\Controllers\ContactsController.cs:180 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\MessageController.cs:5 Name 'MessageController' does not match rule 'Classes'. Suggested name is 'CMessageController'.
+      MessengerService\Controllers\UserController.cs:13 Name 'UserController' does not match rule 'Classes'. Suggested name is 'CUserController'.
+      MessengerService\Controllers\UserController.cs:15 Name 's_log' does not match rule 'Static readonly fields (private)'. Suggested name is 'Log'.
+      MessengerService\Controllers\UserController.cs:46 Use 'var' (built-in types)
+      MessengerService\Controllers\UserController.cs:48 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\UserController.cs:72 Use 'var' (built-in types)
+      MessengerService\Controllers\UserController.cs:74 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\UserController.cs:99 Invert 'if' statement to reduce nesting
+      MessengerService\Controllers\ValidateModelAttribute.cs:17 Redundant [AttributeUsage] property assignment: provided value is equal to default
+      MessengerService\Controllers\ValidateModelAttribute.cs:17 Redundant [AttributeUsage] property assignment: provided value is equal to default
+      MessengerService\Controllers\ValidateModelAttribute.cs:18 Use <inheritdoc /> on root level to inherit documentation from base candidate.
+      MessengerService\Global.asax.cs:5 Name 'WebApiApplication' does not match rule 'Classes'. Suggested name is 'CWebApiApplication'.
+      MessengerService\Other\Logger.cs:7 Name 'SLogger' does not match rule 'Classes'. Suggested name is 'CLogger'.
+      MessengerService\Other\Logger.cs:9 Method 'LogDebug' is never used
+      MessengerService\Other\Logger.cs:19 Method 'LogWarn' is never used
+      MessengerService\Other\Logger.cs:29 Method 'LogFatal' is never used
+      MessengerService\Other\ObservableDirectRouteProvider.cs:8 Class 'CObservableDirectRouteProvider' can be made internal
+      MessengerService\Other\UpdateUsersStatusActivity.cs:84 Typo in comment: "catched"
+      MessengerService\Other\UpdateUsersStatusActivity.cs:97 Name 'SUpdateUsersStatusActivity' does not match rule 'Classes'. Suggested name is 'CUpdateUsersStatusActivity'.
+      MessengerService\Other\UpdateUsersStatusActivity.cs:99 Name 's_logger' does not match rule 'Static readonly fields (private)'. Suggested name is 'Logger'.
+      MessengerService\Other\UpdateUsersStatusActivity.cs:100 Name 's_timeout' does not match rule 'Static readonly fields (private)'. Suggested name is 'Timeout'.
+      MessengerService\Other\UpdateUsersStatusActivity.cs:101 Name 's_isNowOfflineTimeLimit' does not match rule 'Static readonly fields (private)'. Suggested name is 'IsNowOfflineTimeLimit'.
+      MessengerService\Other\UpdateUsersStatusActivity.cs:102 Name 's_tokenSource' does not match rule 'Static readonly fields (private)'. Suggested name is 'TokenSource'.
+      MessengerService\Other\UpdateUsersStatusActivity.cs:104 Name 's_client' does not match rule 'Static readonly fields (private)'. Suggested name is 'Client'.
+      MessengerService\Other\UpdateUsersStatusActivity.cs:113 Use 'var' (built-in types)
+      MessengerService\Other\UpdateUsersStatusActivity.cs:113 Convert to constant
+      MessengerService\Other\UpdateUsersStatusActivity.cs:126 Use 'var' (simple types)
+      MessengerService\Other\UpdateUsersStatusActivity.cs:126 Use object initializer
+      MessengerService\Other\UpdateUsersStatusActivity.cs:142 Use 'var' (simple types)
+      MessengerService\Other\UpdateUsersStatusActivity.cs:154 Redundant string interpolation
+      MessengerService\Other\UpdateUsersStatusActivity.cs:164 Use 'var' (simple types)
+      MessengerService\Other\UpdateUsersStatusActivity.cs:165 Redundant string interpolation
+      MessengerService\Other\UpdateUsersStatusActivity.cs:169 Simplify conditional ternary expression
+    
+  
